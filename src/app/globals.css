@@ -6,6 +6,15 @@
   --secondary: #242424;
 }
 
+body {
+  font-family: var(--font-raleway);
+}
+
+
+.font-sora {
+  font-family: var(--font-sora) !important;
+}
+
 @theme {
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
