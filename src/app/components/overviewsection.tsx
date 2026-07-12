@@ -178,18 +178,18 @@ export default function OverViewSection() {
           </div>
           <div className="grid gap-2.5 border border-neutral-300">
             <Image
-              src="/sales.png"
-              alt="business challenge"
+              src="/arbasilver.png"
+              alt="arba silver "
               width={1232}
               height={600}
               className="w-full h-auto"
             />
             <div className="grid gap-3.5 px-5 ">
-              <h2 className="text-4xl font-semibold">Sales Enablement.</h2>
+              <h2 className="text-4xl font-semibold">Brand Systems..</h2>
               <p className="text-xl">
-                Developed catalogs, line cards, product guides, and technical
-                marketing materials that supported distributors, sales teams,
-                and customers throughout the buying process.
+                Produced packaging, labels, trade show materials, stationery,
+                and supporting brand assets that helped create a consistent
+                experience across customer touchpoints.
               </p>
             </div>
           </div>
