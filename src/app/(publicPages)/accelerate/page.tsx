@@ -1,13 +1,9 @@
-import Footer from "../../components/footer";
-import Navbar from "../../components/navbar";
 import Image from "next/image";
 import AccelerateSection from "../../components/acceleratesection";
 
 export default function Accelerate() {
   return (
     <>
-      <Navbar />
-
       <div className="max-w-7xl mx-auto mb-32 md:mt-8 p-4 md:p-0 ">
         <div className="gap-7 flex flex-col mb-15">
           <div className="flex  items-center height-[36px]  gap-2.5">
@@ -36,7 +32,6 @@ export default function Accelerate() {
         </div>
         <AccelerateSection />
       </div>
-      <Footer />
     </>
   );
 }

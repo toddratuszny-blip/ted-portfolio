@@ -1,13 +1,10 @@
 import Image from "next/image";
 import About from "../../components/about";
 import AboutUsHeader from "../../components/aboutusheader";
-import Footer from "../../components/footer";
-import Navbar from "../../components/navbar";
 import Talk from "../../components/talk";
 export default function Aboutpage() {
   return (
     <div>
-      <Navbar />
       <AboutUsHeader />
       <About
         imgSrcOne="/whoWeAreOne.png"
@@ -26,7 +23,6 @@ export default function Aboutpage() {
           className="absolute top-0"
         />
       </div>
-      <Footer />
     </div>
   );
 }

@@ -1,14 +1,11 @@
-import Navbar from "./components/navbar";
 import Header from "./components/header";
 import About from "./components/about";
 import CaseStudy from "./components/casestudy";
 import Approach from "./components/approach";
 import GetInTouch from "./components/getintouch";
-import Footer from "./components/footer";
 export default function HomePage() {
   return (
     <>
-      <Navbar />
       <Header />
       <About
         badgeText="About Us."
@@ -18,7 +15,6 @@ export default function HomePage() {
       <CaseStudy />
       <Approach />
       <GetInTouch />
-      <Footer />
     </>
   );
 }
