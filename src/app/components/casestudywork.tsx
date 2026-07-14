@@ -181,7 +181,7 @@ function WorkCard({ item }: { item: WorkItem }) {
     return (
       <Link
         href={item.href}
-        className={`block relative w-full  overflow-hidden  bg-white ${item.hasBorder ? "border border-[#D4D4D4]" : ""}`}
+        className={`block relative w-full  overflow-hidden  bg-white `}
       >
         <div className="relative w-full h-full group cursor-pointer overflow-hidden">
           <Image
@@ -217,7 +217,7 @@ function WorkCard({ item }: { item: WorkItem }) {
   return (
     <Link
       href={item.href}
-      className={`relative w-full group cursor-pointer overflow-hidden block ${item.hasBorder ? "border border-[#D4D4D4]" : ""}`}
+      className={`relative w-full group cursor-pointer overflow-hidden block `}
     >
       {item.useFill ? (
         <Image src={item.src} alt={item.alt} fill className="object-cover" />

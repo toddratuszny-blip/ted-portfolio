@@ -93,7 +93,7 @@ export default function GallerySection() {
                 height={600}
                 gallery={GALLERY_IMAGES}
                 index={0}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full "
               />
             </div>
             <div className="grid md:grid-cols-2 gap-8">
@@ -104,7 +104,7 @@ export default function GallerySection() {
                 height={2064}
                 gallery={GALLERY_IMAGES}
                 index={1}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full"
               />
               <LightboxImage
                 src="/gallery/gallery3.png"
@@ -113,7 +113,7 @@ export default function GallerySection() {
                 height={2064}
                 gallery={GALLERY_IMAGES}
                 index={2}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full s"
               />
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function GallerySection() {
                 height={600}
                 gallery={GALLERY_IMAGES}
                 index={3}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full"
               />
             </div>
             <div className="grid md:grid-cols-2 gap-8">
@@ -148,7 +148,7 @@ export default function GallerySection() {
                 height={2064}
                 gallery={GALLERY_IMAGES}
                 index={4}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full "
               />
               <LightboxImage
                 src="/gallery/gallery6.png"
@@ -157,7 +157,7 @@ export default function GallerySection() {
                 height={2064}
                 gallery={GALLERY_IMAGES}
                 index={5}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full"
               />
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -168,7 +168,7 @@ export default function GallerySection() {
                 height={2064}
                 gallery={GALLERY_IMAGES}
                 index={6}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full "
               />
               <LightboxImage
                 src="/gallery/gallery8.jpg"
@@ -177,7 +177,7 @@ export default function GallerySection() {
                 height={2064}
                 gallery={GALLERY_IMAGES}
                 index={7}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full "
               />
               <LightboxImage
                 src="/gallery/gallery9.jpg"
@@ -186,7 +186,7 @@ export default function GallerySection() {
                 height={2064}
                 gallery={GALLERY_IMAGES}
                 index={8}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full"
               />
             </div>
             <div className="">
@@ -197,7 +197,7 @@ export default function GallerySection() {
                 height={600}
                 gallery={GALLERY_IMAGES}
                 index={9}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full "
               />
             </div>
           </div>
@@ -212,7 +212,7 @@ export default function GallerySection() {
             </h1>
           </div>
           <div className="grid gap-[42px] ">
-            <div className="border-[1px] border-[#D4D4D4]">
+            <div>
               <LightboxImage
                 src="/gallery/gallery11.png"
                 alt="box"
@@ -279,16 +279,16 @@ export default function GallerySection() {
               <span className="text-primary"> & Visual Systems.</span>
             </h1>
           </div>
-          <div className="grid gap-[42px] ">
+          <div className="">
             <div className="">
               <LightboxImage
                 src="/gallery/gallery17.png"
                 alt="box"
                 width={1512}
-                height={600}
+                height={800}
                 gallery={GALLERY_IMAGES}
                 index={16}
-                // className="w-full h-[200px] md:h-[600px]"
+                className="h-full object-cover"
               />
             </div>
           </div>
@@ -304,7 +304,7 @@ export default function GallerySection() {
           </div>
 
           <div className="grid gap-[42px]">
-            <div className="border-[1px] border-[#D4D4D4]">
+            <div>
               <LightboxImage
                 src="/gallery/gallery18.jpg"
                 alt="box"
@@ -312,6 +312,7 @@ export default function GallerySection() {
                 height={600}
                 gallery={GALLERY_IMAGES}
                 index={17}
+                className=""
               />
             </div>
             <div className="grid md:grid-cols-2 gap-8">

@@ -84,7 +84,7 @@ export default function MaryAnnOverViewSection() {
             </div>
           </div>
           <div className="grid md:grid-cols-6 gap-6 md:gap-10.5">
-            <div className="w-full md:col-span-4 border border-neutral-300">
+            <div className="w-full md:col-span-4 ">
               <div>
                 <LightboxImage
                   src="/maryann01.png"
@@ -97,7 +97,7 @@ export default function MaryAnnOverViewSection() {
                 />
               </div>
             </div>
-            <div className="md:col-span-2 border border-neutral-300">
+            <div className="md:col-span-2 ">
               <LightboxImage
                 src="/maryann00.png"
                 alt="packaging"
@@ -127,7 +127,7 @@ export default function MaryAnnOverViewSection() {
             </div>
           </div>
           <div className="space-y-10">
-            <div className="border border-neutral-300">
+            <div className="">
               <LightboxImage
                 src="/scope01.jpg"
                 alt="packaging"
@@ -139,7 +139,7 @@ export default function MaryAnnOverViewSection() {
               />
             </div>
             <div className="flex flex-col md:flex-row justify-between gap-10.5">
-              <div className="border border-neutral-300 w-full">
+              <div className="w-full">
                 <LightboxImage
                   src="/scope2.jpg"
                   alt="packaging"
@@ -150,7 +150,7 @@ export default function MaryAnnOverViewSection() {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="border border-neutral-300 w-full">
+              <div className=" w-full">
                 <LightboxImage
                   src="/scope3.jpg"
                   alt="packaging"
@@ -162,7 +162,7 @@ export default function MaryAnnOverViewSection() {
                 />
               </div>
             </div>
-            <div className="border border-neutral-300">
+            <div className="">
               <LightboxImage
                 src="/scope04.jpg"
                 alt="packaging"
@@ -174,7 +174,7 @@ export default function MaryAnnOverViewSection() {
               />
             </div>
             <div className="flex flex-col md:flex-row justify-between gap-10.5">
-              <div className="border border-neutral-300 w-full">
+              <div className=" w-full">
                 <LightboxImage
                   src="/scope5.png"
                   alt="packaging"
@@ -185,7 +185,7 @@ export default function MaryAnnOverViewSection() {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="border border-neutral-300 w-full">
+              <div className=" w-full">
                 <LightboxImage
                   src="/scope6.jpg"
                   alt="packaging"

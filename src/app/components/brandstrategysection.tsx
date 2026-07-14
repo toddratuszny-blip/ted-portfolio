@@ -192,7 +192,7 @@ export default function BrandStrategySection() {
               height={400}
               gallery={BRAND_STRATEGY_IMAGES}
               index={8}
-              className="object-cover"
+              className="object-cover h-full "
             />
             <LightboxImage
               src="/brandstrategy/image (9).png"
@@ -201,7 +201,7 @@ export default function BrandStrategySection() {
               height={400}
               gallery={BRAND_STRATEGY_IMAGES}
               index={9}
-              className="object-cover"
+              className="object-cover h-full"
             />
           </div>
         </div>

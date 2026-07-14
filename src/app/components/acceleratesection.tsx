@@ -166,7 +166,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={1}
-                className="w-full border border-[#D4D4D4]"
+                className="w-full "
               />
               <LightboxImage
                 src="/accelerate/life22.png"
@@ -175,7 +175,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={2}
-                className="h-full object-cover border border-[#D4D4D4]"
+                className="h-full object-cover "
                 // className="w-full md:h-[400px]  "
               />
             </div>
@@ -251,6 +251,7 @@ export default function AccelerateSection() {
                 height={600}
                 gallery={ACCELERATE_IMAGES}
                 index={7}
+
                 // className="w-full md:h-[600px]  border-[1px] border-[#D4D4D4]"
               />
             </div>
@@ -262,6 +263,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={8}
+                className="object-cover"
                 // className="w-full md:h-[400px] "
               />
               <LightboxImage
@@ -271,6 +273,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={9}
+                className="object-cover"
                 // className="w-full md:h-[400px] "
               />
             </div>
@@ -282,6 +285,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={10}
+                className="object-cover"
                 // className="w-full md:h-[400px] "
               />
               <LightboxImage
@@ -291,6 +295,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={11}
+                className="object-cover"
                 // className="w-full md:h-[400px] "
               />
               <LightboxImage
@@ -300,6 +305,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={12}
+                className="object-cover"
                 // className="w-full md:h-[400px] "
               />
             </div>

@@ -142,7 +142,7 @@ export default function OverViewSection() {
               height={600}
               gallery={INDUSTRIAL_OVERVIEW_IMAGES}
               index={2}
-              className="w-full h-auto"
+              className="w-full h-full"
             />
           </div>
         </div>
