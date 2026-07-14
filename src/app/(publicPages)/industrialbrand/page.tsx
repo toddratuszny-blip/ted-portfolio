@@ -1,7 +1,7 @@
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
-import OverViewSection from "../components/overviewsection";
-import LightboxImage from "../components/lightboximage";
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
+import OverViewSection from "../../components/overviewsection";
+import LightboxImage from "../../components/lightboximage";
 
 const INDUSTRIAL_IMAGES = [
   "/industrial1.png",

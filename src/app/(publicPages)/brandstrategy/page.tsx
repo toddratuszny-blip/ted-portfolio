@@ -1,8 +1,7 @@
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
 import Image from "next/image";
-
-import BrandStrategySection from "../components/brandstrategysection";
+import BrandStrategySection from "../../components/brandstrategysection";
 
 export default function BrandStrategy() {
   return (

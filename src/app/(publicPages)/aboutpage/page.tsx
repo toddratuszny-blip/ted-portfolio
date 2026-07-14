@@ -1,9 +1,9 @@
 import Image from "next/image";
-import About from "../components/about";
-import AboutUsHeader from "../components/aboutusheader";
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
-import Talk from "../components/talk";
+import About from "../../components/about";
+import AboutUsHeader from "../../components/aboutusheader";
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
+import Talk from "../../components/talk";
 export default function Aboutpage() {
   return (
     <div>
