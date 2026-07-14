@@ -9,6 +9,7 @@ interface NavItem {
   label: string;
   href: string;
   dropdown?: { label: string; href: string }[];
+  openInNewTab?: boolean;
 }
 
 export default function Navbar() {
@@ -34,6 +35,7 @@ export default function Navbar() {
       href: "/casestudies",
       dropdown: caseStudies,
     },
+    { label: "Resume", href: "/resume.pdf", openInNewTab: true },
     { label: "Contact Us", href: "/contactus" },
   ];
 
@@ -171,16 +173,31 @@ export default function Navbar() {
               key={item.label}
               className="relative px-2 flex items-center h-full"
             >
-              <Link
-                href={item.href}
-                className={`text-lg font-semibold transition-colors duration-200 ${
-                  isActive
-                    ? "text-primary"
-                    : "text-[#5C5E62] hover:text-[#A11B35]"
-                }`}
-              >
-                {item.label}
-              </Link>
+              {item.openInNewTab ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`text-lg font-semibold transition-colors duration-200 ${
+                    isActive
+                      ? "text-primary"
+                      : "text-[#5C5E62] hover:text-[#A11B35]"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  href={item.href}
+                  className={`text-lg font-semibold transition-colors duration-200 ${
+                    isActive
+                      ? "text-primary"
+                      : "text-[#5C5E62] hover:text-[#A11B35]"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )}
 
               {isActive && (
                 <div className="absolute -bottom-2 -left-1.25 -right-1.25 h-px bg-primary" />
@@ -258,16 +275,31 @@ export default function Navbar() {
                   key={item.label}
                   className="flex items-center w-full justify-center"
                 >
-                  <Link
-                    href={item.href}
-                    onClick={() => {
-                      setActiveItem(item.label);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className={`text-[18px] font-semibold transition-colors duration-200 py-3 ${isActive ? "text-primary" : "text-[#5C5E62] hover:text-[#A11B35]"}`}
-                  >
-                    {item.label}
-                  </Link>
+                  {item.openInNewTab ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => {
+                        setActiveItem(item.label);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`text-[18px] font-semibold transition-colors duration-200 py-3 ${isActive ? "text-primary" : "text-[#5C5E62] hover:text-[#A11B35]"}`}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      onClick={() => {
+                        setActiveItem(item.label);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`text-[18px] font-semibold transition-colors duration-200 py-3 ${isActive ? "text-primary" : "text-[#5C5E62] hover:text-[#A11B35]"}`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               );
             })}

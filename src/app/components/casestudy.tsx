@@ -13,11 +13,6 @@ export default function CaseStudy() {
           <h1 className="text-3xl md:text-[100px] font-black font-sora text-[#171717] tracking-tight leading-none">
             Our Case Studies.
           </h1>
-          <div className="absolute -top-7.5 left-[50%] font-sora -translate-x-1/2 md:translate-x-0 md:-top-5 md:left-[38%] h-8.75 w-35 md:h-13.75 md:w-63.75 bg-primary flex items-center justify-center rounded-full border-[3px] md:border-[5px] border-white shadow-[0px_8px_25px_0px_rgba(0,0,0,0.25)] -rotate-[11deg] z-20 transition-transform duration-300 hover:scale-105">
-            <p className="text-xs md:text-[23.33px] font-medium text-white tracking-wide whitespace-nowrap">
-              Most Premium
-            </p>
-          </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">

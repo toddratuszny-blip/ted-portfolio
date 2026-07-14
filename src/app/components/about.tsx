@@ -33,7 +33,7 @@ export default function About({
         className="h-120 w-fit absolute right-0 "
         src={"/aboutUsIllu.svg"}
       />
-      <div className="max-w-7xl mx-auto h-auto flex flex-col lg:flex-row gap-16 mb-8 md:mb-15 md:mb-[86.5px]">
+      <div className="max-w-7xl mx-auto h-auto flex flex-col lg:flex-row gap-16 mb-8 ">
         <div className="">
           <div className="bg-[#B31F3C66] px-3 w-fit flex items-center justify-center rounded-full border border-primary mx-auto lg:mx-0 mb-8 md:mb-16">
             <p className="text-white text-[20px]">{badgeText}</p>
@@ -76,7 +76,7 @@ export default function About({
         </div>
       </div>
 
-      <div className="relative md:absolute left-0 right-0 flex items-center justify-center my-0 md:mb-17.5 px-0 md:px-0">
+      {/* <div className="relative md:absolute left-0 right-0 flex items-center justify-center my-0 md:mb-17.5 px-0 md:px-0">
         <div className="h-px w-full bg-[#FFFFFF1A] hidden md:block"></div>
 
         <div className="relative md:absolute bg-[#1F1F1F] font-sora text-white border border-[#FFFFFF1A] px-4 md:px-8 py-2 md:py-0 md:h-11.5 flex items-center justify-center rounded-full shadow-lg z-10 w-full md:w-auto">
@@ -86,7 +86,7 @@ export default function About({
             in World-wide.
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className=" md:pt-16 w-full overflow-hidden">
         {/* <div

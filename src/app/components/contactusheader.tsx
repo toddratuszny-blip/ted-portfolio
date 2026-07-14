@@ -5,13 +5,13 @@ export default function ContactUsHeader() {
   return (
     <div>
       <div className="relative w-full">
-        <Image
+        {/* <Image
           alt=""
           src={"/contactUsIlluone.png"}
           className="absolute hidden md:block top-0 inset-e-0"
           width={240}
           height={240}
-        />
+        /> */}
         <Image
           alt=""
           src={"/contactUsIlluTwo.png"}
