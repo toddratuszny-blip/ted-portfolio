@@ -22,8 +22,8 @@ export const SITE_CONFIG = {
   },
   contact: {
     email: "infoexample@gmail.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    linkedinLabel: "linkedin.com/in/profile",
+    linkedin: "https://linkedin.com/in/todd",
+    linkedinLabel: "linkedin.com/in/todd",
     resumeUrl: "/resume.pdf",
   },
   ctas: {
@@ -44,11 +44,11 @@ export const SITE_CONFIG = {
 } as const;
 
 export const CASE_STUDY_LINKS: SiteLink[] = [
+  { label: "Creative Gallery", href: "/gallery" },
+  { label: "Accelerate360 test", href: "/accelerate" },
   { label: "Industrial Brand Ecosystem", href: "/industrialbrand" },
   { label: "Mary Ann's Chocolates", href: "/customerbrand" },
   { label: "Summit Point Roofing", href: "/brandstrategy" },
-  { label: "Accelerate360", href: "/accelerate" },
-  { label: "Creative Gallery", href: "/gallery" },
 ];
 
 export const MAIN_NAV_ITEMS: SiteNavItem[] = [
