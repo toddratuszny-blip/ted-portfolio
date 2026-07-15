@@ -176,7 +176,7 @@ export default function OverViewSection() {
 
         <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
         <div className="grid md:grid-cols-2 items-center justify-between gap-12 font-sora">
-          <div className="grid gap-2.5 border pb-4 border-neutral-300">
+          <div className="grid gap-2.5 ">
             <LightboxImage
               src="/sales.png"
               alt="business challenge"
@@ -195,7 +195,7 @@ export default function OverViewSection() {
               </p>
             </div>
           </div>
-          <div className="grid gap-2.5 border pb-4 border-neutral-300">
+          <div className="grid gap-2.5">
             <LightboxImage
               src="/arbasilver.png"
               alt="arba silver "

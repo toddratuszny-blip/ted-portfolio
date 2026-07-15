@@ -47,7 +47,7 @@ export default function IndustrialBrand() {
             height={116}
             gallery={INDUSTRIAL_IMAGES}
             index={1}
-            className="h-fit max-h-29 border object-cover border-neutral-300"
+            className="h-fit max-h-29  object-cover"
           />
           <LightboxImage
             src="/conical2.png"
@@ -56,7 +56,7 @@ export default function IndustrialBrand() {
             height={116}
             gallery={INDUSTRIAL_IMAGES}
             index={2}
-            className="h-fit max-h-29 border object-cover border-neutral-300"
+            className="h-fit max-h-29  object-cover"
           />
           <LightboxImage
             src="/abrasives.png"
@@ -65,7 +65,7 @@ export default function IndustrialBrand() {
             height={116}
             gallery={INDUSTRIAL_IMAGES}
             index={3}
-            className="h-fit max-h-29 border object-cover border-neutral-300"
+            className="h-fit max-h-29  object-cover"
           />
           <LightboxImage
             src="/elite.png"
@@ -74,7 +74,7 @@ export default function IndustrialBrand() {
             height={116}
             gallery={INDUSTRIAL_IMAGES}
             index={4}
-            className="h-fit max-h-29 border object-cover border-neutral-300"
+            className="h-fit max-h-29  object-cover"
           />
         </div>
         <OverViewSection />
