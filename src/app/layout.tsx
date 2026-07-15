@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway, Sora } from "next/font/google";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
+import { SITE_CONFIG } from "./constants/site-config";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -16,9 +17,8 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Strategic Brand Marketing & Creative Direction",
-  description:
-    "Portfolio showcasing brand strategy, creative direction, integrated marketing, and content development for growing businesses.",
+  title: SITE_CONFIG.seo.defaultTitle,
+  description: SITE_CONFIG.seo.defaultDescription,
 };
 
 export default function RootLayout({
@@ -45,7 +45,10 @@ export default function RootLayout({
           sizes="180x180"
           href="/favicon/apple-touch-icon.png"
         />
-        <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+        <meta
+          name="apple-mobile-web-app-title"
+          content={SITE_CONFIG.brand.appTitle}
+        />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
       <body>

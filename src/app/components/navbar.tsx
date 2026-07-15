@@ -4,13 +4,11 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Call from "../Icons/call";
-
-interface NavItem {
-  label: string;
-  href: string;
-  dropdown?: { label: string; href: string }[];
-  openInNewTab?: boolean;
-}
+import {
+  MAIN_NAV_ITEMS,
+  SITE_CONFIG,
+  type SiteNavItem,
+} from "../constants/site-config";
 
 export default function Navbar() {
   const [activeItem, setActiveItem] = useState<string>("Home");
@@ -18,26 +16,6 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileCaseOpen, setIsMobileCaseOpen] = useState(false);
   const dropdownRef = useRef<HTMLLIElement>(null);
-
-  const caseStudies = [
-    { label: "Industrial Brand Ecosystem", href: "/industrialbrand" },
-    { label: "Mary Ann's Chocolates", href: "/customerbrand" },
-    { label: "Summit Point Roofing", href: "/brandstrategy" },
-    { label: "Accelerate360", href: "/accelerate" },
-    { label: "Creative Gallery", href: "/gallery" },
-  ];
-
-  const navItems: NavItem[] = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/aboutpage" },
-    {
-      label: "Case Studies",
-      href: "/casestudies",
-      dropdown: caseStudies,
-    },
-    { label: "Resume", href: "/resume.pdf", openInNewTab: true },
-    { label: "Contact Us", href: "/contactus" },
-  ];
 
   const pathname = usePathname();
 
@@ -64,7 +42,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <Image
             src="logo.svg"
-            alt="Logo"
+            alt={SITE_CONFIG.brand.logoAlt}
             width={1200}
             height={1200}
             className="w-12.5 md:w-19.5 h-20"
@@ -101,7 +79,7 @@ export default function Navbar() {
 
       {/* Desktop Nav */}
       <ul className="hidden md:flex items-center gap-8 ">
-        {navItems.map((item) => {
+        {MAIN_NAV_ITEMS.map((item: SiteNavItem) => {
           const isActive =
             pathname === item.href ||
             (item.dropdown && item.dropdown.some((d) => pathname === d.href));
@@ -212,14 +190,16 @@ export default function Navbar() {
         className="hidden md:flex items-center gap-2 bg-black text-white font-medium pl-5.5 pr-6 py-4 rounded-full "
       >
         <Call />
-        <span className="text-sm tracking-wide text-[16px]">Contact Us</span>
+        <span className="text-sm tracking-wide text-[16px]">
+          {SITE_CONFIG.ctas.contactUs}
+        </span>
       </Link>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-15 left-0 w-full bg-white flex flex-col items-center shadow-lg py-6 gap-2 z-10 md:hidden">
           <ul className="flex flex-col items-center gap-1 w-full">
-            {navItems.map((item) => {
+            {MAIN_NAV_ITEMS.map((item: SiteNavItem) => {
               const isActive = activeItem === item.label;
 
               if (item.dropdown) {
@@ -309,7 +289,9 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
             className="flex items-center gap-2 bg-black text-white font-medium px-6 py-3 rounded-full transition-all duration-200 mt-3"
           >
-            <span className="text-sm tracking-wide">Contact Us</span>
+            <span className="text-sm tracking-wide">
+              {SITE_CONFIG.ctas.contactUs}
+            </span>
           </Link>
         </div>
       )}

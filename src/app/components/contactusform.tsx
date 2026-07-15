@@ -2,24 +2,28 @@ import Link from "next/link";
 import ArrowRight from "../Icons/arrowright";
 import LinkedIn from "../Icons/linkedin";
 import Mail from "../Icons/mail";
+import Phone from "../Icons/phone";
+import { SITE_CONFIG } from "../constants/site-config";
 
 const contactItems = [
   {
     title: "Email",
-    value: "infoexample@gmail.com",
-    href: "mailto:infoexample@gmail.com",
+    value: SITE_CONFIG.contact.email,
+    href: `mailto:${SITE_CONFIG.contact.email}`,
     icon: <Mail />,
   },
+
   {
     title: "LinkedIn",
-    value: "linkedin.com/in/yourprofile",
-    href: "#",
+    value: SITE_CONFIG.contact.linkedinLabel,
+    href: SITE_CONFIG.contact.linkedin,
     icon: <LinkedIn fill="currentColor" />,
+    openInNewTab: true,
   },
   {
     title: "Resume",
-    value: "Open PDF Resume",
-    href: "/resume.pdf",
+    value: SITE_CONFIG.ctas.openResume,
+    href: SITE_CONFIG.contact.resumeUrl,
     icon: <ArrowRight fill="currentColor" />,
     openInNewTab: true,
   },
@@ -60,7 +64,7 @@ export default function ContactUsForm() {
               </div>
 
               <div className="inline-flex items-center gap-2 text-primary font-semibold">
-                <span>Open</span>
+                <span>{SITE_CONFIG.ctas.open}</span>
                 <ArrowRight />
               </div>
             </>

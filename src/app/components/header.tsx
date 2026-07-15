@@ -7,6 +7,7 @@ import LinkedIn from "../Icons/linkedin";
 import BE from "../Icons/BE";
 import ArrowRight from "../Icons/arrowright";
 import ArrowDown from "../Icons/arrowdown";
+import { SITE_CONFIG } from "../constants/site-config";
 
 export default function Header() {
   return (
@@ -41,7 +42,11 @@ export default function Header() {
             </Link>
           </div> */}
           <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
-            <Link href="#">
+            <Link
+              href={SITE_CONFIG.contact.linkedin}
+              target="_blank"
+              rel="noreferrer"
+            >
               <LinkedIn fill="currentColor" />
             </Link>
           </div>
@@ -64,7 +69,7 @@ export default function Header() {
             href="/industrialbrand"
             className="inline-flex items-center gap-3 bg-primary  text-white font-medium px-6 py-3.5 rounded-full "
           >
-            <span>View Case Studies</span>
+            <span>{SITE_CONFIG.ctas.viewCaseStudies}</span>
             <ArrowRight />
           </Link>
         </div>
