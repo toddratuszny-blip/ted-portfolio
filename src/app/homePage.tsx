@@ -8,9 +8,9 @@ export default function HomePage() {
     <>
       <Header />
       <About
-        badgeText="About Us."
-        heading="A Portfolio Built Around Business Stories, Not Just Visual Work."
-        description="My work sits at the intersection of brand strategy, creative direction, integrated marketing, and content development. Each project reflects how creative decisions support business goals, improve brand consistency, and help teams communicate more effectively across channels."
+        badgeText="About"
+        heading="A Broad Marketing Background. A Creative Point of View."
+description="For 15+ years, I’ve worked across brand strategy, creative direction, ecommerce, web, content, and sales enablement. I connect business goals to clear positioning, cohesive creative systems, and practical execution across customer touchpoints."
       />{" "}
       <CaseStudy />
       <Approach />

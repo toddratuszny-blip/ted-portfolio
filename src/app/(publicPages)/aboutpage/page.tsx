@@ -2,25 +2,29 @@ import Image from "next/image";
 import About from "../../components/about";
 import AboutUsHeader from "../../components/aboutusheader";
 import Talk from "../../components/talk";
+
 export default function Aboutpage() {
   return (
     <div>
       <AboutUsHeader />
+
       <About
         imgSrcOne="/whoWeAreOne.png"
         imgSrcTwo="/whoWeAreTwo.png"
-        badgeText="Who We Are"
-        heading="Axleo is a business that provides services related to online marketing."
-        description="Digital agencies can vary in size andspecialization. Some may focusonspecificniches, such as healthcare ore-commerce, while others may offeracomprehensive."
+        badgeText="About Me"
+        heading="Creative leadership grounded in practical execution."
+        description="My background is intentionally broad. I’ve led brand development, campaign creative, ecommerce, websites, content, photography, packaging, sales materials, and digital marketing across organizations ranging from small businesses to national brands. That range helps me see how every part of the customer experience connects—and how to turn strategy into work that can actually be implemented."
       />
+
       <div className="relative">
         <Talk />
+
         <Image
           alt=""
-          src={"/letsTalkBg.png"}
-          width={"2000"}
-          height={"2000"}
-          className="absolute top-0"
+          src="/letsTalkBg.png"
+          width={2000}
+          height={2000}
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         />
       </div>
     </div>

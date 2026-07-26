@@ -13,28 +13,31 @@ export const SITE_CONFIG = {
     siteName: "TR Portfolio",
     logoAlt: "TR Portfolio Logo",
     appTitle: "TR Portfolio",
-    copyright: "(c) 2026 TR Portfolio. All rights reserved.",
+    copyright: "© 2026 Todd Ratuszny. All rights reserved.",
   },
   seo: {
-    defaultTitle: "Portfolio | Strategic Brand Marketing & Creative Direction",
+    defaultTitle:
+      "Portfolio | Strategic Brand Marketing & Creative Direction",
     defaultDescription:
       "Portfolio showcasing brand strategy, creative direction, integrated marketing, and content development for growing businesses.",
   },
   contact: {
-    email: "infoexample@gmail.com",
-    linkedin: "https://linkedin.com/in/todd",
-    linkedinLabel: "linkedin.com/in/todd",
-    resumeUrl: "/resume.pdf",
+    email: "toddratuszny@gmail.com",
+    linkedin:
+      "https://www.linkedin.com/in/todd-ratuszny-19793512/",
+    linkedinLabel:
+      "linkedin.com/in/todd-ratuszny-19793512",
+    resumeUrl: "/Todd%20Ratuszny%20Resume.pdf",
   },
   ctas: {
-    contactUs: "Contact Us",
+    contactUs: "Connect",
     viewCaseStudies: "View Case Studies",
     open: "Open",
     openResume: "Open PDF Resume",
   },
   footer: {
     description:
-      "Explore selected case studies showing how strategy, creative direction, and marketing execution come together to support business growth.",
+      "I'm currently seeking a remote opportunity where I can combine strategic thinking, creative leadership, and hands-on execution to help organizations build stronger brands and more effective marketing.",
     legalLinks: [
       { label: "Terms & Conditions", href: "#" },
       { label: "Privacy Policy", href: "#" },
@@ -44,11 +47,26 @@ export const SITE_CONFIG = {
 } as const;
 
 export const CASE_STUDY_LINKS: SiteLink[] = [
-  { label: "Creative Gallery", href: "/gallery" },
-  { label: "Accelerate360 test", href: "/accelerate" },
-  { label: "Industrial Brand Ecosystem", href: "/industrialbrand" },
-  { label: "Mary Ann's Chocolates", href: "/customerbrand" },
-  { label: "Summit Point Roofing", href: "/brandstrategy" },
+  {
+    label: "Summit Point Roofing",
+    href: "/brandstrategy",
+  },
+  {
+    label: "Industrial Brand Ecosystem",
+    href: "/industrialbrand",
+  },
+  {
+    label: "Accelerate360",
+    href: "/accelerate",
+  },
+  {
+    label: "Mary Ann's Chocolates",
+    href: "/customerbrand",
+  },
+  {
+    label: "Creative Gallery",
+    href: "/gallery",
+  },
 ];
 
 export const MAIN_NAV_ITEMS: SiteNavItem[] = [
@@ -64,11 +82,26 @@ export const MAIN_NAV_ITEMS: SiteNavItem[] = [
     href: SITE_CONFIG.contact.resumeUrl,
     openInNewTab: true,
   },
-  { label: SITE_CONFIG.ctas.contactUs, href: "/contactus" },
+  {
+    label: SITE_CONFIG.ctas.contactUs,
+    href: "/contactus",
+  },
 ];
 
 export const FOOTER_NAV_ITEMS: SiteLink[] = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/aboutpage" },
-  { label: SITE_CONFIG.ctas.contactUs, href: "/contactus" },
+  { label: "About", href: "/aboutpage" },
+  {
+    label: "Case Studies",
+    href: "/casestudies",
+  },
+  {
+    label: "Resume",
+    href: SITE_CONFIG.contact.resumeUrl,
+    openInNewTab: true,
+  },
+  {
+    label: "Contact",
+    href: "/contactus",
+  },
 ];

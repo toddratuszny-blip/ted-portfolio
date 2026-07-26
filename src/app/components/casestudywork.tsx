@@ -1,5 +1,4 @@
 // import Image from "next/image";
-// import ArrowUpRight from "../Icons/arrowupright";
 
 // export default function CaseStudyWork() {
 //     return (
@@ -108,9 +107,9 @@ import Link from "next/link";
 
 const works = [
   {
-    src: "/homecasestudy/cs1.1.png",
+    src: "/homecasestudy/industrial-hero-CS.jpg",
     alt: "Work 1",
-    title: "Industrial Brand Ecosystem",
+    title: "Industrial Brand\nEcosystem",
     layout: "half",
     useFill: true,
     hasBorder: true,
@@ -119,7 +118,7 @@ const works = [
   {
     src: "/homecasestudy/cs2.png",
     alt: "Work 2",
-    title: "Mary Ann's Chocolates",
+    title: "Mary Ann's\nChocolates",
     layout: "half",
     useFill: false,
     hasBorder: true,
@@ -128,7 +127,7 @@ const works = [
   {
     src: "/homecasestudy/cs3.png",
     alt: "Case study work preview",
-    title: "Summit Point Roofing",
+    title: "Summit Point\nRoofing",
     layout: "full",
     useFill: true,
     hasBorder: true,
@@ -137,7 +136,7 @@ const works = [
   {
     src: "/homecasestudy/cs4.png",
     alt: "Work 4",
-    title: "Accelerate360",
+    title: "Accelerate360\nLifeToGo",
     layout: "half",
     useFill: false,
     hasBorder: true,
@@ -146,23 +145,13 @@ const works = [
   {
     src: "/homecasestudy/cs5.png",
     alt: "Work 5",
-    title: "Creative Gallery",
+    title: "Creative\nGallery",
     layout: "half",
     useFill: false,
     hasBorder: true,
     href: "/gallery",
   },
 ];
-
-const overlay = (
-  <div
-    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
-    style={{
-      background:
-        "linear-gradient(180deg, rgba(255, 255, 255, 0) -23.89%, rgba(0, 0, 0, 0.8) 100%)",
-    }}
-  />
-);
 
 interface WorkItem {
   src: string;
@@ -276,17 +265,6 @@ export default function CaseStudyWork() {
       </div>
 
       {/* <div className="w-full h-auto md:h-47.5 flex items-center md:items-end justify-center py-10 md:py-0"> */}
-      <Link
-        href="/industrialbrand"
-        className="w-full h-auto md:h-47.5 flex items-center md:items-end justify-center  md:py-0"
-      >
-        <div className="bg-primary rounded-full w-25 h-25 md:w-30 md:h-30 flex flex-col justify-center items-center cursor-pointer hover:scale-105 transition-transform">
-          <ArrowUpRight />
-          <p className="text-white text-[14px] md:text-[16px] leading-3.75 w-14 text-center pt-1">
-            See All Work
-          </p>
-        </div>
-      </Link>
       {/* </div> */}
     </div>
   );

@@ -1,87 +1,73 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import FaceBook from "../Icons/facebook";
-import Instagram from "../Icons/instagram";
 import LinkedIn from "../Icons/linkedin";
-import BE from "../Icons/BE";
 import ArrowRight from "../Icons/arrowright";
 import ArrowDown from "../Icons/arrowdown";
 import { SITE_CONFIG } from "../constants/site-config";
 
 export default function Header() {
   return (
-    <section className="w-full relative md:pt-16 md:pb-8 bg-white overflow-hidden">
+    <section className="relative w-full overflow-hidden bg-white md:pb-8 md:pt-16">
       <Image
+        src="/heroEllipse.png"
         alt=""
         width={800}
         height={800}
-        className="h-fit absolute left-0 top-0 "
-        src={"/heroEllipse.png"}
+        className="absolute left-0 top-0 h-fit"
       />
-      <div className="max-w-7xl  mx-auto grid grid-cols-12 items-start px-4 xl:px-0 relative">
-        <div className="col-span-12 lg:col-span-11 text-center lg:text-left">
-          <h1 className="text-[40px] sm:text-[64px] md:text-[80px] font-bold text-black leading-[1.1] tracking-tight font-sora">
-            Strategic Brand <br className="hidden md:block" />
-            <span className="text-primary">Marketing & Creative</span>{" "}
+
+      <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-start px-4 xl:px-0">
+        <div className="col-span-12 text-center lg:col-span-11 lg:text-left">
+          <h1 className="font-sora text-[40px] font-bold leading-[1.1] tracking-tight text-black sm:text-[64px] md:text-[80px]">
+            Strategic Thinking. <br className="hidden md:block" />
+            <span className="text-primary">Creative Leadership.</span>{" "}
             <br className="hidden md:block" />
-            Direction For Growing <br className="hidden md:block" />
-            Businesses.
+            Marketing Execution.
           </h1>
         </div>
 
-        <div className="col-span-12 lg:col-span-1 flex flex-row lg:flex-col items-center justify-center lg:justify-self-end gap-5 pt-8 lg:pt-4">
-          {/* <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
-            <Link href="#">
-              <FaceBook fill="currentColor" />
-            </Link>
-          </div>
-          <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
-            <Link href="#">
-              <Instagram fill="currentColor" />
-            </Link>
-          </div> */}
-          <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
+        <div className="col-span-12 flex flex-row items-center justify-center gap-5 pt-8 lg:col-span-1 lg:justify-self-end lg:pt-4">
+          <div className="flex h-10.5 w-10.5 items-center justify-center rounded-full border-[1.17px] border-[#E5E5E5] bg-neutral-100 text-black transition-opacity hover:bg-black hover:text-white hover:opacity-80">
             <Link
               href={SITE_CONFIG.contact.linkedin}
               target="_blank"
               rel="noreferrer"
+              aria-label="LinkedIn"
             >
               <LinkedIn fill="currentColor" />
             </Link>
           </div>
-          {/* <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
-            <Link href="#">
-              <BE fill="currentColor" />
-            </Link>
-          </div> */}
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 mt-6 md:mt-16 items-end max-w-7xl mx-auto px-4 xl:px-0">
-        <div className="flex flex-col items-center md:items-start text-center md:text-left gap-8 w-full md:w-[514px] lg:ml-[25%]">
-          <p className="text-[#171717] text-[18px] md:text-[24px] sm:text-xl leading-relaxed font-400">
-            I help brands clarify their positioning, build stronger marketing
-            systems, and create cohesive creative experiences across digital,
-            content, ecommerce, and sales channels.
+      <div className="relative z-10 mx-auto mt-6 grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:mt-16 md:grid-cols-[0.9fr_1.1fr] xl:px-0">
+        <div className="flex w-full flex-col items-center gap-8 text-center md:items-start md:text-left lg:ml-[18%] lg:max-w-[500px]">
+          <p className="text-[18px] font-normal leading-relaxed text-[#171717] sm:text-xl md:text-[24px]">
+            I build brands, marketing systems, and digital experiences that
+            help organizations communicate more clearly, compete more
+            effectively, and grow with confidence.
           </p>
+
           <Link
             href="/industrialbrand"
-            className="inline-flex items-center gap-3 bg-primary  text-white font-medium px-6 py-3.5 rounded-full "
+            className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 font-medium text-white"
           >
             <span>{SITE_CONFIG.ctas.viewCaseStudies}</span>
             <ArrowRight />
           </Link>
         </div>
 
-        <div className="flex justify-center md:justify-end w-full">
-          <div className="overflow-hidden rounded-sm shadow-sm max-w-[320px] w-full h-60 relative">
+        <div className="flex w-full justify-center md:justify-end">
+          <div className="w-full max-w-[620px]">
             <Image
-              src="/female.png"
-              alt="Creative team collaborating at desktop workspace"
-              fill
-              className="object-cover"
-              sizes="(max-w-768px) 100vw, 560px"
+              src="/Sales_04_Conical_Catalog_Spreads.jpg"
+              alt="Conical catalog spreads"
+              width={1600}
+              height={1000}
+              className="h-auto w-full rounded-sm shadow-sm"
+              sizes="(max-width: 768px) 100vw, 620px"
               priority
             />
           </div>
@@ -89,15 +75,20 @@ export default function Header() {
       </div>
 
       <button
+        type="button"
         onClick={() =>
-          window.scrollBy({ top: window.innerHeight, behavior: "smooth" })
+          window.scrollBy({
+            top: window.innerHeight,
+            behavior: "smooth",
+          })
         }
-        className="relative z-10 flex items-center justify-center lg:justify-start gap-2 mt-6 md:mt-12 self-start select-none group cursor-pointer max-w-7xl mx-auto px-4 xl:px-0 mb-4 md:mb-8 md:mb-0 w-full"
+        className="relative z-10 mx-auto mb-4 mt-6 flex w-full max-w-7xl cursor-pointer select-none items-center justify-center gap-2 px-4 md:mb-0 md:mt-12 lg:justify-start xl:px-0"
       >
-        <span className="text-[18px] font-semibold tracking-wide text-black group-hover:text-primary transition-colors duration-200">
+        <span className="text-[18px] font-semibold tracking-wide text-black transition-colors duration-200 hover:text-primary">
           Scroll
         </span>
-        <div className="w-[36px] h-[26px] rounded-full bg-black flex items-center justify-center text-white px-[9px] py-[4px] group-hover:bg-primary transition-colors duration-200 ">
+
+        <div className="flex h-[26px] w-[36px] items-center justify-center rounded-full bg-black px-[9px] py-[4px] text-white transition-colors duration-200 hover:bg-primary">
           <ArrowDown />
         </div>
       </button>

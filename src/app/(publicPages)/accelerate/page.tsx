@@ -22,7 +22,7 @@ export default function Accelerate() {
         <div className="flex flex-col md:flex-row ">
           <div className=" w-full ">
             <Image
-              src="/acceleratehero.jpg"
+              src="/banners2.jpg"
               alt="box"
               width={1512}
               height={2064}

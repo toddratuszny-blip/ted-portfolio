@@ -1,36 +1,35 @@
 import Image from "next/image";
-import ArrowUpRight from "../Icons/arrowupright";
+
 export default function AboutUsHeader() {
   return (
-    <div className="max-w-7xl mx-auto md:h-screen flex flex-col md:grid md:gap-25 px-4 md:px-0 md:pt-8">
-      <div className="flex flex-col gap-6 mb-8 md:mb-0">
-        <h2 className="text-black text-[40px] md:text-[80px] font-semibold leading-[120%] tracking-[-4%] font-sora text-center md:text-left">
-          We provides a range of services related to{" "}
+    <section className="max-w-7xl mx-auto flex flex-col gap-10 md:gap-16 px-4 xl:px-0 pt-8 pb-12 md:pt-14 md:pb-20">
+      <div className="max-w-6xl">
+        <h1 className="text-black text-[40px] md:text-[72px] font-semibold leading-[1.08] tracking-[-0.04em] font-sora text-center md:text-left">
+          A Broad Marketing Background.{" "}
           <span className="text-primary">
-            digital marketing, online presence, & technology.
+            A Creative Point of View.
           </span>
-        </h2>
+        </h1>
+
+        <p className="max-w-3xl mt-6 md:mt-8 text-[#404040] text-[18px] md:text-[22px] leading-[1.6] text-center md:text-left">
+          For more than 15 years, I’ve worked across brand strategy,
+          creative direction, ecommerce, web, content, and sales enablement.
+          My experience spans strategic planning and hands-on execution,
+          allowing me to connect business goals with clear positioning,
+          cohesive creative systems, and practical marketing solutions.
+        </p>
       </div>
-      <div className="relative w-full mb-2.5">
+
+      <div className="relative w-full">
         <Image
-          src="/Subtract.png"
-          alt="group"
+          src="/Subtract3.png"
+          alt="Selected creative and marketing work"
           width={1216}
           height={480}
-          className="w-full h-auto "
+          className="w-full h-auto"
+          priority
         />
-
-        <div className="absolute top-[-19%] md:-top-12 right-[17%] md:right-62.5 w-12.5 h-12.5 sm:w-25 sm:h-25 md:w-30 cursor-pointer md:h-30 group">
-          <div className="bg-primary rounded-full w-full h-full flex flex-col justify-center items-center shadow-lg">
-            <div className="md:block hidden group-hover:rotate-45 duration-300">
-              <ArrowUpRight />
-            </div>
-            <p className="text-white text-[10px] sm:text-[10px] md:text-[16px] leading-tight px-2 text-center pt-1">
-              Get In Touch
-            </p>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 }

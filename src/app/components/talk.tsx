@@ -1,75 +1,57 @@
-import FaceBook from "../Icons/facebook";
-import LongArrow from "../Icons/longarrow";
-import Instagram from "../Icons/instagram";
-import LinkedIn from "../Icons/linkedin";
-import BE from "../Icons/BE";
-import ArrowUpRight from "../Icons/arrowupright";
 import Link from "next/link";
+import LinkedIn from "../Icons/linkedin";
+import LongArrow from "../Icons/longarrow";
+import { SITE_CONFIG } from "../constants/site-config";
+
 export default function Talk() {
   return (
-    <div className="max-w-7xl mx-auto py-10.5 px-4 md:px-0 flex flex-col md:flex-row items-center gap-10 md:gap-0">
-      <div className="w-full md:w-[60%] flex flex-col gap-7.5 md:gap-12">
-        <div className="text-center md:text-left">
-          <p className="text-[50px] font-sora md:text-[100px] font-bold leading-none">
-            Let&apos;s <span className="text-primary font-normal">TALK</span>
-          </p>
+    <section className="relative z-10 mx-auto max-w-7xl px-4 py-16 md:py-24 xl:px-0">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-[0.8fr_1.4fr] md:gap-16">
+        <div>
+          <h2 className="font-sora text-[42px] font-bold leading-none tracking-tight text-black md:text-[64px]">
+            How <span className="font-normal text-primary">I Work</span>
+          </h2>
         </div>
-        <div className="md:ml-[35%] text-center md:text-left">
-          <p className="text-base md:text-xl text-gray-800 font-sora">
-            Crafting a contact text for a digital agency involvesproviding
-            esential information for potential clients or collaborators to reach
-            out.
-          </p>
-        </div>
-        <div className="flex flex-col md:flex-row items-center gap-5 md:gap-8">
-          <p className="text-base font-sora md:text-xl font-semibold text-primary">
-            Lets Connect!
-          </p>
-          <div className="hidden md:block">
-            <LongArrow />
+
+        <div className="flex flex-col gap-8">
+          <div className="max-w-3xl space-y-5">
+            <p className="font-sora text-[16px] leading-[1.65] text-gray-800 md:text-[18px]">
+              My career has never fit neatly into a single discipline. I&apos;ve
+              worked across branding, creative direction, digital experiences,
+              content, ecommerce, photography, communications, and sales
+              enablement. That breadth helps me understand how individual
+              projects connect to the larger customer experience.
+            </p>
+
+            <p className="font-sora text-[16px] leading-[1.65] text-gray-800 md:text-[18px]">
+              I begin by understanding the problem behind the assignment. From
+              there, I focus on simplifying complexity, developing practical
+              solutions, and carrying ideas from early strategy through final
+              execution with consistency and attention to detail.
+            </p>
           </div>
-          <div className="flex gap-4">
-            {/* <Link
-              href={"/"}
-              className="w-10.5 h-10.5 bg-white border hover:text-white hover:bg-black cursor-pointer text-black border-neutral-200 rounded-full flex justify-center items-center"
-            >
-              <FaceBook fill="currentColor" />
-            </Link>
+
+          <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8">
+            <p className="font-sora text-base font-semibold text-primary md:text-lg">
+              Connect on LinkedIn
+            </p>
+
+            <div className="hidden sm:block">
+              <LongArrow />
+            </div>
+
             <Link
-              href={"/"}
-              className="w-10.5 h-10.5 bg-white border hover:text-white hover:bg-black cursor-pointer text-black border-neutral-200 rounded-full flex justify-center items-center"
-            >
-              <Instagram fill="currentColor" />
-            </Link> */}
-            <Link
-              href={"/"}
-              className="w-10.5 h-10.5 bg-white border hover:text-white hover:bg-black cursor-pointer text-black border-neutral-200 rounded-full flex justify-center items-center"
+              href={SITE_CONFIG.contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Connect with Todd Ratuszny on LinkedIn"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white text-black transition-colors hover:bg-black hover:text-white"
             >
               <LinkedIn fill="currentColor" />
             </Link>
-            {/* <Link
-              href={"/"}
-              className="w-10.5 h-10.5 bg-white border hover:text-white hover:bg-black cursor-pointer text-black border-neutral-200 rounded-full flex justify-center items-center"
-            >
-              <BE fill="currentColor" />
-            </Link> */}
           </div>
         </div>
       </div>
-      <div className="w-full md:w-[40%] flex items-center justify-center md:justify-end">
-        <Link href="/contactus">
-          <div className="w-20 h-20 md:w-30 md:h-30 group flex items-end justify-center ">
-            <div className="bg-primary rounded-full w-20 h-20 md:w-30 md:h-30 flex flex-col justify-center items-center   ">
-              <span className="group-hover:rotate-45 duration-300">
-                <ArrowUpRight />
-              </span>
-              <p className="text-white text-[12px] md:text-[16px] leading-3.75 w-14 text-center pt-1">
-                Contact Now
-              </p>
-            </div>
-          </div>
-        </Link>
-      </div>
-    </div>
+    </section>
   );
 }

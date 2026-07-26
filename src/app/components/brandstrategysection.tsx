@@ -27,317 +27,392 @@ const BRAND_STRATEGY_IMAGES = [
   "/brandstrategy/image (16).png",
   "/brandstrategy/image (17).png",
 ];
-export default function BrandStrategySection() {
-  const ROLES = [
-    "Brand Strategy",
-    "Creative Direction",
-    "Product Marketing",
-    "Sales Enablemen",
-    "Website & Ecommerce",
-    "Website & Ecommerce Support",
-    "Content Development",
-  ];
-  const SCOPE = [
-    "Brand Development",
-    "Creative Direction",
-    "Packaging Design",
-    "Retail Marketing",
-    "Catalog Design",
-    "Print Production",
-    "Vendor Coordination",
-  ];
-  function RolePill({ label }: { label: string }) {
-    return (
-      <div className=" px-4.5 py-2.5 rounded-full bg-white shadow-[0_0_25px_0_rgba(0,0,0,0.12)] flex items-center justify-center whitespace-nowrap">
-        <p className="text-lg font-sora">{label}</p>
-      </div>
-    );
-  }
 
+const ROLES = [
+  "Brand Strategy",
+  "Creative Direction",
+  "Digital Marketing",
+  "Sales Enablement",
+  "Website Development",
+  "Content Development",
+  "Vendor Management",
+];
+
+function RolePill({ label }: { label: string }) {
   return (
-    <>
-      <div className="max-w-7xl mx-auto ">
-        <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
-        <div className="space-y-6">
-          <div className="flex items-center gap-2.5">
-            <OverView />
-            <h1 className="text-3xl md:text-5xl font-sora font-semibold">
-              Overview.
-            </h1>
-          </div>
-          <p className="text-xl font-sora">
-            Developed and supported a portfolio of industrial brands including
-            Elite Abrasives, Lehigh Valley Abrasives, Conical Tool, Global
-            Cutting Tools, and Industrial Tool Crib. Work spanned brand
-            development, ecommerce, product marketing, sales enablement, and
-            digital marketing across multiple channels.
-          </p>
-        </div>
-        <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
-        <div className="grid gap-6">
-          <div className="flex items-center gap-2.5">
-            <Setting />
-            <h1 className="text-3xl md:text-5xl font-sora font-semibold">
-              My<span className="text-primary"> Role.</span>
-            </h1>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            {ROLES.map((role) => (
-              <RolePill key={role} label={role} />
-            ))}
-          </div>
+    <div className="flex items-center justify-center whitespace-nowrap rounded-full bg-white px-4.5 py-2.5 shadow-[0_0_25px_0_rgba(0,0,0,0.12)]">
+      <p className="font-sora text-lg">{label}</p>
+    </div>
+  );
+}
+
+export default function BrandStrategySection() {
+  return (
+    <div className="mx-auto max-w-7xl">
+      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+
+      <section className="space-y-6">
+        <div className="flex items-center gap-2.5">
+          <OverView />
+
+          <h2 className="font-sora text-3xl font-semibold md:text-5xl">
+            Overview.
+          </h2>
         </div>
 
-        <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
-        <div className="space-y-6">
-          <div className="flex items-center gap-2.5">
-            <Laptop />
-            <h1 className="text-3xl md:text-5xl font-sora font-semibold">
-              Digital<span className="text-primary"> Experience.</span>
-            </h1>
-          </div>
-          <div className="grid gap-10.5">
-            <div className="w-full">
-              <LightboxImage
-                src="/brandstrategy/image.png"
-                alt="box"
-                width={1512}
-                height={600}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={0}
-                className="w-full! "
-              />
-            </div>
-            <div className=" grid md:grid-cols-2 gap-10.5">
-              <LightboxImage
-                src="/brandstrategy/image (1).png"
-                alt="box"
-                width={1512}
-                height={2064}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={1}
-              />
-              <LightboxImage
-                src="/brandstrategy/image (2).png"
-                alt="box"
-                width={1512}
-                height={2064}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={2}
-              />
-            </div>
-            <div className=" grid md:grid-cols-3 gap-8.5">
-              <LightboxImage
-                src="/brandstrategy/image (3).png"
-                alt="box"
-                width={1512}
-                height={2064}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={3}
-              />
-              <LightboxImage
-                src="/brandstrategy/image (4).png"
-                alt="box"
-                width={1512}
-                height={2064}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={4}
-              />
-              <LightboxImage
-                src="/brandstrategy/image (5).png"
-                alt="box"
-                width={1512}
-                height={2064}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={5}
-              />
-            </div>
-            <div className="">
-              <LightboxImage
-                src="/brandstrategy/image (6).png"
-                alt="box"
-                width={1512}
-                height={600}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={6}
-              />
-            </div>
-          </div>
+        <p className="font-sora text-xl leading-relaxed">
+          Led brand strategy, creative direction, and digital marketing for
+          Summit Point Roofing, overseeing a comprehensive modernization of the
+          company&apos;s brand, website, marketing materials, and customer
+          communications. The work unified four divisions under a cohesive
+          visual system while supporting lead generation, sales enablement,
+          recruitment, and long-term brand growth.
+        </p>
+      </section>
+
+      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+
+      <section className="grid gap-6">
+        <div className="flex items-center gap-2.5">
+          <Setting />
+
+          <h2 className="font-sora text-3xl font-semibold md:text-5xl">
+            My<span className="text-primary"> Role.</span>
+          </h2>
         </div>
 
-        <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
-        <div className="grid gap-6">
-          <div className="flex items-center gap-2.5 font-sora">
-            <Sales />
-            <h1 className="text-3xl md:text-5xl font-sora font-semibold">
-              Sales<span className="text-primary"> Enablement.</span>
-            </h1>
-          </div>
-          <div className="grid md:grid-cols-3 items-stretch gap-5 md:gap-8">
-            <div className="">
-              <LightboxImage
-                src="/brandstrategy/image (7).png"
-                alt="box"
-                width={651}
-                height={842}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={7}
-                // className="w-full h-fit"
-              />
-            </div>
+        <div className="flex flex-wrap gap-4">
+          {ROLES.map((role) => (
+            <RolePill key={role} label={role} />
+          ))}
+        </div>
+      </section>
+
+      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+
+      <section className="space-y-6">
+        <div className="flex items-center gap-2.5">
+          <Laptop />
+
+          <h2 className="font-sora text-3xl font-semibold md:text-5xl">
+            Digital<span className="text-primary"> Experience.</span>
+          </h2>
+        </div>
+
+        <p className="font-sora text-xl leading-relaxed">
+          Redesigned and expanded the company&apos;s digital presence through a
+          modern, conversion-focused website experience. The work included
+          responsive design, service-line architecture, content development,
+          photography integration, lead-generation pathways, and ongoing
+          support for digital marketing initiatives.
+        </p>
+
+        <div className="grid gap-10.5">
+          <div className="w-full overflow-hidden border border-[#CFCFCF] bg-white">
             <LightboxImage
-              src="/brandstrategy/image (8).png"
-              alt="box"
-              width={651}
-              height={400}
+              src="/brandstrategy/image.png"
+              alt="Summit Point Roofing website homepage and digital experience"
+              width={1200}
+              height={600}
               gallery={BRAND_STRATEGY_IMAGES}
-              index={8}
-              className="object-cover h-full "
-            />
-            <LightboxImage
-              src="/brandstrategy/image (9).png"
-              alt="box"
-              width={651}
-              height={400}
-              gallery={BRAND_STRATEGY_IMAGES}
-              index={9}
-              className="object-cover h-full"
+              index={0}
+              className="block h-auto w-full object-contain"
             />
           </div>
-        </div>
 
-        <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
-        <div className="grid gap-6">
-          <div className="flex items-center gap-2.5 font-sora">
-            <Mic />
-            <h1 className="text-3xl md:text-5xl font-sora font-semibold">
-              Integrated
-              <span className="text-primary"> Marketing Campaigns.</span>
-            </h1>
-          </div>
-          <div className="space-y-8">
-            <div className="w-full">
-              <LightboxImage
-                src="/brandstrategy/image (10).png"
-                alt="box"
-                width={651}
-                height={842}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={10}
-                className="w-full h-full"
-                // className="w-full md:h-[600px] object-cover object-top border-[1px] border-[#D4D4D4]"
-              />
-            </div>
-            <div className=" grid md:grid-cols-2 gap-8">
-              <LightboxImage
-                src="/brandstrategy/image (11).png"
-                alt="box"
-                width={651}
-                height={400}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={11}
-              />
-              <LightboxImage
-                src="/brandstrategy/image (12).png"
-                alt="box"
-                width={651}
-                height={400}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={12}
-              />
+          <div className="grid gap-10.5 md:grid-cols-2">
+            <LightboxImage
+              src="/brandstrategy/image (1).png"
+              alt="Summit Point Roofing website content and service pages"
+              width={1512}
+              height={2064}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={1}
+              className="h-auto w-full border border-[#CFCFCF] object-contain"
+            />
 
-              <LightboxImage
-                src="/brandstrategy/image (13).png"
-                alt="box"
-                width={651}
-                height={400}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={13}
-              />
-              <LightboxImage
-                src="/brandstrategy/image (14).png"
-                alt="box"
-                width={651}
-                height={400}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={14}
-              />
-            </div>
-            <div className=" grid md:grid-cols-2 gap-8">
-              <LightboxImage
-                src="/brandstrategy/image (15).png"
-                alt="box"
-                width={651}
-                height={400}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={15}
-              />
-              <LightboxImage
-                src="/brandstrategy/image (16).png"
-                alt="box"
-                width={651}
-                height={400}
-                gallery={BRAND_STRATEGY_IMAGES}
-                index={16}
-              />
-            </div>
+            <LightboxImage
+              src="/brandstrategy/image (2).png"
+              alt="Summit Point Roofing website project and service content"
+              width={1512}
+              height={2064}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={2}
+              className="h-auto w-full border border-[#CFCFCF] object-contain"
+            />
           </div>
-        </div>
 
-        <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
-        <div className="grid gap-6">
-          <div className="flex items-center gap-2.5 font-sora">
-            <Sparcles />
-            <h1 className="text-3xl md:text-5xl font-sora font-semibold">
-              Integrated
-              <span className="text-primary"> Marketing Campaigns.</span>
-            </h1>
+          <div className="grid gap-8.5 md:grid-cols-3">
+            <LightboxImage
+              src="/brandstrategy/image (3).png"
+              alt="Summit Point Roofing digital content example"
+              width={1512}
+              height={2064}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={3}
+              className="h-auto w-full border border-[#CFCFCF] object-contain"
+            />
+
+            <LightboxImage
+              src="/brandstrategy/image (4).png"
+              alt="Summit Point Roofing digital content example"
+              width={1512}
+              height={2064}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={4}
+              className="h-auto w-full border border-[#CFCFCF] object-contain"
+            />
+
+            <LightboxImage
+              src="/brandstrategy/image (5).png"
+              alt="Summit Point Roofing digital content example"
+              width={1512}
+              height={2064}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={5}
+              className="h-auto w-full border border-[#CFCFCF] object-contain"
+            />
           </div>
+
           <div className="w-full">
             <LightboxImage
-              src="/brandstrategy/image (17).png"
-              alt="box"
+              src="/brandstrategy/image (6).png"
+              alt="Summit Point Roofing blog and content marketing experience"
+              width={1512}
+              height={600}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={6}
+              className="h-auto w-full border border-[#CFCFCF] object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+
+      <section className="grid gap-6">
+        <div className="flex items-center gap-2.5 font-sora">
+          <Sales />
+
+          <h2 className="font-sora text-3xl font-semibold md:text-5xl">
+            Sales<span className="text-primary"> Enablement.</span>
+          </h2>
+        </div>
+
+        <p className="font-sora text-xl leading-relaxed">
+          Developed practical sales tools that helped representatives
+          communicate value more effectively throughout the customer journey.
+          The work included proposals, inspection reports, leave-behinds,
+          presentations, educational materials, and customer-facing
+          documentation.
+        </p>
+
+        <div className="grid items-stretch gap-5 md:grid-cols-3 md:gap-8">
+          <LightboxImage
+            src="/brandstrategy/image (7).png"
+            alt="Summit Point Roofing sales proposal and inspection materials"
+            width={651}
+            height={842}
+            gallery={BRAND_STRATEGY_IMAGES}
+            index={7}
+            className="h-auto w-full border border-[#CFCFCF] object-contain"
+          />
+
+          <LightboxImage
+            src="/brandstrategy/image (8).png"
+            alt="Summit Point Roofing commercial roofing sales collateral"
+            width={651}
+            height={400}
+            gallery={BRAND_STRATEGY_IMAGES}
+            index={8}
+            className="h-full w-full border border-[#CFCFCF] object-cover"
+          />
+
+          <LightboxImage
+            src="/brandstrategy/image (9).png"
+            alt="Summit Point Roofing customer education and sales material"
+            width={651}
+            height={400}
+            gallery={BRAND_STRATEGY_IMAGES}
+            index={9}
+            className="h-full w-full border border-[#CFCFCF] object-cover"
+          />
+        </div>
+      </section>
+
+      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+
+      <section className="grid gap-6">
+        <div className="flex items-center gap-2.5 font-sora">
+          <Mic />
+
+          <h2 className="font-sora text-3xl font-semibold md:text-5xl">
+            Integrated
+            <span className="text-primary"> Marketing Campaigns.</span>
+          </h2>
+        </div>
+
+        <p className="font-sora text-xl leading-relaxed">
+          Planned and executed coordinated marketing campaigns spanning social
+          media, email, direct mail, seasonal promotions, customer education,
+          recruitment, referral marketing, and ongoing brand-awareness
+          initiatives.
+        </p>
+
+        <div className="space-y-8">
+          <div className="w-full">
+            <LightboxImage
+              src="/brandstrategy/image (10).png"
+              alt="Summit Point Roofing integrated brand campaign"
               width={651}
               height={842}
               gallery={BRAND_STRATEGY_IMAGES}
-              index={17}
-              className="w-full"
+              index={10}
+              className="h-auto w-full object-contain"
+            />
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <LightboxImage
+              src="/brandstrategy/image (11).png"
+              alt="Summit Point Roofing print and digital marketing campaign"
+              width={651}
+              height={400}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={11}
+              className="h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/brandstrategy/image (12).png"
+              alt="Summit Point Roofing social media campaign"
+              width={651}
+              height={400}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={12}
+              className="h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/brandstrategy/image (13).png"
+              alt="Summit Point Roofing customer marketing campaign"
+              width={651}
+              height={400}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={13}
+              className="h-auto w-full border border-[#CFCFCF] bg-white object-contain"
+            />
+
+            <LightboxImage
+              src="/brandstrategy/image (14).png"
+              alt="Summit Point Roofing referral and promotional campaign"
+              width={651}
+              height={400}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={14}
+              className="h-auto w-full border border-[#CFCFCF] bg-white object-contain"
+            />
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <LightboxImage
+              src="/brandstrategy/image (15).png"
+              alt="Summit Point Roofing recruitment campaign"
+              width={651}
+              height={400}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={15}
+              className="h-auto w-full border border-[#CFCFCF] object-contain"
+            />
+
+            <LightboxImage
+              src="/brandstrategy/image (16).png"
+              alt="Summit Point Roofing customer acquisition campaign"
+              width={651}
+              height={400}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={16}
+              className="h-auto w-full border border-[#CFCFCF] object-contain"
             />
           </div>
         </div>
+      </section>
 
-        <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
-        <div className="grid gap-6">
-          <div className="flex items-center gap-2.5">
-            <Target />
-            <h1 className="text-3xl md:text-5xl font-sora font-semibold">
-              Outcomes<span className="text-primary"> & Impact.</span>
-            </h1>
+      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+
+      <section className="grid gap-6">
+        <div className="flex items-center gap-2.5 font-sora">
+          <Sparcles />
+
+          <h2 className="font-sora text-3xl font-semibold md:text-5xl">
+            Brand Systems
+            <span className="text-primary"> & Marketing Assets.</span>
+          </h2>
+        </div>
+
+        <p className="font-sora text-xl leading-relaxed">
+          Produced branded stationery, presentation materials, signage, print
+          collateral, and supporting assets that reinforced a consistent
+          customer experience across physical and digital touchpoints.
+        </p>
+
+        <div className="w-full">
+          <LightboxImage
+            src="/brandstrategy/image (17).png"
+            alt="Summit Point Roofing stationery, signage, and branded marketing assets"
+            width={651}
+            height={842}
+            gallery={BRAND_STRATEGY_IMAGES}
+            index={17}
+            className="h-auto w-full border border-[#CFCFCF] object-contain"
+          />
+        </div>
+      </section>
+
+      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+
+      <section className="grid gap-6">
+        <div className="flex items-center gap-2.5">
+          <Target />
+
+          <h2 className="font-sora text-3xl font-semibold md:text-5xl">
+            Outcomes<span className="text-primary"> & Impact.</span>
+          </h2>
+        </div>
+
+        <p className="font-sora text-xl leading-relaxed">
+          The work established a scalable marketing foundation for a growing
+          organization, improved consistency across four operating divisions,
+          and strengthened customer communications, digital lead generation,
+          and internal sales support.
+        </p>
+
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-7.5">
+            <p className="text-[32px] font-semibold text-primary md:text-[40px]">
+              $30M
+            </p>
+            <p className="text-[24px] text-[#404040]">Organization</p>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="border border-neutral-300 p-7.5 bg-[#FAFAFA] min-w-71.5">
-              <h1 className="text-[32px] md:text-[40px] font-semibold text-primary">
-                $30M
-              </h1>
-              <h3 className="text-[24px] text-[#404040]">Organization</h3>
-            </div>
-            <div className="border border-neutral-300 p-7.5 bg-[#FAFAFA] min-w-71.5">
-              <h1 className="text-[32px] md:text-[40px] font-semibold">04</h1>
-              <h3 className="text-[24px] text-[#404040]">Divisions</h3>
-            </div>
-            <div className="border border-neutral-300 p-7.5 bg-[#FAFAFA] min-w-71.5">
-              <h1 className="text-[32px] md:text-[40px] font-semibold text-primary">
-                03
-              </h1>
-              <h3 className="text-[24px] text-[#404040]">Location</h3>
-            </div>
-            <div className="border border-neutral-300 p-7.5 bg-[#FAFAFA] min-w-71.5">
-              <h1 className="text-[32px] md:text-[40px] font-semibold">10+</h1>
-              <h3 className="text-[24px] text-[#404040]">Service lines</h3>
-            </div>
+
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-7.5">
+            <p className="text-[32px] font-semibold md:text-[40px]">04</p>
+            <p className="text-[24px] text-[#404040]">Divisions</p>
+          </div>
+
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-7.5">
+            <p className="text-[32px] font-semibold text-primary md:text-[40px]">
+              03
+            </p>
+            <p className="text-[24px] text-[#404040]">Locations</p>
+          </div>
+
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-7.5">
+            <p className="text-[32px] font-semibold md:text-[40px]">10+</p>
+            <p className="text-[24px] text-[#404040]">Service Lines</p>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   );
 }

@@ -1,36 +1,48 @@
-import Image from "next/image";
 import GallerySection from "../../components/gallerysection";
+import LightboxImage from "../../components/lightboximage";
 
-export default function Accelerate() {
+const CREATIVE_GALLERY_IMAGES = ["/Creative.jpg"];
+
+export default function CreativeGallery() {
   return (
-    <>
-      <div className="max-w-7xl mx-auto mb-32 md:mt-8 p-4 md:p-0 font-sora">
-        <div className="gap-7 flex flex-col mb-15">
-          <div className="flex  items-center height-[36px]  gap-2.5">
-            <div className=" bg-primary flex justify-center items-center  rounded-full py-2.5 px-5 ">
-              <p className="text-white text-base whitespace-nowrap">
+    <main className="mx-auto mb-32 max-w-7xl px-4 font-sora md:mt-8 md:px-0">
+      <section className="mb-14">
+        <div className="mb-10 flex flex-col gap-7">
+          <div className="flex items-center gap-2.5">
+            <div className="flex items-center justify-center rounded-full bg-primary px-5 py-2.5">
+              <p className="whitespace-nowrap text-base text-white">
                 Creative Gallery
               </p>
             </div>
-            <div className="w-44 h-0.5 bg-linear-to-r from-primary to-white opacity-100" />
+
+            <div className="h-0.5 w-44 bg-linear-to-r from-primary to-white" />
           </div>
-          <h2 className="text-[32px] md:text-6xl leading-18 font-sora font-semibold">
-            Range across formats, industries, and audiences.
-          </h2>
+
+          <h1 className="font-sora text-[32px] font-semibold leading-tight md:text-6xl">
+            Selected Creative Work Across Brand, Print & Digital
+          </h1>
+
+          <p className="max-w-5xl font-sora text-xl leading-relaxed text-[#404040]">
+            A cross-section of brand identity, editorial design, advertising,
+            digital experiences, illustration, and cause-based creative
+            developed across diverse industries and audiences.
+          </p>
         </div>
-        <div className="flex flex-col md:flex-row ">
-          <div className=" w-full ">
-            <Image
-              src="/gallery/galleryhero.png"
-              alt="box"
-              width={1512}
-              height={2064}
-              className="w-full h-full"
-            />
-          </div>
+
+        <div className="w-full overflow-hidden">
+          <LightboxImage
+            src="/Creative3.jpg"
+            alt="Creative gallery featuring brand identity, editorial design, advertising, digital work, illustration, and nonprofit campaigns"
+            width={2048}
+            height={1179}
+            gallery={CREATIVE_GALLERY_IMAGES}
+            index={0}
+            className="block h-auto w-full object-contain"
+          />
         </div>
-        <GallerySection />
-      </div>
-    </>
+      </section>
+
+      <GallerySection />
+    </main>
   );
 }
