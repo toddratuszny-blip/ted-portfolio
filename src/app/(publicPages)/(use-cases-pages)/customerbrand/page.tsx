@@ -47,9 +47,9 @@ const features = [
 export default function CustomerBrand() {
   return (
     <>
-      <div className="bg-[url('/chocBanner.png')] bg-cover w-full relative h-full min-h-[calc(100dvh-220px)]">
-        <div className="absolute w-full h-full bg-black/30"></div>
-        <div className=" py-8 md:py-16 px-12 mx-auto grid md:grid-cols-2 relative">
+      <div className="bg-[url('/brandstrategy/bsBanner.png')] bg-cover bg-center w-full relative h-full min-h-[calc(100dvh-220px)]">
+        <div className="absolute w-full h-full bg-black/70 md:bg-black/30"></div>
+         <div className=" py-8 md:py-16 px-4 md:px-12 mx-auto grid md:grid-cols-2 relative">
           <div className="flex flex-col gap-4 md:gap-8 max-w-140">
             <div className="flex items-center w-fit justify-center rounded-full bg-primary px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
@@ -75,7 +75,7 @@ export default function CustomerBrand() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-5 divide-x divide-white/40">
+      <div className="grid md:grid-cols-5 divide-y mb-6 md:mb-12 md:divide-x divide-white/40">
         {features.map((feature) => (
           <FeatureCard
             key={feature.title}
