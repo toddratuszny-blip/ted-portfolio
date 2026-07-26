@@ -273,7 +273,6 @@ export default function MaryAnnOverViewSection() {
           alt="Mary Ann's Chocolates coordinated brand identity, stationery, packaging, and product materials"
           width={1600}
           height={1120}
-          sizes="(max-width: 768px) 100vw, 1280px"
           gallery={MARYANN_IMAGES}
           index={2}
           className="block h-auto w-full object-contain"
@@ -340,7 +339,6 @@ export default function MaryAnnOverViewSection() {
           alt="Mary Ann's Chocolates catalog featuring retail displays and product information"
           width={1750}
           height={864}
-          sizes="(max-width: 768px) 100vw, 1280px"
           gallery={MARYANN_IMAGES}
           index={5}
           className="block h-auto w-full object-contain"
