@@ -70,7 +70,6 @@ const ROLES = [
   "Cross-Functional Collaboration",
 ];
 
-
 function Divider() {
   return (
     <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-18" />
@@ -88,8 +87,6 @@ function RolePill({ label }: { label: string }) {
 export default function AccelerateSection() {
   return (
     <div className="mx-auto max-w-7xl font-sora">
-      <Divider />
-
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
           <OverView />
@@ -200,10 +197,7 @@ export default function AccelerateSection() {
                 imageNumber === 16 ? 15 : imageNumber === 17 ? 16 : 18;
 
               return (
-                <div
-                  key={imageNumber}
-                  className="flex items-center"
-                >
+                <div key={imageNumber} className="flex items-center">
                   <LightboxImage
                     src={`/accelerate/life${imageNumber}.png`}
                     alt="LifeToGo Immunity campaign extension"

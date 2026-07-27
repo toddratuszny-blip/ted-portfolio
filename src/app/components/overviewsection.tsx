@@ -156,8 +156,6 @@ function MetricCard({
 export default function OverViewSection() {
   return (
     <div className="mx-auto max-w-7xl">
-      <Divider />
-
       {/* Overview */}
       <section className="space-y-6">
         <div className="flex items-center gap-2.5">
@@ -177,8 +175,8 @@ export default function OverViewSection() {
 
           <p className="font-sora text-xl leading-relaxed">
             My work focused on developing distinct corporate and product brands,
-            modernizing established organizations, integrating acquisitions,
-            and creating scalable marketing systems that supported both
+            modernizing established organizations, integrating acquisitions, and
+            creating scalable marketing systems that supported both
             business-to-business and direct-to-consumer growth.
           </p>
         </div>
@@ -342,11 +340,7 @@ export default function OverViewSection() {
           />
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <MetricCard
-              metric="07"
-              label="Ecommerce Platforms"
-              highlight
-            />
+            <MetricCard metric="07" label="Ecommerce Platforms" highlight />
 
             <MetricCard
               metric="$3M+"
@@ -354,11 +348,7 @@ export default function OverViewSection() {
               highlight={false}
             />
 
-            <MetricCard
-              metric="10K"
-              label="Products and SKUs"
-              highlight
-            />
+            <MetricCard metric="10K" label="Products and SKUs" highlight />
 
             <MetricCard
               metric="50K+"
@@ -492,14 +482,14 @@ export default function OverViewSection() {
           <p className="text-xl leading-relaxed">
             Created identity systems, packaging, labels, stationery,
             advertising, trade show materials, environmental graphics, and
-            supporting brand assets that established a more consistent
-            customer experience.
+            supporting brand assets that established a more consistent customer
+            experience.
           </p>
 
           <p className="text-xl leading-relaxed">
-            Managed designers, developers, freelancers, agencies,
-            photographers, printers, and domestic and international vendors
-            supporting multiple companies and business units.
+            Managed designers, developers, freelancers, agencies, photographers,
+            printers, and domestic and international vendors supporting multiple
+            companies and business units.
           </p>
         </div>
       </section>
@@ -518,10 +508,10 @@ export default function OverViewSection() {
 
         <p className="font-sora text-xl leading-relaxed">
           Built a scalable brand and marketing foundation across a complex
-          portfolio of industrial businesses. The work supported company
-          growth, acquisition integration, ecommerce revenue, product
-          marketing, customer communications, and the ongoing needs of
-          executive leadership and sales teams.
+          portfolio of industrial businesses. The work supported company growth,
+          acquisition integration, ecommerce revenue, product marketing,
+          customer communications, and the ongoing needs of executive leadership
+          and sales teams.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

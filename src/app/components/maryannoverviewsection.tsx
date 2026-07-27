@@ -113,8 +113,6 @@ function OutcomeCard({
 export default function MaryAnnOverViewSection() {
   return (
     <div className="mx-auto max-w-7xl">
-      <Divider />
-
       {/* Overview */}
       <section className="space-y-6">
         <div className="flex items-center gap-2.5">
@@ -157,10 +155,10 @@ export default function MaryAnnOverViewSection() {
 
           <p className="font-sora text-xl leading-relaxed">
             Directed the visual development of the brand across identity,
-            packaging, retail environments, merchandising, catalogs,
-            promotional communications, print production, and vendor
-            coordination. The role combined brand strategy with hands-on
-            creative execution across nearly every customer touchpoint.
+            packaging, retail environments, merchandising, catalogs, promotional
+            communications, print production, and vendor coordination. The role
+            combined brand strategy with hands-on creative execution across
+            nearly every customer touchpoint.
           </p>
 
           <div className="flex flex-wrap gap-4">

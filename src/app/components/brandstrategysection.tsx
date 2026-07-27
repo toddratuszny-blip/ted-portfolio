@@ -49,7 +49,7 @@ function RolePill({ label }: { label: string }) {
 export default function BrandStrategySection() {
   return (
     <div className="mx-auto max-w-7xl">
-      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+      {/* <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" /> */}
 
       <section className="space-y-6">
         <div className="flex items-center gap-2.5">
@@ -103,8 +103,8 @@ export default function BrandStrategySection() {
           Redesigned and expanded the company&apos;s digital presence through a
           modern, conversion-focused website experience. The work included
           responsive design, service-line architecture, content development,
-          photography integration, lead-generation pathways, and ongoing
-          support for digital marketing initiatives.
+          photography integration, lead-generation pathways, and ongoing support
+          for digital marketing initiatives.
         </p>
 
         <div className="grid gap-10.5">
@@ -383,8 +383,8 @@ export default function BrandStrategySection() {
         <p className="font-sora text-xl leading-relaxed">
           The work established a scalable marketing foundation for a growing
           organization, improved consistency across four operating divisions,
-          and strengthened customer communications, digital lead generation,
-          and internal sales support.
+          and strengthened customer communications, digital lead generation, and
+          internal sales support.
         </p>
 
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">

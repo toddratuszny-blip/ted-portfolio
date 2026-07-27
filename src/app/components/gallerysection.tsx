@@ -53,7 +53,7 @@ function CapabilityPill({ label }: { label: string }) {
 export default function GallerySection() {
   return (
     <div className="mx-auto max-w-7xl">
-      <Divider />
+      {/* <Divider /> */}
 
       {/* Overview */}
       <section className="grid gap-6">
@@ -166,8 +166,7 @@ export default function GallerySection() {
       <section className="grid gap-8">
         <div className="space-y-5">
           <h2 className="font-sora text-3xl font-semibold md:text-5xl">
-            Campaign &
-            <span className="text-primary"> Marketing Creative.</span>
+            Campaign &<span className="text-primary"> Marketing Creative.</span>
           </h2>
 
           <p className="max-w-6xl font-sora text-xl leading-relaxed">
@@ -270,11 +269,11 @@ export default function GallerySection() {
           </h2>
 
           <p className="max-w-6xl font-sora text-xl leading-relaxed">
-            Identity systems ranging from startups to established
-            organizations, including logo development, visual standards, custom
-            illustration, and supporting brand assets. Each system was designed
-            to communicate distinct positioning while providing a practical
-            foundation for consistent execution.
+            Identity systems ranging from startups to established organizations,
+            including logo development, visual standards, custom illustration,
+            and supporting brand assets. Each system was designed to communicate
+            distinct positioning while providing a practical foundation for
+            consistent execution.
           </p>
         </div>
 
