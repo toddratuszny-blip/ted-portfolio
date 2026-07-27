@@ -93,7 +93,7 @@ export const FOOTER_NAV_ITEMS: SiteLink[] = [
   { label: "About", href: "/aboutpage" },
   {
     label: "Case Studies",
-    href: "/casestudies",
+    href: "/industrialbrand",
   },
   {
     label: "Resume",

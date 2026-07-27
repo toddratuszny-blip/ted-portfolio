@@ -15,7 +15,7 @@ export default function Talk() {
 
         <div className="flex flex-col gap-8">
           <div className="max-w-3xl space-y-5">
-            <p className="font-sora text-[16px] leading-[1.65] text-gray-800 md:text-[18px]">
+            <p className="text-[#404040] text-[18px] md:text-[22px] leading-[1.6]">
               My career has never fit neatly into a single discipline. I&apos;ve
               worked across branding, creative direction, digital experiences,
               content, ecommerce, photography, communications, and sales
@@ -23,7 +23,7 @@ export default function Talk() {
               projects connect to the larger customer experience.
             </p>
 
-            <p className="font-sora text-[16px] leading-[1.65] text-gray-800 md:text-[18px]">
+            <p className="text-[#404040] text-[18px] md:text-[22px] leading-[1.6]">
               I begin by understanding the problem behind the assignment. From
               there, I focus on simplifying complexity, developing practical
               solutions, and carrying ideas from early strategy through final

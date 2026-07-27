@@ -62,11 +62,11 @@ export default function Header() {
         <div className="flex w-full justify-center md:justify-end">
           <div className="w-full max-w-[620px]">
             <Image
-              src="/Sales_04_Conical_Catalog_Spreads.jpg"
+              src="/extreme3.png"
               alt="Conical catalog spreads"
               width={1600}
               height={1000}
-              className="h-auto w-full rounded-sm shadow-sm"
+              className="h-auto w-full rounded-sm"
               sizes="(max-width: 768px) 100vw, 620px"
               priority
             />

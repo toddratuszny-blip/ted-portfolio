@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Call from "../Icons/call";
+import ArrowRight from "../Icons/arrowright";
 import {
   MAIN_NAV_ITEMS,
   SITE_CONFIG,
@@ -185,16 +185,15 @@ export default function Navbar() {
         })}
       </ul>
 
-      <Link
-        href="/contactus"
-        className="hidden md:flex items-center gap-2 bg-black text-white font-medium pl-5.5 pr-6 py-4 rounded-full "
-      >
-        <Call />
-        <span className="text-sm tracking-wide text-[16px]">
-          {SITE_CONFIG.ctas.contactUs}
-        </span>
-      </Link>
-
+<Link
+  href="/contactus"
+  className="hidden md:flex items-center gap-2 bg-black text-white font-medium pl-5.5 pr-6 py-4 rounded-full"
+>
+  <ArrowRight />
+  <span className="text-sm tracking-wide text-[16px]">
+    {SITE_CONFIG.ctas.contactUs}
+  </span>
+</Link>
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-15 left-0 w-full bg-white flex flex-col items-center shadow-lg py-6 gap-2 z-10 md:hidden">
