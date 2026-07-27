@@ -19,7 +19,7 @@ const GALLERY_IMAGES = [
   "/gallery/gallery14.png",
   "/gallery/gallery16.png",
   "/gallery/gallery15.png",
-  "/gallery/gallery17.png",
+  "/gallery/gallery17B.png",
   "/gallery/gallery18.jpg",
   "/gallery/gallery19.png",
   "/gallery/11_03_Campaign_2 copy",
@@ -381,7 +381,7 @@ export default function GallerySection() {
         <div className="flex w-full justify-center">
           <div className="w-full max-w-5xl">
             <LightboxImage
-              src="/gallery/gallery17.png"
+              src="/gallery/gallery17B.png"
               alt="Custom illustrated icon and visual system"
               width={1512}
               height={800}

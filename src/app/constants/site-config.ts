@@ -82,10 +82,6 @@ export const MAIN_NAV_ITEMS: SiteNavItem[] = [
     href: SITE_CONFIG.contact.resumeUrl,
     openInNewTab: true,
   },
-  {
-    label: SITE_CONFIG.ctas.contactUs,
-    href: "/contactus",
-  },
 ];
 
 export const FOOTER_NAV_ITEMS: SiteLink[] = [
@@ -105,4 +101,3 @@ export const FOOTER_NAV_ITEMS: SiteLink[] = [
     href: "/contactus",
   },
 ];
-
