@@ -78,11 +78,15 @@ export default function BrandStrategy() {
       <div className="grid md:grid-cols-5 divide-y mb-6 md:mb-12 md:divide-x divide-white/40">
         {features.map((feature) => (
           <FeatureCard
-            key={feature.title}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
+  key={feature.title}
+  icon={feature.icon}
+  title={feature.title}
+  description={feature.description}
+  bgClassName="bg-[#233444]"
+  hoverClassName="hover:bg-[#1B2A38]"
+  resultsBgClassName="bg-[#567791]"
+  resultsHoverClassName="hover:bg-[#45667F]"
+/>
         ))}
       </div>
       <main className="mx-auto mb-32 max-w-7xl px-4 md:mt-8 md:px-0">

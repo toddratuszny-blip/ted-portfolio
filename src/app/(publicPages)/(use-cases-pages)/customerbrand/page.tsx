@@ -78,11 +78,16 @@ export default function CustomerBrand() {
       <div className="grid md:grid-cols-5 divide-y mb-6 md:mb-12 md:divide-x divide-white/40">
         {features.map((feature) => (
           <FeatureCard
-            key={feature.title}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
+  key={feature.title}
+  icon={feature.icon}
+  title={feature.title}
+  description={feature.description}
+  bgClassName="bg-[#381E15]"
+  hoverClassName="hover:bg-[#4A2A1F]"
+  resultsBgClassName="bg-[#F5EBDD]"
+  resultsHoverClassName="hover:bg-[#E9DDCD]"
+  resultsTextClassName="text-[#4A2A1F]"
+/>
         ))}
       </div>
 

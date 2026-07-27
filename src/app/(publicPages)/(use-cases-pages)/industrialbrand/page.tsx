@@ -88,11 +88,15 @@ export default function IndustrialBrand() {
       <div className="grid md:grid-cols-5 divide-y mb-6 md:mb-12 md:divide-x divide-white/40">
         {features.map((feature) => (
           <FeatureCard
-            key={feature.title}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
+  key={feature.title}
+  icon={feature.icon}
+  title={feature.title}
+  description={feature.description}
+  bgClassName="bg-[#0F1314]"
+  hoverClassName="hover:bg-[#1D2325]"
+  resultsBgClassName="bg-[#B12A2F]"
+  resultsHoverClassName="hover:bg-[#982127]"
+/>
         ))}
       </div>
 

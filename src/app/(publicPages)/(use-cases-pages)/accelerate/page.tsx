@@ -77,7 +77,7 @@ export default function Accelerate() {
                 <li>Aura</li>
                 <li>Soundcore</li>
                 <li>Performance Inspired</li>
-                <li>Barney Butte</li>
+                <li>Barney Butter</li>
                 <li>LifeToGo</li>
                 <li>Swarovski</li>
                 <li> and 40+ more</li>
@@ -89,11 +89,15 @@ export default function Accelerate() {
       <div className="grid md:grid-cols-5 divide-y mb-6 md:mb-12 md:divide-x divide-white/40">
         {features.map((feature) => (
           <FeatureCard
-            key={feature.title}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
+  key={feature.title}
+  icon={feature.icon}
+  title={feature.title}
+  description={feature.description}
+  bgClassName="bg-[#41B883]"
+  hoverClassName="hover:bg-[#369D6F]"
+  resultsBgClassName="bg-[#35A9E5]"
+  resultsHoverClassName="hover:bg-[#2597D2]"
+/>
         ))}
       </div>
       <div className="max-w-7xl mx-auto mb-32 md:mt-8 p-4 md:p-0 ">
