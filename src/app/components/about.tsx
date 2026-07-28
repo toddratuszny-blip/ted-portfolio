@@ -31,8 +31,8 @@ export default function About({
         <div className="grid items-start gap-10 lg:grid-cols-[1.25fr_1fr] lg:gap-16">
           <div className="w-full overflow-hidden rounded-sm">
             <Image
-              src="/Elite Brand System.jpg"
-              alt="Elite Abrasives brand identity system"
+              src="/extreme3.png"
+              alt="Conical Tool brand identity system"
               width={1600}
               height={900}
               className="block h-auto w-full object-contain"

@@ -8,7 +8,7 @@ import Sparcles from "../Icons/sparkles";
 import LightboxImage from "./lightboximage";
 
 const BRAND_STRATEGY_IMAGES = [
-  "/brandstrategy/image.png",
+  "/brandstrategy/SPR-Web.png",
   "/brandstrategy/image (1).png",
   "/brandstrategy/image (2).png",
   "/brandstrategy/image (3).png",
@@ -110,7 +110,7 @@ export default function BrandStrategySection() {
         <div className="grid gap-10.5">
           <div className="w-full overflow-hidden border border-[#CFCFCF] bg-white">
             <LightboxImage
-              src="/brandstrategy/image.png"
+              src="/brandstrategy/SPR-Web.png"
               alt="Summit Point Roofing website homepage and digital experience"
               width={1200}
               height={600}

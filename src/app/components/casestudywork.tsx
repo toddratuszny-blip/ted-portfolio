@@ -116,7 +116,7 @@ const works = [
     href: "/industrialbrand",
   },
   {
-    src: "/homecasestudy/cs2.png",
+    src: "/homecasestudy/mary_home.png",
     alt: "Work 2",
     title: "Mary Ann's\nChocolates",
     layout: "half",
@@ -125,7 +125,7 @@ const works = [
     href: "/customerbrand",
   },
   {
-    src: "/homecasestudy/cs3.png",
+    src: "/homecasestudy/SPR-Home.jpg",
     alt: "Case study work preview",
     title: "Summit Point\nRoofing",
     layout: "full",
@@ -134,7 +134,7 @@ const works = [
     href: "/brandstrategy",
   },
   {
-    src: "/homecasestudy/cs4.png",
+    src: "/homecasestudy/lifetogo_homepage_1200.png",
     alt: "Work 4",
     title: "Accelerate360\nLifeToGo",
     layout: "half",
@@ -143,7 +143,7 @@ const works = [
     href: "/accelerate",
   },
   {
-    src: "/homecasestudy/cs5.png",
+    src: "/homecasestudy/creative.jpg",
     alt: "Work 5",
     title: "Creative\nGallery",
     layout: "half",
