@@ -16,11 +16,7 @@ export default function Talk() {
         <div className="flex flex-col gap-8">
           <div className="max-w-3xl space-y-5">
             <p className="text-[#404040] text-[18px] md:text-[22px] leading-[1.6]">
-              My career has never fit neatly into a single discipline. I&apos;ve
-              worked across branding, creative direction, digital experiences,
-              content, ecommerce, photography, communications, and sales
-              enablement. That breadth helps me understand how individual
-              projects connect to the larger customer experience.
+              Every project starts with understanding the business problem—not the deliverable. Whether the solution is a website, campaign, product launch, sales tool, or brand refresh, I focus on simplifying complexity, aligning stakeholders, and creating work that serves a clear business purpose. Strategy guides the direction; execution brings it to life.
             </p>
 
             <p className="text-[#404040] text-[18px] md:text-[22px] leading-[1.6]">

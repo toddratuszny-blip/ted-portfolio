@@ -9,11 +9,11 @@ export default function Aboutpage() {
       <AboutUsHeader />
 
       <About
-        imgSrcOne="/whoWeAreOne.png"
+        imgSrcOne="/LTG Mask.png"
         imgSrcTwo="/whoWeAreTwo.png"
         badgeText="About Me"
         heading="Creative leadership grounded in practical execution."
-        description="My background is intentionally broad. I’ve led brand development, campaign creative, ecommerce, websites, content, photography, packaging, sales materials, and digital marketing across organizations ranging from small businesses to national brands. That range helps me see how every part of the customer experience connects—and how to turn strategy into work that can actually be implemented."
+        description="Marketing is strongest when strategy and execution work together. Because I've led everything from brand development and digital experiences to sales enablement and campaign production, I understand how decisions made in one area affect the entire customer journey. That perspective helps me build marketing systems that are cohesive, practical, and aligned with business goals."
       />
 
       <div className="relative">
@@ -24,7 +24,7 @@ export default function Aboutpage() {
           src="/letsTalkBg.png"
           width={2000}
           height={2000}
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
         />
       </div>
     </div>
