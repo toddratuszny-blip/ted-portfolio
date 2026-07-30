@@ -272,6 +272,19 @@ export default function BrandStrategySection() {
             />
           </div>
 
+          <div className="mx-auto w-full max-w-4xl">
+            <div className="relative aspect-video overflow-hidden rounded-xl bg-black shadow-[0_0_25px_0_rgba(0,0,0,0.1)]">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/hbRHX3w_hxM"
+                title="Summit Point Roofing promotional video"
+                className="absolute inset-0 h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
           <div className="grid gap-8 md:grid-cols-2">
             <LightboxImage
               src="/brandstrategy/image (11).png"
