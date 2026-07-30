@@ -20,9 +20,10 @@ const GALLERY_IMAGES = [
   "/gallery/gallery16.png",
   "/gallery/gallery15.png",
   "/gallery/gallery17B.png",
+  "/gallery/conical_23.png",
   "/gallery/gallery18.jpg",
   "/gallery/gallery19.png",
-  "/gallery/11_03_Campaign_2 copy",
+  "/gallery/11_03_Campaign_2 copy2.jpg",
 ];
 
 const CAPABILITIES = [
@@ -377,18 +378,35 @@ export default function GallerySection() {
           </p>
         </div>
 
-        {/* Natural ratio retained to prevent icon distortion */}
-        <div className="flex w-full justify-center">
-          <div className="w-full max-w-5xl">
-            <LightboxImage
-              src="/gallery/gallery17B.png"
-              alt="Custom illustrated icon and visual system"
-              width={1512}
-              height={800}
-              gallery={GALLERY_IMAGES}
-              index={16}
-              className="block h-auto w-full object-contain"
-            />
+        <div className="grid gap-12">
+          {/* Natural ratio retained to prevent icon distortion */}
+          <div className="flex w-full justify-center">
+            <div className="w-full max-w-5xl">
+              <LightboxImage
+                src="/gallery/gallery17B.png"
+                alt="Custom illustrated icon and visual system"
+                width={1512}
+                height={800}
+                gallery={GALLERY_IMAGES}
+                index={16}
+                className="block h-auto w-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Reduced to match the visible artwork size of gallery17B */}
+          <div className="flex w-full justify-center">
+            <div className="w-full max-w-[640px] md:-translate-x-[22px]">
+              <LightboxImage
+                src="/gallery/conical_23.png"
+                alt="Technical product icon and visual system for cutting tools"
+                width={2048}
+                height={1325}
+                gallery={GALLERY_IMAGES}
+                index={17}
+                className="block h-auto w-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -417,7 +435,7 @@ export default function GallerySection() {
             width={1512}
             height={600}
             gallery={GALLERY_IMAGES}
-            index={17}
+            index={18}
             className="block h-auto w-full object-contain"
           />
 
@@ -428,7 +446,7 @@ export default function GallerySection() {
               width={1512}
               height={2064}
               gallery={GALLERY_IMAGES}
-              index={18}
+              index={19}
               className="block h-auto w-full object-contain"
             />
 
@@ -438,7 +456,7 @@ export default function GallerySection() {
               width={1512}
               height={2064}
               gallery={GALLERY_IMAGES}
-              index={19}
+              index={20}
               className="block h-auto w-full object-contain"
             />
           </div>
