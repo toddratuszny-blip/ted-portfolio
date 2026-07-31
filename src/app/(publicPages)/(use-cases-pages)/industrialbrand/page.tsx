@@ -67,29 +67,28 @@ export default function IndustrialBrand() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/65 md:bg-black/30" />
+        <div className="absolute inset-0 bg-black/60 md:bg-black/30" />
 
         {/* Hero content */}
         <div className="relative z-10 mx-auto grid px-4 pb-10 pt-16 md:grid-cols-2 md:px-12 md:py-16">
-          <div className="flex max-w-[420px] flex-col gap-5 md:max-w-[560px] md:gap-8">
+          <div className="flex w-[52%] max-w-[220px] flex-col gap-5 md:w-auto md:max-w-[560px] md:gap-8">
             <div className="flex w-fit items-center justify-center rounded-full bg-[#B12A2F] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
                 Case Study
               </p>
             </div>
 
-            <h1 className="text-3xl font-bold uppercase text-white md:text-5xl">
+            <h1 className="text-3xl font-bold uppercase leading-[1.05] text-white md:text-5xl md:leading-tight">
               Industrial Brand Ecosystem
             </h1>
 
-            <h2 className="text-xl font-bold text-white md:text-2xl">
+            <h2 className="text-xl font-bold leading-tight text-white md:text-2xl">
               Unifying Industrial Brands
             </h2>
 
-            <p className="max-w-[340px] text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
-              Marketing and creative leader for an eight-company ecosystem
-              supporting seven ecommerce platforms, approximately 10,000 SKUs,
-              and $3M+ in annual ecommerce revenue.
+            <p className="text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
+              Marketing and creative leader supporting seven ecommerce
+              platforms, 10,000 SKUs, and $3M+ in annual ecommerce revenue.
             </p>
           </div>
         </div>
