@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FeatureCard from "@/app/components/FeatureCard";
 import GallerySection from "../../../components/gallerysection";
 import {
@@ -44,56 +45,57 @@ const features = [
 export default function CreativeGallery() {
   return (
     <>
-      <div className="bg-[url('/gallery/galleryBanner.jpg')] bg-cover bg-center w-full relative h-full min-h-[calc(100dvh-220px)]">
-        <div className="absolute w-full h-full bg-black/70 md:bg-black/30"></div>
+      <div className="relative min-h-[620px] w-full overflow-hidden md:min-h-[calc(100dvh-220px)]">
+        {/* Mobile hero */}
+        <Image
+          src="/gallery/Creative Mobile.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center md:hidden"
+        />
 
-        <div className="py-8 md:py-16 px-4 md:px-12 mx-auto grid md:grid-cols-2 relative">
-          <div className="flex flex-col gap-4 md:gap-8 max-w-140">
-            <div className="flex items-center w-fit justify-center rounded-full bg-[#B32045] px-5 py-2.5">
+        {/* Desktop hero */}
+        <Image
+          src="/gallery/galleryBanner.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hidden object-cover object-center md:block"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/65 md:bg-black/30" />
+
+        {/* Hero content */}
+        <div className="relative z-10 mx-auto grid px-4 pb-10 pt-16 md:grid-cols-2 md:px-12 md:py-16">
+          <div className="flex max-w-[420px] flex-col gap-5 md:max-w-[560px] md:gap-8">
+            <div className="flex w-fit items-center justify-center rounded-full bg-[#B32045] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
                 Case Study
               </p>
             </div>
 
-            <h1 className="text-3xl md:text-5xl uppercase font-bold text-white">
-              CREATIVE GALLERY
+            <h1 className="text-3xl font-bold uppercase text-white md:text-5xl">
+              Creative Gallery
             </h1>
 
-            <h3 className="text-xl md:text-2xl font-bold text-white">
-              Selected creative work spanning brands, industries, audiences, and
-              disciplines.
-            </h3>
+            <h2 className="text-xl font-bold text-white md:text-2xl">
+              Selected Creative Work
+            </h2>
 
-            <p className="text-base md:text-xl font-medium text-white max-w-140">
-              A selection of work spanning brand identity, advertising,
-              editorial, digital experiences, nonprofit communications,
-              illustration, and print—demonstrating the versatility developed
-              through more than 15 years of in-house, agency, B2B, and
-              consumer-focused creative leadership.
+            <p className="max-w-[340px] text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
+              Creative leadership spanning brand identity, campaigns, editorial,
+              digital experiences, illustration, packaging, and print across
+              more than 15 years.
             </p>
-
-            <div>
-              <p className="text-base md:text-xl font-semibold text-white max-w-140">
-                SELECTED AREAS OF EXPERIENCE
-                <span className="block text-base">
-                  (Not an exhaustive list of capabilities)
-                </span>
-              </p>
-
-              <ul className="text-base md:text-lg list-disc font-medium text-white ps-5">
-                <li>Brand Identity & Visual Systems</li>
-                <li>Editorial & Publication Design</li>
-                <li>Campaign Development & Advertising</li>
-                <li>Digital Experiences & Web Design</li>
-                <li>Illustration & Iconography</li>
-                <li>Print, Packaging & Collateral</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-5 divide-y mb-6 md:mb-12 md:divide-x divide-white/40">
+      <div className="mb-6 grid divide-y divide-white/40 md:mb-12 md:grid-cols-5 md:divide-x">
         {features.map((feature) => (
           <FeatureCard
             key={feature.title}

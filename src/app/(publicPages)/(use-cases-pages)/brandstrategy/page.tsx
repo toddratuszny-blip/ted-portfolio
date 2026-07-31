@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FeatureCard from "@/app/components/FeatureCard";
 import {
   BookOpenIcon,
@@ -7,9 +8,6 @@ import {
   TargetIcon,
 } from "../../../../../public/icons";
 import BrandStrategySection from "../../../components/brandstrategysection";
-import LightboxImage from "../../../components/lightboximage";
-
-const SUMMIT_IMAGES = ["/SPR.jpg"];
 
 const features = [
   {
@@ -47,39 +45,56 @@ const features = [
 export default function BrandStrategy() {
   return (
     <div>
-      <div className="bg-[url('/brandstrategy/bsBanner.jpg')] bg-cover bg-center w-full relative h-full min-h-[calc(100dvh-220px)]">
-        <div className="absolute w-full h-full bg-black/70 md:bg-black/30"></div>
+      <div className="relative min-h-[620px] w-full overflow-hidden md:min-h-[calc(100dvh-220px)]">
+        {/* Mobile hero */}
+        <Image
+          src="/brandstrategy/SPR Mobile.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center md:hidden"
+        />
 
-        <div className="py-8 md:py-16 px-4 md:px-12 mx-auto grid md:grid-cols-2 relative">
-          <div className="flex flex-col gap-3 md:gap-8 max-w-140">
-            <div className="flex items-center w-fit justify-center rounded-full bg-[#567791] px-5 py-2.5">
+        {/* Desktop hero */}
+        <Image
+          src="/brandstrategy/bsBanner.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hidden object-cover object-center md:block"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/65 md:bg-black/30" />
+
+        {/* Hero content */}
+        <div className="relative z-10 mx-auto grid px-4 pb-10 pt-16 md:grid-cols-2 md:px-12 md:py-16">
+          <div className="flex max-w-[420px] flex-col gap-5 md:max-w-[560px] md:gap-8">
+            <div className="flex w-fit items-center justify-center rounded-full bg-[#567791] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
                 Case Study
               </p>
             </div>
 
-            <h1 className="text-3xl md:text-5xl uppercase font-bold text-white">
+            <h1 className="text-3xl font-bold uppercase text-white md:text-5xl">
               Summit Point Roofing
             </h1>
 
-            <h3 className="text-xl md:text-2xl font-bold text-white">
-              Building a Unified Marketing Ecosystem Across <br /> Four
-              Divisions
-            </h3>
+            <h2 className="text-xl font-bold text-white md:text-2xl">
+              Building a Unified Marketing Ecosystem
+            </h2>
 
-            <p className="text-base md:text-xl font-medium text-white max-w-140">
-              Primary marketing and creative lead for a $30M roofing
-              organization, directing brand, digital, campaign, sales
-              enablement, and marketing operations across four divisions, three
-              Michigan locations, and 10+ service lines. The work created a more
-              unified brand presence, expanded digital reach, and better
-              equipped teams across the organization.
+            <p className="max-w-[340px] text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
+              Marketing and creative lead for a $30M roofing organization
+              spanning four divisions, three locations, and 10+ service lines.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-5 divide-y mb-6 md:mb-12 md:divide-x divide-white/40">
+      <div className="mb-6 grid divide-y divide-white/40 md:mb-12 md:grid-cols-5 md:divide-x">
         {features.map((feature) => (
           <FeatureCard
             key={feature.title}

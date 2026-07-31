@@ -1,5 +1,5 @@
+import Image from "next/image";
 import FeatureCard from "@/app/components/FeatureCard";
-import LightboxImage from "../../../components/lightboximage";
 import MaryAnnOverViewSection from "../../../components/maryannoverviewsection";
 import {
   BookOpenIcon,
@@ -8,8 +8,6 @@ import {
   PalateIcon,
   StoreFrontIcon,
 } from "../../../../../public/icons";
-
-const CUSTOMER_BRAND_IMAGES = ["/Mary-Anns.jpg"];
 
 const features = [
   {
@@ -47,40 +45,57 @@ const features = [
 export default function CustomerBrand() {
   return (
     <>
-      <div className="bg-[url('/chocBanner.jpg')] bg-cover bg-center w-full relative h-full min-h-[calc(100dvh-220px)]">
-        <div className="absolute w-full h-full bg-black/30 md:bg-black/60"></div>
+      <div className="relative min-h-[620px] w-full overflow-hidden md:min-h-[calc(100dvh-220px)]">
+        {/* Mobile hero */}
+        <Image
+          src="/MA Mobile.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center md:hidden"
+        />
 
-        <div className="py-8 md:py-16 px-4 md:px-12 mx-auto grid md:grid-cols-2 relative">
-          <div className="flex flex-col gap-4 md:gap-8 max-w-140">
+        {/* Desktop hero */}
+        <Image
+          src="/chocBanner.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hidden object-cover object-center md:block"
+        />
 
-            <div className="flex items-center w-fit justify-center rounded-full bg-[#F5EBDD] px-5 py-2.5">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/45 md:bg-black/60" />
+
+        {/* Hero content */}
+        <div className="relative z-10 mx-auto grid px-4 pb-10 pt-16 md:grid-cols-2 md:px-12 md:py-16">
+          <div className="flex max-w-[420px] flex-col gap-5 md:max-w-[560px] md:gap-8">
+            <div className="flex w-fit items-center justify-center rounded-full bg-[#F5EBDD] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-[#4A2A1F]">
                 Case Study
               </p>
             </div>
 
-            <h1 className="text-3xl md:text-5xl uppercase font-bold text-white">
+            <h1 className="text-3xl font-bold uppercase text-white md:text-5xl">
               MARY ANN&apos;S CHOCOLATES
             </h1>
 
-            <h3 className="text-xl md:text-2xl font-bold text-white">
-              Building a Cohesive Consumer Brand Across Packaging, Retail &
-              Print
-            </h3>
+            <h2 className="text-xl font-bold text-white md:text-2xl">
+              Building a Cohesive Consumer Brand
+            </h2>
 
-            <p className="text-base md:text-xl font-medium text-white max-w-140">
-              Developed a comprehensive consumer brand system for Mary Ann’s
-              Chocolates, creating a cohesive identity that extended across
-              packaging, retail displays, catalogs, promotional campaigns, and
-              branded collateral. Every touchpoint was designed to strengthen
-              shelf presence, reinforce brand recognition, and deliver a premium
-              customer experience.
+            <p className="max-w-[340px] text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
+              Creative lead developing a unified premium brand across packaging,
+              retail displays, catalogs, promotions, and customer-facing
+              collateral.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-5 divide-y mb-6 md:mb-12 md:divide-x divide-white/40">
+      <div className="mb-6 grid divide-y divide-white/40 md:mb-12 md:grid-cols-5 md:divide-x">
         {features.map((feature) => (
           <FeatureCard
             key={feature.title}

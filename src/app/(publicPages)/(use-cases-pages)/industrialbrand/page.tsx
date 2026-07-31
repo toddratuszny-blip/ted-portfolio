@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FeatureCard from "@/app/components/FeatureCard";
 import OverViewSection from "../../../components/overviewsection";
 import {
@@ -44,11 +45,33 @@ const features = [
 export default function IndustrialBrand() {
   return (
     <>
-      <div className="relative h-full min-h-[calc(100dvh-220px)] w-full bg-[url('/indBanner2.png')] bg-cover bg-center">
-        <div className="absolute h-full w-full bg-black/70 md:bg-black/30" />
+      <div className="relative min-h-[620px] w-full overflow-hidden md:min-h-[calc(100dvh-220px)]">
+        {/* Mobile hero */}
+        <Image
+          src="/Industrial-Mobile.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center md:hidden"
+        />
 
-        <div className="relative mx-auto grid px-4 py-8 md:grid-cols-2 md:px-12 md:py-16">
-          <div className="flex max-w-140 flex-col gap-4 md:gap-8">
+        {/* Desktop hero */}
+        <Image
+          src="/indBanner2.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hidden object-cover object-center md:block"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/65 md:bg-black/30" />
+
+        {/* Hero content */}
+        <div className="relative z-10 mx-auto grid px-4 pb-10 pt-16 md:grid-cols-2 md:px-12 md:py-16">
+          <div className="flex max-w-[420px] flex-col gap-5 md:max-w-[560px] md:gap-8">
             <div className="flex w-fit items-center justify-center rounded-full bg-[#B12A2F] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
                 Case Study
@@ -56,33 +79,18 @@ export default function IndustrialBrand() {
             </div>
 
             <h1 className="text-3xl font-bold uppercase text-white md:text-5xl">
-              INDUSTRIAL BRAND ECOSYSTEM
+              Industrial Brand Ecosystem
             </h1>
 
-            <h3 className="text-xl font-bold text-white md:text-2xl">
-              Unifying Industrial Brands Across B2B, B2C & D2C Markets
-            </h3>
+            <h2 className="text-xl font-bold text-white md:text-2xl">
+              Unifying Industrial Brands
+            </h2>
 
-            <p className="max-w-140 text-base font-medium text-white md:text-xl">
-              A unified ecosystem of industrial brands built around a shared
-              strategy, distinct market positioning, and a cohesive customer
-              experience that drives engagement, strengthens sales enablement,
-              and supports long-term business growth.
+            <p className="max-w-[340px] text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
+              Marketing and creative leader for an eight-company ecosystem
+              supporting seven ecommerce platforms, approximately 10,000 SKUs,
+              and $3M+ in annual ecommerce revenue.
             </p>
-
-            <div>
-              <p className="max-w-140 text-base font-semibold text-white md:text-xl">
-                BRANDS INCLUDED
-              </p>
-
-              <ul className="list-disc ps-5 text-base font-medium text-white md:text-lg">
-                <li>Elite Abrasives</li>
-                <li>Conical Cutting Tools</li>
-                <li>Global Cutting Tools</li>
-                <li>Lehigh Valley Abrasives</li>
-                <li>Industrial Tool Crib</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
