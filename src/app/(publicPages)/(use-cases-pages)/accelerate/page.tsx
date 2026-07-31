@@ -45,54 +45,61 @@ const features = [
 export default function Accelerate() {
   return (
     <>
-      <div className="bg-[url('/accelerate/a360Banner.jpg')] bg-cover bg-center w-full relative h-full min-h-[calc(100dvh-220px)]">
-        <div className="absolute w-full h-full bg-black/70 md:bg-black/50"></div>
+      <div className="relative min-h-[calc(100dvh-220px)] w-full overflow-hidden">
 
-        <div className="py-8 md:py-16 px-4 md:px-12 mx-auto grid md:grid-cols-2 relative">
-          <div className="flex flex-col gap-4 md:gap-8 max-w-140">
+        {/* Mobile Hero */}
+        <Image
+          src="/accelerate/LTG Mobile.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center md:hidden"
+        />
 
-            <div className="flex items-center w-fit justify-center rounded-full bg-[#35A9E5] px-5 py-2.5">
-              <p className="whitespace-nowrap text-base text-white">
+        {/* Desktop Hero */}
+        <Image
+          src="/accelerate/a360Banner.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hidden object-cover object-center md:block"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/65 md:bg-black/50" />
+
+        {/* Hero Content */}
+        <div className="relative z-10 mx-auto grid md:grid-cols-2 px-4 py-10 md:px-12 md:py-16">
+          <div className="flex max-w-[520px] flex-col gap-5 md:gap-8">
+
+            <div className="flex w-fit items-center justify-center rounded-full bg-[#35A9E5] px-5 py-2.5">
+              <p className="text-base text-white whitespace-nowrap">
                 Case Study
               </p>
             </div>
 
-            <h1 className="text-3xl md:text-5xl uppercase font-bold text-white">
+            <h1 className="text-3xl font-bold uppercase text-white md:text-5xl">
               ACCELERATE360
             </h1>
 
-            <h3 className="text-xl md:text-2xl font-bold text-white">
-              Launching Consumer Brands Through Ecommerce & Integrated Creative
-            </h3>
+            <h2 className="text-xl font-bold text-white md:text-2xl">
+              Launching Consumer Brands
+            </h2>
 
-            <p className="text-base md:text-xl font-medium text-white max-w-140">
-              At Accelerate360, I supported creative and marketing execution for
-              47 national consumer brands. This featured work for LifeToGo
-              spanned integrated campaigns, ecommerce, digital advertising,
-              email, publisher media, and owned channels.
+            <p className="max-w-[360px] text-base font-medium leading-relaxed text-white md:max-w-[520px] md:text-xl">
+              Primary creative marketing lead supporting the launch of 47
+              consumer brands across ecommerce, integrated campaigns, and
+              publisher media.
             </p>
 
-            <div>
-              <p className="text-base md:text-xl font-semibold text-white max-w-140">
-                Brands Supported:
-              </p>
-
-              <ul className="text-base md:text-lg list-disc font-medium text-white ps-5">
-                <li>Anker</li>
-                <li>Aura</li>
-                <li>Soundcore</li>
-                <li>Performance Inspired</li>
-                <li>Barney Butter</li>
-                <li>LifeToGo</li>
-                <li>Swarovski</li>
-                <li>and 40+ more</li>
-              </ul>
-            </div>
           </div>
         </div>
+
       </div>
 
-      <div className="grid md:grid-cols-5 divide-y mb-6 md:mb-12 md:divide-x divide-white/40">
+      <div className="mb-6 grid divide-y divide-white/40 md:mb-12 md:grid-cols-5 md:divide-x">
         {features.map((feature) => (
           <FeatureCard
             key={feature.title}
@@ -107,7 +114,7 @@ export default function Accelerate() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto mb-32 md:mt-8 p-4 md:p-0">
+      <div className="mx-auto mb-32 max-w-7xl p-4 md:mt-8 md:p-0">
         <AccelerateSection />
       </div>
     </>
