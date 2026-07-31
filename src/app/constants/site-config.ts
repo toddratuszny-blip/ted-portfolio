@@ -27,7 +27,7 @@ export const SITE_CONFIG = {
       "https://www.linkedin.com/in/todd-ratuszny-19793512/",
     linkedinLabel:
       "linkedin.com/in/todd-ratuszny-19793512",
-    resumeUrl: "/Todd%20Ratuszny%20Resume.pdf",
+    resumeUrl: "/Todd_Ratuszny_Resume.pdf",
   },
   ctas: {
     contactUs: "Connect",
