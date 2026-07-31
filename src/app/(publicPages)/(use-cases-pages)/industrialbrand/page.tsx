@@ -48,7 +48,7 @@ export default function IndustrialBrand() {
       <div className="relative min-h-[620px] w-full overflow-hidden md:min-h-[calc(100dvh-220px)]">
         {/* Mobile hero */}
         <Image
-          src="/Industrial-Mobile.png"
+          src="/industrial mobile 3.png"
           alt=""
           fill
           priority
