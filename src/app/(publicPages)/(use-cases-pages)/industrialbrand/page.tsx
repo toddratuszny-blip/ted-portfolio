@@ -49,7 +49,7 @@ export default function IndustrialBrand() {
 
         <div className="relative mx-auto grid px-4 py-8 md:grid-cols-2 md:px-12 md:py-16">
           <div className="flex max-w-140 flex-col gap-4 md:gap-8">
-            <div className="flex w-fit items-center justify-center rounded-full bg-primary px-5 py-2.5">
+            <div className="flex w-fit items-center justify-center rounded-full bg-[#B12A2F] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
                 Case Study
               </p>
