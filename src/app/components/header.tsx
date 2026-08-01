@@ -62,7 +62,7 @@ export default function Header() {
         <div className="flex w-full justify-center md:justify-end">
           <div className="w-full max-w-[620px]">
             <Image
-              src="/Elite Brand System.png"
+              src="/conical global brand.png"
               alt="Conical catalog spreads"
               width={1600}
               height={1000}

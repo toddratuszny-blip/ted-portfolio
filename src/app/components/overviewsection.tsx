@@ -633,26 +633,30 @@ export default function OverViewSection() {
           </p>
         </div>
 
-        <div className="grid items-center gap-10 md:grid-cols-[1.6fr_0.8fr]">
-          <LightboxImage
-            src="/Elite trade.png"
-            alt="Elite Abrasives trade show and environmental brand execution"
-            width={1440}
-            height={880}
-            gallery={INDUSTRIAL_GALLERY}
-            index={20}
-            className="mx-auto block max-h-[500px] w-auto max-w-full object-contain"
-          />
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div className="flex min-h-[520px] items-center justify-center">
+            <LightboxImage
+              src="/Elite trade.png"
+              alt="Elite Abrasives trade show and environmental brand execution"
+              width={1440}
+              height={880}
+              gallery={INDUSTRIAL_GALLERY}
+              index={20}
+              className="block h-auto w-full max-w-[700px] object-contain"
+            />
+          </div>
 
-          <LightboxImage
-            src="/LVA_Email_Selection_082715_Offline_03.jpg"
-            alt="Lehigh Valley Abrasives email marketing campaign"
-            width={620}
-            height={753}
-            gallery={INDUSTRIAL_GALLERY}
-            index={21}
-            className="mx-auto block max-h-[500px] w-auto max-w-full object-contain"
-          />
+          <div className="flex min-h-[520px] items-center justify-center">
+            <LightboxImage
+              src="/LVA_Email_Selection_082715_Offline_03.jpg"
+              alt="Lehigh Valley Abrasives email marketing campaign"
+              width={620}
+              height={753}
+              gallery={INDUSTRIAL_GALLERY}
+              index={21}
+              className="block h-auto max-h-[520px] w-auto max-w-full object-contain"
+            />
+          </div>
         </div>
       </section>
 
