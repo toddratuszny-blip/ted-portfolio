@@ -17,12 +17,23 @@ export default function AboutUsHeader() {
       </div>
 
       <div className="relative w-full">
+        {/* Desktop */}
         <Image
           src="/Elite Brand System2.jpg"
           alt="Selected creative and marketing work"
           width={1216}
           height={480}
-          className="w-full h-auto"
+          className="hidden h-auto w-full md:block"
+          priority
+        />
+
+        {/* Mobile */}
+        <Image
+          src="/Elite Branding System3.png"
+          alt="Selected creative and marketing work"
+          width={900}
+          height={1600}
+          className="block h-auto w-full md:hidden"
           priority
         />
       </div>

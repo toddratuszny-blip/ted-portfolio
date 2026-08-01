@@ -21,9 +21,7 @@ export default function Footer() {
           </h2>
 
           <p className="mt-6 text-lg md:text-xl text-neutral-300 leading-relaxed max-w-2xl">
-            I'm currently seeking a remote opportunity where I can combine
-            strategic thinking, creative leadership, and hands-on execution to
-            help ambitious organizations grow.
+            Great marketing happens when strategy, creativity, and execution work together—not in silos.
           </p>
         </div>
 

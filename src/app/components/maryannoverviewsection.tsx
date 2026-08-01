@@ -5,16 +5,15 @@ import Target from "../Icons/target";
 import LightboxImage from "./lightboximage";
 
 const MARYANN_IMAGES = [
-  "/maryann01.png",
+  "/maryannnew.png",
   "/maryann002.png",
   "/scope012.webp",
   "/scope2.jpg",
   "/scope3.jpg",
   "/scope042.png",
   "/scopenew.png",
-  "/scopenew.png",
+  "/scope6B.png",
 ];
-
 const ROLES = [
   "Brand Development",
   "Creative Direction",
