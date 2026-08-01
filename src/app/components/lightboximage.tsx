@@ -27,10 +27,14 @@ export default function LightboxImage({
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const closeLightbox = () => setActiveIndex(null);
+
   const showPrevious = () =>
     setActiveIndex((current) =>
-      current === null ? null : (current - 1 + gallery.length) % gallery.length,
+      current === null
+        ? null
+        : (current - 1 + gallery.length) % gallery.length,
     );
+
   const showNext = () =>
     setActiveIndex((current) =>
       current === null ? null : (current + 1) % gallery.length,
@@ -59,7 +63,7 @@ export default function LightboxImage({
       <button
         type="button"
         onClick={() => setActiveIndex(index)}
-        className="block w-full cursor-zoom-in text-left"
+        className="flex w-full cursor-zoom-in justify-center text-left"
         aria-label={`Open image ${index + 1}`}
       >
         <Image
@@ -101,7 +105,7 @@ export default function LightboxImage({
             </svg>
           </button>
 
-          <div className="container mx-auto flex flex-col items-center relative">
+          <div className="container relative mx-auto flex flex-col items-center">
             {gallery.length > 1 && (
               <>
                 <button

@@ -37,14 +37,14 @@ const CAPABILITIES = [
 
 function Divider() {
   return (
-    <div className="my-20 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+    <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-20" />
   );
 }
 
 function CapabilityPill({ label }: { label: string }) {
   return (
-    <div className="flex items-center justify-center rounded-full bg-white px-4.5 py-2.5 shadow-[0_0_25px_0_rgba(0,0,0,0.12)]">
-      <p className="whitespace-nowrap font-sora text-base md:text-lg">
+    <div className="flex items-center justify-center rounded-full bg-white px-4 py-2.5 shadow-[0_0_25px_0_rgba(0,0,0,0.12)] md:px-4.5">
+      <p className="whitespace-nowrap font-sora text-sm sm:text-base md:text-lg">
         {label}
       </p>
     </div>
@@ -54,8 +54,6 @@ function CapabilityPill({ label }: { label: string }) {
 export default function GallerySection() {
   return (
     <div className="mx-auto max-w-7xl">
-      {/* <Divider /> */}
-
       {/* Overview */}
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
@@ -102,7 +100,7 @@ export default function GallerySection() {
           final delivery across print and digital channels.
         </p>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-3 md:gap-4">
           {CAPABILITIES.map((capability) => (
             <CapabilityPill key={capability} label={capability} />
           ))}
@@ -126,7 +124,7 @@ export default function GallerySection() {
           </p>
         </div>
 
-        <div className="grid gap-10.5">
+        <div className="grid gap-7 md:gap-10.5">
           <LightboxImage
             src="/gallery/gallery3.png"
             alt="Editorial and publication design portfolio"
@@ -137,7 +135,7 @@ export default function GallerySection() {
             className="block h-auto w-full object-contain"
           />
 
-          <div className="grid items-start gap-8 md:grid-cols-2">
+          <div className="grid items-start gap-6 md:grid-cols-2 md:gap-8">
             <LightboxImage
               src="/gallery/gallery2.png"
               alt="Print publication design spread"
@@ -167,7 +165,8 @@ export default function GallerySection() {
       <section className="grid gap-8">
         <div className="space-y-5">
           <h2 className="font-sora text-3xl font-semibold md:text-5xl">
-            Campaign &<span className="text-primary"> Marketing Creative.</span>
+            Campaign &
+            <span className="text-primary"> Marketing Creative.</span>
           </h2>
 
           <p className="max-w-6xl font-sora text-xl leading-relaxed">
@@ -177,7 +176,7 @@ export default function GallerySection() {
           </p>
         </div>
 
-        <div className="grid gap-10.5">
+        <div className="grid gap-7 md:gap-10.5">
           <LightboxImage
             src="/gallery/gallery4.png"
             alt="Furniture advertising and campaign creative"
@@ -198,7 +197,7 @@ export default function GallerySection() {
             className="block h-auto w-full object-contain"
           />
 
-          <div className="grid items-start gap-8 md:grid-cols-2">
+          <div className="grid items-start gap-6 md:grid-cols-2 md:gap-8">
             <LightboxImage
               src="/gallery/gallery5.png"
               alt="Furniture campaign design and product details"
@@ -220,7 +219,8 @@ export default function GallerySection() {
             />
           </div>
 
-          <div className="grid items-stretch gap-8 md:grid-cols-3">
+          {/* Keep all three posters together on mobile */}
+          <div className="grid grid-cols-3 items-stretch gap-3 md:gap-8">
             <div className="overflow-hidden border border-[#CFCFCF] bg-white">
               <LightboxImage
                 src="/gallery/gallery7.jpg"
@@ -270,33 +270,31 @@ export default function GallerySection() {
           </h2>
 
           <p className="max-w-6xl font-sora text-xl leading-relaxed">
-            Identity systems ranging from startups to established organizations,
-            including logo development, visual standards, custom illustration,
-            and supporting brand assets. Each system was designed to communicate
-            distinct positioning while providing a practical foundation for
-            consistent execution.
+            Identity systems ranging from startups to established
+            organizations, including logo development, visual standards, custom
+            illustration, and supporting brand assets. Each system was designed
+            to communicate distinct positioning while providing a practical
+            foundation for consistent execution.
           </p>
         </div>
 
-        <div className="grid gap-9">
-          {/* Family Tree Therapies logo reduced */}
-          <div className="flex justify-center">
-            <div className="w-full max-w-2xl">
-              <LightboxImage
-                src="/gallery/gallery11.png"
-                alt="Family Tree Therapies brand identity"
-                width={1512}
-                height={600}
-                gallery={GALLERY_IMAGES}
-                index={10}
-                className="block h-auto w-full object-contain"
-              />
-            </div>
+        <div className="grid gap-8 md:gap-9">
+          {/* Family Tree */}
+          <div className="mx-auto w-[88%] max-w-2xl md:w-full">
+            <LightboxImage
+              src="/gallery/gallery11.png"
+              alt="Family Tree Therapies brand identity"
+              width={1512}
+              height={600}
+              gallery={GALLERY_IMAGES}
+              index={10}
+              className="block h-auto w-full object-contain"
+            />
           </div>
 
-          {/* Green Fork and EBS logos reduced and standardized */}
-          <div className="mx-auto grid w-full max-w-4xl items-center gap-6 md:grid-cols-2">
-            <div className="flex min-h-48 items-center justify-center">
+          {/* Green Fork and EBS */}
+          <div className="mx-auto grid w-full max-w-4xl grid-cols-2 items-center gap-5 md:gap-6">
+            <div className="flex items-center justify-center">
               <LightboxImage
                 src="/gallery/gallery12.1.png"
                 alt="Green Fork brand identity"
@@ -304,11 +302,11 @@ export default function GallerySection() {
                 height={2064}
                 gallery={GALLERY_IMAGES}
                 index={11}
-                className="block h-auto max-h-56 w-full object-contain"
+                className="mx-auto block h-auto w-[88%] object-contain md:max-h-56 md:w-full"
               />
             </div>
 
-            <div className="flex min-h-48 items-center justify-center">
+            <div className="flex items-center justify-center">
               <LightboxImage
                 src="/gallery/gallery13.png"
                 alt="EBS Environmental Business Solutions brand identity"
@@ -316,13 +314,14 @@ export default function GallerySection() {
                 height={2064}
                 gallery={GALLERY_IMAGES}
                 index={12}
-                className="block h-auto max-h-56 w-full object-contain"
+                className="mx-auto block h-auto w-[84%] object-contain md:max-h-56 md:w-full"
               />
             </div>
           </div>
 
-          <div className="mx-auto -mt-2 grid w-full max-w-6xl items-center gap-8 md:grid-cols-3">
-            <div className="flex min-h-[180px] items-center justify-center px-6">
+          {/* All three supporting logos stay in one row on mobile */}
+          <div className="mx-auto grid w-full max-w-6xl grid-cols-3 items-center gap-3 md:gap-8">
+            <div className="flex items-center justify-center">
               <LightboxImage
                 src="/gallery/gallery14.png"
                 alt="Kramer Medical Supplies brand identity"
@@ -330,11 +329,23 @@ export default function GallerySection() {
                 height={500}
                 gallery={GALLERY_IMAGES}
                 index={13}
-                className="block h-auto w-full max-w-[320px] object-contain"
+                className="mx-auto block h-auto w-full object-contain md:max-w-[320px]"
               />
             </div>
 
-            <div className="flex min-h-[180px] items-center justify-center px-6">
+            <div className="flex items-center justify-center">
+              <LightboxImage
+                src="/gallery/gallery15.png"
+                alt="Waterfront Mills brand identity"
+                width={1512}
+                height={500}
+                gallery={GALLERY_IMAGES}
+                index={15}
+                className="mx-auto block h-auto w-full object-contain md:max-w-[320px]"
+              />
+            </div>
+
+            <div className="flex items-center justify-center">
               <LightboxImage
                 src="/gallery/gallery16.png"
                 alt="Rapid Metal Solutions brand identity"
@@ -342,19 +353,7 @@ export default function GallerySection() {
                 height={500}
                 gallery={GALLERY_IMAGES}
                 index={14}
-                className="block h-auto w-full max-w-[320px] object-contain"
-              />
-            </div>
-
-            <div className="flex min-h-[180px] items-center justify-center px-6">
-              <LightboxImage
-                src="/gallery/gallery15.png"
-                alt="Waterfront Hills brand identity"
-                width={1512}
-                height={500}
-                gallery={GALLERY_IMAGES}
-                index={15}
-                className="block h-auto w-full max-w-[320px] object-contain"
+                className="mx-auto block h-auto w-full object-contain md:max-w-[320px]"
               />
             </div>
           </div>
@@ -368,7 +367,7 @@ export default function GallerySection() {
         <div className="space-y-5">
           <h2 className="font-sora text-3xl font-semibold md:text-5xl">
             Illustration
-            <span className="text-primary"> & Visual Systems.</span>
+            <span className="text-primary"> &amp; Visual Systems.</span>
           </h2>
 
           <p className="max-w-6xl font-sora text-xl leading-relaxed">
@@ -378,8 +377,7 @@ export default function GallerySection() {
           </p>
         </div>
 
-        <div className="grid gap-12">
-          {/* Natural ratio retained to prevent icon distortion */}
+        <div className="grid gap-9 md:gap-12">
           <div className="flex w-full justify-center">
             <div className="w-full max-w-5xl">
               <LightboxImage
@@ -394,9 +392,8 @@ export default function GallerySection() {
             </div>
           </div>
 
-          {/* Reduced to match the visible artwork size of gallery17B */}
           <div className="flex w-full justify-center">
-            <div className="w-full max-w-[640px] md:-translate-x-[22px]">
+            <div className="w-[90%] max-w-[640px] md:w-full md:-translate-x-[22px]">
               <LightboxImage
                 src="/gallery/conical_23.png"
                 alt="Technical product icon and visual system for cutting tools"
@@ -428,18 +425,20 @@ export default function GallerySection() {
           </p>
         </div>
 
-        <div className="grid gap-10.5">
-          <LightboxImage
-            src="/gallery/gallery18.jpg"
-            alt="Mel Trotter Ministries cause-based advertising campaign"
-            width={1512}
-            height={600}
-            gallery={GALLERY_IMAGES}
-            index={18}
-            className="block h-auto w-full object-contain"
-          />
+        <div className="grid gap-7 md:gap-10.5">
+          <div className="mx-auto w-[64%] md:w-full">
+            <LightboxImage
+              src="/gallery/gallery18.jpg"
+              alt="Mel Trotter Ministries cause-based advertising campaign"
+              width={1512}
+              height={600}
+              gallery={GALLERY_IMAGES}
+              index={18}
+              className="block h-auto w-full object-contain"
+            />
+          </div>
 
-          <div className="grid items-start gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-2 items-start gap-4 md:gap-8">
             <LightboxImage
               src="/gallery/gallery19.png"
               alt="Mel Trotter Ministries nonprofit campaign"

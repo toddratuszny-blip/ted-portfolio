@@ -69,10 +69,10 @@ export default function CreativeGallery() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/65 md:bg-black/30" />
 
-        {/* Hero Content */}
+        {/* Hero content */}
         <div className="relative z-10 mx-auto grid px-4 pb-10 pt-16 md:grid-cols-2 md:px-12 md:py-16">
           <div className="flex w-[52%] max-w-[220px] flex-col gap-5 md:w-auto md:max-w-[560px] md:gap-8">
-            <div className="flex w-fit items-center justify-center rounded-full bg-[#B32045] px-5 py-2.5">
+            <div className="flex w-fit items-center justify-center rounded-full bg-[#2F3334] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
                 Case Study
               </p>
@@ -87,30 +87,72 @@ export default function CreativeGallery() {
             </h2>
 
             <p className="text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
-              Creative leadership spanning brand identity, campaigns, editorial,
-              digital experiences, illustration, packaging, and print across
-              more than 15 years.
+              Creative leadership spanning brand identity, campaigns,
+              editorial, digital experiences, illustration, packaging, and
+              print across more than 15 years.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="mb-6 grid divide-y divide-white/40 md:mb-12 md:grid-cols-5 md:divide-x">
+      <div className="mb-6 grid divide-y divide-white/40 md:mb-12 md:grid-cols-5 md:divide-x md:divide-y-0">
         {features.map((feature) => (
           <FeatureCard
             key={feature.title}
             icon={feature.icon}
             title={feature.title}
             description={feature.description}
-            bgClassName="bg-[#5D5C5C]"
-            hoverClassName="hover:bg-[#4D4D4D]"
-            resultsBgClassName="bg-[#B32045]"
-            resultsHoverClassName="hover:bg-[#951A39]"
+            bgClassName="bg-[#4F6358]"
+            hoverClassName="hover:bg-[#5D7166]"
+            resultsBgClassName="bg-[#2F3334]"
+            resultsHoverClassName="hover:bg-[#3A3F40]"
           />
         ))}
       </div>
 
-      <main className="mx-auto mb-32 max-w-7xl px-4 font-sora md:mt-8 md:px-0">
+      <main
+        className="
+          mx-auto mb-24 max-w-7xl overflow-hidden px-5 font-sora
+          md:mb-32 md:mt-8 md:px-0
+
+          max-md:[&_section]:mb-16
+          max-md:[&_section]:mt-0
+          max-md:[&_section]:pt-0
+          max-md:[&_section]:pb-0
+
+          max-md:[&_hr]:my-14
+
+          max-md:[&_h2]:mb-5
+          max-md:[&_h2]:mt-0
+          max-md:[&_h2]:leading-[1.15]
+
+          max-md:[&_h3]:mb-5
+          max-md:[&_h3]:mt-0
+          max-md:[&_h3]:leading-[1.15]
+
+          max-md:[&_p]:mb-7
+          max-md:[&_p]:mt-0
+
+          max-md:[&_figure]:mx-auto
+          max-md:[&_figure]:my-7
+          max-md:[&_figure]:w-full
+          max-md:[&_figure]:max-w-full
+
+          max-md:[&_picture]:flex
+          max-md:[&_picture]:w-full
+          max-md:[&_picture]:justify-center
+
+          max-md:[&_img]:mx-auto
+          max-md:[&_img]:block
+          max-md:[&_img]:h-auto
+          max-md:[&_img]:max-h-[68svh]
+          max-md:[&_img]:max-w-full
+          max-md:[&_img]:object-contain
+
+          max-md:[&_.grid]:gap-7
+          max-md:[&_[class*='space-y-']>*+*]:mt-7
+        "
+      >
         <GallerySection />
       </main>
     </>

@@ -56,7 +56,7 @@ const ROLES = [
 
 function Divider() {
   return (
-    <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-18" />
+    <div className="my-12 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-18" />
   );
 }
 
@@ -77,7 +77,7 @@ function MediaCard({
 }) {
   return (
     <div
-      className={`flex min-h-0 items-center justify-center overflow-hidden ${className}`}
+      className={`flex w-full min-h-0 items-center justify-center overflow-hidden ${className}`}
     >
       {children}
     </div>
@@ -154,7 +154,7 @@ export default function AccelerateSection() {
           </p>
         </div>
 
-        <div className="mt-4 grid gap-5 md:grid-cols-12 md:gap-6">
+        <div className="mt-3 grid gap-6 md:mt-4 md:grid-cols-12 md:gap-6">
           <MediaCard className="md:col-span-8 md:row-span-2">
             <LightboxImage
               src="/accelerate/1000x1000 (1)B.jpg"
@@ -163,7 +163,7 @@ export default function AccelerateSection() {
               height={1512}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/1000x1000 (1)B.jpg")}
-              className="block h-full max-h-[760px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[520px] object-contain md:h-full md:max-h-[760px] md:max-w-none"
             />
           </MediaCard>
 
@@ -175,7 +175,7 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life5.png")}
-              className="block h-full max-h-[360px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[360px] md:max-w-none"
             />
           </MediaCard>
 
@@ -187,7 +187,7 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life7.jpg")}
-              className="block h-full max-h-[360px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[360px] md:max-w-none"
             />
           </MediaCard>
 
@@ -204,7 +204,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex(src)}
-                className="block h-full max-h-[430px] w-full object-contain"
+                className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[430px] md:max-w-none"
               />
             </MediaCard>
           ))}
@@ -257,7 +257,7 @@ export default function AccelerateSection() {
           identity and product positioning.
         </p>
 
-        <div className="mt-4 grid gap-5 md:grid-cols-12 md:gap-6">
+        <div className="mt-3 grid gap-6 md:mt-4 md:grid-cols-12 md:gap-6">
           <div className="overflow-hidden md:col-span-12">
             <LightboxImage
               src="/accelerate/life39.png"
@@ -278,7 +278,7 @@ export default function AccelerateSection() {
               height={400}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life40.jpg")}
-              className="block h-full max-h-[500px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[440px] object-contain md:h-full md:max-h-[500px] md:max-w-none"
             />
           </MediaCard>
 
@@ -290,7 +290,7 @@ export default function AccelerateSection() {
               height={600}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life42.png")}
-              className="block h-full max-h-[500px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[440px] object-contain md:h-full md:max-h-[500px] md:max-w-none"
             />
           </MediaCard>
         </div>
@@ -314,7 +314,7 @@ export default function AccelerateSection() {
           experience.
         </p>
 
-        <div className="mt-4 grid gap-5 md:grid-cols-12 md:gap-6">
+        <div className="mt-3 grid gap-6 md:mt-4 md:grid-cols-12 md:gap-6">
           <MediaCard className="md:col-span-12">
             <LightboxImage
               src="/accelerate/Brand Banner.jpg"
@@ -335,7 +335,7 @@ export default function AccelerateSection() {
               height={686}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life15.jpg")}
-              className="block h-full max-h-[520px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[520px] object-contain md:h-full md:max-h-[520px] md:max-w-none"
             />
           </MediaCard>
 
@@ -347,7 +347,7 @@ export default function AccelerateSection() {
               height={400}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life18B.jpg")}
-              className="block h-full max-h-[740px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[400px] object-contain md:h-full md:max-h-[740px] md:max-w-none"
             />
           </MediaCard>
 
@@ -392,7 +392,7 @@ export default function AccelerateSection() {
           </p>
         </div>
 
-        <div className="mt-4 grid gap-5 md:grid-cols-12 md:gap-6">
+        <div className="mt-3 grid gap-6 md:mt-4 md:grid-cols-12 md:gap-6">
           <div className="overflow-hidden md:col-span-12">
             <LightboxImage
               src="/accelerate/life25.jpg"
@@ -413,7 +413,7 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life26.png")}
-              className="block h-full max-h-[440px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[440px] md:max-w-none"
             />
           </MediaCard>
 
@@ -425,7 +425,7 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life27.png")}
-              className="block h-full max-h-[440px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[440px] md:max-w-none"
             />
           </MediaCard>
 
@@ -437,7 +437,7 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life3.png")}
-              className="block h-full max-h-[480px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[320px] object-contain md:h-full md:max-h-[430px] md:max-w-none"
             />
           </MediaCard>
 
@@ -450,7 +450,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life33.png")}
-                className="block h-full max-h-[260px] w-full object-contain"
+                className="mx-auto block h-auto w-full max-w-[340px] object-contain md:h-full md:max-h-[260px] md:max-w-none"
               />
             </MediaCard>
 
@@ -462,7 +462,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life35.png")}
-                className="block h-full max-h-[260px] w-full object-contain"
+                className="mx-auto block h-auto w-full max-w-[340px] object-contain md:h-full md:max-h-[260px] md:max-w-none"
               />
             </MediaCard>
 
@@ -474,7 +474,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life43.jpg")}
-                className="block h-full max-h-[240px] w-full object-contain"
+                className="mx-auto block h-auto w-full max-w-[340px] object-contain md:h-full md:max-h-[240px] md:max-w-none"
               />
             </MediaCard>
 
@@ -486,7 +486,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life44.jpg")}
-                className="block h-full max-h-[240px] w-full object-contain"
+                className="mx-auto block h-auto w-full max-w-[340px] object-contain md:h-full md:max-h-[240px] md:max-w-none"
               />
             </MediaCard>
           </div>
@@ -499,7 +499,7 @@ export default function AccelerateSection() {
               height={600}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life23.png")}
-              className="block h-full max-h-[340px] w-full object-contain"
+              className="mx-auto block h-auto w-full max-w-[520px] object-contain md:h-full md:max-h-[340px] md:max-w-none"
             />
           </MediaCard>
         </div>
@@ -524,7 +524,7 @@ export default function AccelerateSection() {
         </p>
       </section>
 
-      <section className="grid gap-6">
+      <section className="mt-10 grid gap-6 md:mt-0">
         <div className="flex items-center gap-2.5">
           <h1 className="text-3xl font-semibold md:text-5xl">
             Takeaway<span className="text-primary">.</span>

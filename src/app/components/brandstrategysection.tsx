@@ -15,16 +15,16 @@ const BRAND_STRATEGY_IMAGES = [
   "/brandstrategy/image (4).png",
   "/brandstrategy/image (5).png",
   "/brandstrategy/image (6).png",
-  "/brandstrategy/image (7).png",
-  "/brandstrategy/image (8).png",
-  "/brandstrategy/image (9).png",
+  "/brandstrategy/image (8)B..png",
+  "/brandstrategy/image (7)B.png",
+  "/brandstrategy/image (9)B.png",
   "/brandstrategy/image (10).png",
   "/brandstrategy/image (11).png",
   "/brandstrategy/image (12).png",
-  "/brandstrategy/image (13).png",
-  "/brandstrategy/image (14).png",
-  "/brandstrategy/image (15).png",
-  "/brandstrategy/image (16).png",
+  "/brandstrategy/image (13)B.png",
+  "/brandstrategy/image (14)B.png",
+  "/brandstrategy/image (15)B.png",
+  "/brandstrategy/image (16)B.png",
   "/brandstrategy/image (17).png",
 ];
 
@@ -40,8 +40,8 @@ const ROLES = [
 
 function RolePill({ label }: { label: string }) {
   return (
-    <div className="flex items-center justify-center whitespace-nowrap rounded-full bg-white px-4.5 py-2.5 shadow-[0_0_25px_0_rgba(0,0,0,0.12)]">
-      <p className="font-sora text-lg">{label}</p>
+    <div className="flex items-center justify-center whitespace-nowrap rounded-full bg-white px-4 py-2.5 shadow-[0_0_25px_0_rgba(0,0,0,0.12)] md:px-4.5">
+      <p className="font-sora text-base md:text-lg">{label}</p>
     </div>
   );
 }
@@ -49,7 +49,7 @@ function RolePill({ label }: { label: string }) {
 export default function BrandStrategySection() {
   return (
     <div className="mx-auto max-w-7xl">
-      {/* <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" /> */}
+      {/* <div className="my-12 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-14" /> */}
 
       <section className="space-y-6">
         <div className="flex items-center gap-2.5">
@@ -70,7 +70,7 @@ export default function BrandStrategySection() {
         </p>
       </section>
 
-      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+      <div className="my-12 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-14" />
 
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
@@ -81,14 +81,14 @@ export default function BrandStrategySection() {
           </h2>
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-3 md:gap-4">
           {ROLES.map((role) => (
             <RolePill key={role} label={role} />
           ))}
         </div>
       </section>
 
-      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+      <div className="my-12 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-14" />
 
       <section className="space-y-6">
         <div className="flex items-center gap-2.5">
@@ -107,7 +107,7 @@ export default function BrandStrategySection() {
           for digital marketing initiatives.
         </p>
 
-        <div className="grid gap-10.5">
+        <div className="grid gap-4 md:gap-10.5">
           <div className="w-full overflow-hidden border border-[#CFCFCF] bg-white">
             <LightboxImage
               src="/brandstrategy/SPR-Web.png"
@@ -120,7 +120,7 @@ export default function BrandStrategySection() {
             />
           </div>
 
-          <div className="grid gap-10.5 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-10.5">
             <LightboxImage
               src="/brandstrategy/image (1).png"
               alt="Summit Point Roofing website content and service pages"
@@ -128,7 +128,7 @@ export default function BrandStrategySection() {
               height={2064}
               gallery={BRAND_STRATEGY_IMAGES}
               index={1}
-              className="h-auto w-full border border-[#CFCFCF] object-contain"
+              className="block h-auto w-full border border-[#CFCFCF] object-contain"
             />
 
             <LightboxImage
@@ -138,11 +138,11 @@ export default function BrandStrategySection() {
               height={2064}
               gallery={BRAND_STRATEGY_IMAGES}
               index={2}
-              className="h-auto w-full border border-[#CFCFCF] object-contain"
+              className="block h-auto w-full border border-[#CFCFCF] object-contain"
             />
           </div>
 
-          <div className="grid gap-8.5 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3 md:gap-8.5">
             <LightboxImage
               src="/brandstrategy/image (3).png"
               alt="Summit Point Roofing digital content example"
@@ -150,7 +150,7 @@ export default function BrandStrategySection() {
               height={2064}
               gallery={BRAND_STRATEGY_IMAGES}
               index={3}
-              className="h-auto w-full border border-[#CFCFCF] object-contain"
+              className="block h-auto w-full border border-[#CFCFCF] object-contain"
             />
 
             <LightboxImage
@@ -160,7 +160,7 @@ export default function BrandStrategySection() {
               height={2064}
               gallery={BRAND_STRATEGY_IMAGES}
               index={4}
-              className="h-auto w-full border border-[#CFCFCF] object-contain"
+              className="block h-auto w-full border border-[#CFCFCF] object-contain"
             />
 
             <LightboxImage
@@ -170,7 +170,7 @@ export default function BrandStrategySection() {
               height={2064}
               gallery={BRAND_STRATEGY_IMAGES}
               index={5}
-              className="h-auto w-full border border-[#CFCFCF] object-contain"
+              className="block h-auto w-full border border-[#CFCFCF] object-contain"
             />
           </div>
 
@@ -188,7 +188,7 @@ export default function BrandStrategySection() {
         </div>
       </section>
 
-      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+      <div className="my-12 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-14" />
 
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5 font-sora">
@@ -207,40 +207,40 @@ export default function BrandStrategySection() {
           documentation.
         </p>
 
-        <div className="grid items-stretch gap-5 md:grid-cols-3 md:gap-8">
+        <div className="grid items-stretch gap-4 md:grid-cols-3 md:gap-8">
           <LightboxImage
-            src="/brandstrategy/image (7).png"
+            src="/brandstrategy/image (8)B..png"
             alt="Summit Point Roofing sales proposal and inspection materials"
             width={651}
             height={842}
             gallery={BRAND_STRATEGY_IMAGES}
             index={7}
-            className="h-auto w-full border border-[#CFCFCF] object-contain"
+            className="block h-auto w-full border border-[#CFCFCF] object-contain"
           />
 
           <LightboxImage
-            src="/brandstrategy/image (8).png"
+            src="/brandstrategy/image (7)B.png"
             alt="Summit Point Roofing commercial roofing sales collateral"
             width={651}
             height={400}
             gallery={BRAND_STRATEGY_IMAGES}
             index={8}
-            className="h-full w-full border border-[#CFCFCF] object-cover"
+            className="block h-auto w-full border border-[#CFCFCF] object-contain md:h-full md:object-cover"
           />
 
           <LightboxImage
-            src="/brandstrategy/image (9).png"
+            src="/brandstrategy/image (9)B.png"
             alt="Summit Point Roofing customer education and sales material"
             width={651}
             height={400}
             gallery={BRAND_STRATEGY_IMAGES}
             index={9}
-            className="h-full w-full border border-[#CFCFCF] object-cover"
+            className="block h-auto w-full border border-[#CFCFCF] object-contain md:h-full md:object-cover"
           />
         </div>
       </section>
 
-      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+      <div className="my-12 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-14" />
 
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5 font-sora">
@@ -259,7 +259,7 @@ export default function BrandStrategySection() {
           initiatives.
         </p>
 
-        <div className="space-y-8">
+        <div className="space-y-4 md:space-y-8">
           <div className="w-full">
             <LightboxImage
               src="/brandstrategy/image (10).png"
@@ -272,20 +272,37 @@ export default function BrandStrategySection() {
             />
           </div>
 
-          <div className="mx-auto w-full max-w-4xl">
-            <div className="relative aspect-video overflow-hidden rounded-xl bg-black shadow-[0_0_25px_0_rgba(0,0,0,0.1)]">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/hbRHX3w_hxM"
-                title="Summit Point Roofing promotional video"
-                className="absolute inset-0 h-full w-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
+          <div className="my-12 bg-[#F5F7F8] px-4 py-10 md:my-16 md:px-10 md:py-14">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="font-sora text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+                Featured Brand Video
+              </p>
+
+              <h3 className="mt-3 font-sora text-2xl font-semibold md:text-3xl">
+                Bringing the Summit Point story to life.
+              </h3>
+
+              <p className="mx-auto mt-3 max-w-2xl font-sora text-base leading-relaxed text-neutral-600 md:text-lg">
+                A company story video developed to strengthen brand credibility,
+                showcase the team, and support commercial marketing efforts.
+              </p>
+            </div>
+
+            <div className="mx-auto mt-8 w-full max-w-3xl">
+              <div className="relative aspect-video overflow-hidden rounded-xl bg-black shadow-[0_18px_50px_rgba(0,0,0,0.18)]">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/hbRHX3w_hxM"
+                  title="Summit Point Roofing promotional video"
+                  className="absolute inset-0 h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-8">
             <LightboxImage
               src="/brandstrategy/image (11).png"
               alt="Summit Point Roofing print and digital marketing campaign"
@@ -293,7 +310,7 @@ export default function BrandStrategySection() {
               height={400}
               gallery={BRAND_STRATEGY_IMAGES}
               index={11}
-              className="h-auto w-full object-contain"
+              className="block h-auto w-full object-contain"
             />
 
             <LightboxImage
@@ -303,55 +320,55 @@ export default function BrandStrategySection() {
               height={400}
               gallery={BRAND_STRATEGY_IMAGES}
               index={12}
-              className="h-auto w-full object-contain"
+              className="block h-auto w-full object-contain"
             />
 
             <LightboxImage
-              src="/brandstrategy/image (13).png"
+              src="/brandstrategy/image (13)B.png"
               alt="Summit Point Roofing customer marketing campaign"
               width={651}
               height={400}
               gallery={BRAND_STRATEGY_IMAGES}
               index={13}
-              className="h-auto w-full border border-[#CFCFCF] bg-white object-contain"
+              className="block h-auto w-full border border-[#CFCFCF] bg-white object-contain"
             />
 
             <LightboxImage
-              src="/brandstrategy/image (14).png"
+              src="/brandstrategy/image (14)B.png"
               alt="Summit Point Roofing referral and promotional campaign"
               width={651}
               height={400}
               gallery={BRAND_STRATEGY_IMAGES}
               index={14}
-              className="h-auto w-full border border-[#CFCFCF] bg-white object-contain"
+              className="block h-auto w-full border border-[#CFCFCF] bg-white object-contain"
             />
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-8">
             <LightboxImage
-              src="/brandstrategy/image (15).png"
+              src="/brandstrategy/image (15)B.png"
               alt="Summit Point Roofing recruitment campaign"
               width={651}
               height={400}
               gallery={BRAND_STRATEGY_IMAGES}
               index={15}
-              className="h-auto w-full border border-[#CFCFCF] object-contain"
+              className="block h-auto w-full border border-[#CFCFCF] object-contain"
             />
 
             <LightboxImage
-              src="/brandstrategy/image (16).png"
+              src="/brandstrategy/image (16)B.png"
               alt="Summit Point Roofing customer acquisition campaign"
               width={651}
               height={400}
               gallery={BRAND_STRATEGY_IMAGES}
               index={16}
-              className="h-auto w-full border border-[#CFCFCF] object-contain"
+              className="block h-auto w-full border border-[#CFCFCF] object-contain"
             />
           </div>
         </div>
       </section>
 
-      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+      <div className="my-12 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-14" />
 
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5 font-sora">
@@ -377,12 +394,12 @@ export default function BrandStrategySection() {
             height={842}
             gallery={BRAND_STRATEGY_IMAGES}
             index={17}
-            className="h-auto w-full border border-[#CFCFCF] object-contain"
+            className="block h-auto w-full border border-[#CFCFCF] object-contain"
           />
         </div>
       </section>
 
-      <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white" />
+      <div className="my-12 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-14" />
 
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
@@ -400,27 +417,27 @@ export default function BrandStrategySection() {
           internal sales support.
         </p>
 
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <div className="border border-neutral-300 bg-[#FAFAFA] p-7.5">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
             <p className="text-[32px] font-semibold text-primary md:text-[40px]">
               $30M
             </p>
             <p className="text-[24px] text-[#404040]">Organization</p>
           </div>
 
-          <div className="border border-neutral-300 bg-[#FAFAFA] p-7.5">
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
             <p className="text-[32px] font-semibold md:text-[40px]">04</p>
             <p className="text-[24px] text-[#404040]">Divisions</p>
           </div>
 
-          <div className="border border-neutral-300 bg-[#FAFAFA] p-7.5">
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
             <p className="text-[32px] font-semibold text-primary md:text-[40px]">
               03
             </p>
             <p className="text-[24px] text-[#404040]">Locations</p>
           </div>
 
-          <div className="border border-neutral-300 bg-[#FAFAFA] p-7.5">
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
             <p className="text-[32px] font-semibold md:text-[40px]">10+</p>
             <p className="text-[24px] text-[#404040]">Service Lines</p>
           </div>

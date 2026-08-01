@@ -101,8 +101,8 @@ export default function IndustrialBrand() {
             icon={feature.icon}
             title={feature.title}
             description={feature.description}
-            bgClassName="bg-[#0F1314]"
-            hoverClassName="hover:bg-[#1D2325]"
+            bgClassName="bg-[#5A5D61]"
+            hoverClassName="hover:bg-[#676B70]"
             resultsBgClassName="bg-[#B12A2F]"
             resultsHoverClassName="hover:bg-[#982127]"
           />
