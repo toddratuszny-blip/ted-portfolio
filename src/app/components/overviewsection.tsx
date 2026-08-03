@@ -37,13 +37,9 @@ const ROLES = [
   "Brand Development",
   "Product Marketing",
   "Ecommerce",
-  "Digital Marketing",
   "Acquisition Integration",
   "Sales Enablement",
-  "Content Development",
   "Team Leadership",
-  "Marketing Operations",
-  "Vendor Management",
 ];
 
 const BUSINESS_CHALLENGES = [
@@ -168,20 +164,11 @@ export default function OverViewSection() {
       <section className="space-y-6">
         <SectionHeading icon={<OverView />}>Overview.</SectionHeading>
 
-        <div className="space-y-5">
-          <p className="font-sora text-xl leading-relaxed">
-            Over eight years, I partnered directly with executive leadership to
-            build and grow an ecosystem of eight manufacturing, distribution,
-            and ecommerce companies.
-          </p>
-
-          <p className="font-sora text-xl leading-relaxed">
-            My work focused on developing distinct corporate and product brands,
-            modernizing established organizations, integrating acquisitions, and
-            creating scalable marketing systems that supported both
-            business-to-business and direct-to-consumer growth.
-          </p>
-        </div>
+        <p className="font-sora text-xl leading-relaxed">
+          Over eight years, I partnered directly with executive leadership to
+          build and grow an ecosystem of eight manufacturing, distribution, and
+          ecommerce companies.
+        </p>
       </section>
 
       <Divider />
@@ -192,16 +179,83 @@ export default function OverViewSection() {
         </SectionHeading>
 
         <p className="font-sora text-xl leading-relaxed">
-          Served as the primary marketing and creative resource for executive
-          leadership while directing brand strategy, creative services,
-          ecommerce, product marketing, content, acquisition integration, and
-          customer-facing communications across multiple businesses.
+          Led brand strategy, creative direction, ecommerce, product marketing,
+          acquisition integration, and customer-facing communications across the
+          portfolio.
         </p>
 
         <div className="flex flex-wrap gap-4">
           {ROLES.map((role) => (
             <RolePill key={role} label={role} />
           ))}
+        </div>
+      </section>
+
+      <Divider />
+
+      <section className="space-y-8">
+        <SectionHeading icon={<Setting />}>
+          Brand Strategy <span className="text-primary">& Identity.</span>
+        </SectionHeading>
+
+        <div className="space-y-5">
+          <p className="font-sora text-xl leading-relaxed">
+            Created and evolved corporate and product brands across the
+            portfolio, balancing distinct market positioning with shared
+            standards that made the broader organization easier to manage and
+            scale.
+          </p>
+
+          <p className="font-sora text-xl leading-relaxed">
+            The work included naming, messaging, identity development, brand
+            standards, stationery systems, acquisition integration, and
+            customer-facing implementation across established and newly built
+            brands.
+          </p>
+        </div>
+
+        <div className="grid items-center gap-8 lg:grid-cols-[1.35fr_0.65fr]">
+          <LightboxImage
+            src="/LVA BRANDS.jpg"
+            alt="Lehigh Valley Abrasives brand standards and identity system"
+            width={1530}
+            height={990}
+            gallery={INDUSTRIAL_GALLERY}
+            index={0}
+            className="mx-auto block max-h-[560px] w-auto max-w-full object-contain"
+          />
+
+          <LightboxImage
+            src="/Elite Letterhead_Final_1.jpg"
+            alt="Elite Abrasives letterhead and corporate identity system"
+            width={2550}
+            height={3300}
+            gallery={INDUSTRIAL_GALLERY}
+            index={1}
+            className="mx-auto block max-h-[560px] w-auto max-w-full object-contain"
+          />
+        </div>
+
+        <div className="mx-auto grid max-w-3xl items-center gap-8 sm:grid-cols-2">
+          <LightboxImage
+            src="/Elite_Business Card_Finals-2.jpg"
+            alt="Elite Abrasives business card identity application"
+            width={1050}
+            height={600}
+            gallery={INDUSTRIAL_GALLERY}
+            index={2}
+            className="mx-auto block max-h-[190px] w-auto max-w-full object-contain"
+          />
+
+          <LightboxImage
+            src="/LVA Business Card2.png"
+            alt="Lehigh Valley Abrasives business card identity application"
+            width={1050}
+            height={600}
+            gallery={INDUSTRIAL_GALLERY}
+            index={3}
+            className="mx-auto block max-h-[190px] w-auto max-w-full object-contain"
+          />
         </div>
       </section>
 
@@ -284,74 +338,6 @@ export default function OverViewSection() {
               </p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <Divider />
-
-      <section className="space-y-8">
-        <SectionHeading icon={<Setting />}>
-          Brand Strategy <span className="text-primary">& Identity.</span>
-        </SectionHeading>
-
-        <div className="space-y-5">
-          <p className="font-sora text-xl leading-relaxed">
-            Created and evolved corporate and product brands across the
-            portfolio, balancing distinct market positioning with shared
-            standards that made the broader organization easier to manage and
-            scale.
-          </p>
-
-          <p className="font-sora text-xl leading-relaxed">
-            The work included naming, messaging, identity development, brand
-            standards, stationery systems, acquisition integration, and
-            customer-facing implementation across established and newly built
-            brands.
-          </p>
-        </div>
-
-        <div className="grid items-center gap-8 lg:grid-cols-[1.35fr_0.65fr]">
-          <LightboxImage
-            src="/LVA BRANDS.jpg"
-            alt="Lehigh Valley Abrasives brand standards and identity system"
-            width={1530}
-            height={990}
-            gallery={INDUSTRIAL_GALLERY}
-            index={0}
-            className="mx-auto block max-h-[560px] w-auto max-w-full object-contain"
-          />
-
-          <LightboxImage
-            src="/Elite Letterhead_Final_1.jpg"
-            alt="Elite Abrasives letterhead and corporate identity system"
-            width={2550}
-            height={3300}
-            gallery={INDUSTRIAL_GALLERY}
-            index={1}
-            className="mx-auto block max-h-[560px] w-auto max-w-full object-contain"
-          />
-        </div>
-
-        <div className="mx-auto grid max-w-3xl items-center gap-8 sm:grid-cols-2">
-          <LightboxImage
-            src="/Elite_Business Card_Finals-2.jpg"
-            alt="Elite Abrasives business card identity application"
-            width={1050}
-            height={600}
-            gallery={INDUSTRIAL_GALLERY}
-            index={2}
-            className="mx-auto block max-h-[190px] w-auto max-w-full object-contain"
-          />
-
-          <LightboxImage
-            src="/LVA Business Card2.png"
-            alt="Lehigh Valley Abrasives business card identity application"
-            width={1050}
-            height={600}
-            gallery={INDUSTRIAL_GALLERY}
-            index={3}
-            className="mx-auto block max-h-[190px] w-auto max-w-full object-contain"
-          />
         </div>
       </section>
 
