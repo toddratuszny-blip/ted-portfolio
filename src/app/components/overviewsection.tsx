@@ -10,7 +10,7 @@ const INDUSTRIAL_GALLERY = [
   "/LVA BRANDS.jpg",
   "/Elite Letterhead_Final_1.jpg",
   "/Elite_Business Card_Finals-2.jpg",
-  "/LVA Business Card.jpg",
+  "/LVA Business Card2.jpg",
   "/eliteB.png",
   "/global3B.png",
   "/itc.png",
@@ -344,7 +344,7 @@ export default function OverViewSection() {
           />
 
           <LightboxImage
-            src="/LVA Business Card.jpg"
+            src="/LVA Business Card2.jpg"
             alt="Lehigh Valley Abrasives business card identity application"
             width={1050}
             height={600}

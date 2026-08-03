@@ -5,7 +5,7 @@ import Target from "../Icons/target";
 import LightboxImage from "./lightboximage";
 
 const MARYANN_IMAGES = [
-  "/maryannnew.png",
+  "/maryannnew2.png",
   "/maryann002.png",
   "/scope012.webp",
   "/scope2.jpg",
@@ -170,7 +170,7 @@ export default function MaryAnnOverViewSection() {
         <div className="grid items-stretch gap-6 md:grid-cols-6 md:gap-10.5">
           <div className="w-full md:col-span-4">
             <LightboxImage
-              src="/maryannnew.png"
+              src="/maryannnew2.png"
               alt="Mary Ann's Chocolates catalog spreads, product assortment, and retail display"
               width={4000}
               height={4000}
