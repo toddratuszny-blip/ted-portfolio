@@ -57,11 +57,11 @@ export const CASE_STUDY_LINKS: SiteLink[] = [
   },
   {
     label: "Accelerate360",
-    href: "/accelerate",
+    href: "/accelerate360",
   },
   {
     label: "Mary Ann's Chocolates",
-    href: "/customerbrand",
+    href: "/mary-anns-chocolates",
   },
   {
     label: "Creative Gallery",
@@ -71,7 +71,7 @@ export const CASE_STUDY_LINKS: SiteLink[] = [
 
 export const MAIN_NAV_ITEMS: SiteNavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/aboutpage" },
+  { label: "About", href: "/about" },
   {
     label: "Case Studies",
     href: "/casestudies",
@@ -86,7 +86,7 @@ export const MAIN_NAV_ITEMS: SiteNavItem[] = [
 
 export const FOOTER_NAV_ITEMS: SiteLink[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/aboutpage" },
+  { label: "About", href: "/about" },
   {
     label: "Case Studies",
     href: "/industrialbrand",
@@ -97,7 +97,7 @@ export const FOOTER_NAV_ITEMS: SiteLink[] = [
     openInNewTab: true,
   },
   {
-    label: "Contact",
-    href: "/contactus",
+    label: "Connect",
+    href: "/connect",
   },
 ];

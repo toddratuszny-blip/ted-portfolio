@@ -6,7 +6,7 @@ import LightboxImage from "./lightboximage";
 const ACCELERATE_IMAGES = [
   "/accelerate/1000x1000 (1)B.jpg",
   "/accelerate/life5.png",
-  "/accelerate/life7.jpg",
+  "/accelerate/life7.png",
   "/accelerate/life16.png",
   "/accelerate/life17.png",
   "/accelerate/life19B.png",
@@ -26,7 +26,7 @@ const ACCELERATE_IMAGES = [
   "/accelerate/life35.png",
   "/accelerate/life43.jpg",
   "/accelerate/life44.jpg",
-  "/accelerate/life23.png",
+  "/accelerate/life23B.png",
 ];
 
 function getImageIndex(src: string) {
@@ -181,12 +181,12 @@ export default function AccelerateSection() {
 
           <MediaCard className="md:col-span-4">
             <LightboxImage
-              src="/accelerate/life7.jpg"
+              src="/accelerate/life7.png"
               alt="LifeToGo Immunity and Calm campaign creative"
               width={1512}
               height={2064}
               gallery={ACCELERATE_IMAGES}
-              index={getImageIndex("/accelerate/life7.jpg")}
+              index={getImageIndex("/accelerate/life7.png")}
               className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[360px] md:max-w-none"
             />
           </MediaCard>
@@ -493,12 +493,12 @@ export default function AccelerateSection() {
 
           <MediaCard className="md:col-span-12 md:min-h-[360px]">
             <LightboxImage
-              src="/accelerate/life23.png"
+              src="/accelerate/life23B.png"
               alt="Partner-brand marketplace campaign"
               width={1512}
               height={600}
               gallery={ACCELERATE_IMAGES}
-              index={getImageIndex("/accelerate/life23.png")}
+              index={getImageIndex("/accelerate/life23B.png")}
               className="mx-auto block h-auto w-full max-w-[520px] object-contain md:h-full md:max-h-[340px] md:max-w-none"
             />
           </MediaCard>

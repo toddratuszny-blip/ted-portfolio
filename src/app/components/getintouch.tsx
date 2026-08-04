@@ -19,7 +19,7 @@ export default function GetInTouch() {
               business growth.
             </h2>
           </div>
-          <Link href={"/contactus"}>
+          <Link href={"/connect"}>
             <div className="bg-primary h-[56px] w-[186px] flex items-center justify-center rounded-full gap-[12px]  cursor-pointer py-[16px] px-[24px] mx-auto md:mx-0">
               <p className="text-white text-[16px]">Get In Touch</p>
               <ArrowRight />

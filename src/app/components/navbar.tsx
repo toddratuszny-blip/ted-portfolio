@@ -186,7 +186,7 @@ export default function Navbar() {
       </ul>
 
 <Link
-  href="/contactus"
+  href="/connect"
   className="hidden md:flex items-center gap-2 bg-black text-white font-medium pl-5.5 pr-6 py-4 rounded-full"
 >
   <ArrowRight />
@@ -284,7 +284,7 @@ export default function Navbar() {
             })}
           </ul>
           <Link
-            href="/contactus"
+            href="/connect"
             onClick={() => setIsMobileMenuOpen(false)}
             className="flex items-center gap-2 bg-black text-white font-medium px-6 py-3 rounded-full transition-all duration-200 mt-3"
           >
