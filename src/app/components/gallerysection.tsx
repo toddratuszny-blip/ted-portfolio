@@ -44,14 +44,13 @@ function Divider() {
 
 function CapabilityPill({ label }: { label: string }) {
   return (
-    <div className="flex items-center justify-center rounded-full bg-white px-4 py-2.5 shadow-[0_0_25px_0_rgba(0,0,0,0.12)] md:px-4.5">
-      <p className="whitespace-nowrap font-sora text-sm sm:text-base md:text-lg">
+    <div className="inline-flex h-10 items-center justify-center rounded-full bg-white px-4 shadow-[0_0_25px_0_rgba(0,0,0,0.12)] md:h-auto md:px-4.5 md:py-2.5">
+      <span className="translate-y-px whitespace-nowrap text-center font-sora text-sm leading-none sm:text-base md:translate-y-0 md:text-lg md:leading-normal">
         {label}
-      </p>
+      </span>
     </div>
   );
 }
-
 function MobileDisclosure({
   label,
   children,
@@ -71,7 +70,7 @@ function MobileDisclosure({
         </span>
       </summary>
 
-      <div className="pt-4">{children}</div>
+      <div className="pb-2 pt-4">{children}</div>
     </details>
   );
 }
@@ -126,7 +125,7 @@ export default function GallerySection() {
         </p>
 
         <MobileDisclosure label="View creative capabilities">
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             {CAPABILITIES.map((capability) => (
               <CapabilityPill key={capability} label={capability} />
             ))}
