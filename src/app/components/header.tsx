@@ -28,22 +28,26 @@ export default function Header() {
           </h1>
         </div>
 
-        <div className="col-span-12 flex flex-row items-center justify-center gap-5 pt-8 lg:col-span-1 lg:justify-self-end lg:pt-4">
-          <div className="flex h-10.5 w-10.5 items-center justify-center rounded-full border-[1.17px] border-[#E5E5E5] bg-neutral-100 text-black transition-opacity hover:bg-black hover:text-white hover:opacity-80">
-            <Link
-              href={SITE_CONFIG.contact.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >
+        {/* LinkedIn CTA */}
+        <div className="col-span-12 flex justify-center pt-8 lg:col-span-1 lg:justify-self-end lg:pt-4">
+          <Link
+            href={SITE_CONFIG.contact.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View Todd Ratuszny on LinkedIn"
+            className="group inline-flex items-center gap-3 rounded-full border border-[#E5E5E5] bg-white px-5 py-3 text-primary transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white"
+          >
+            <span className="text-[15px] font-medium">LinkedIn</span>
+
+            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-current">
               <LinkedIn fill="currentColor" />
-            </Link>
-          </div>
+            </span>
+          </Link>
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto mt-6 grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:mt-16 md:grid-cols-[0.9fr_1.1fr] xl:px-0">
-        <div className="flex w-full flex-col items-center gap-8 text-center md:items-start md:text-left lg:ml-[18%] lg:max-w-[500px]">
+      <div className="relative z-10 mx-auto mt-6 grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:mt-16 md:grid-cols-[1fr_1fr] xl:px-0">
+        <div className="flex w-full flex-col items-center gap-8 text-center md:items-start md:text-left lg:ml-[6%] lg:max-w-[500px]">
           <p className="text-[18px] font-normal leading-relaxed text-[#171717] sm:text-xl md:text-[24px]">
             I build brands, marketing systems, and digital experiences that
             help organizations communicate more clearly, compete more
@@ -52,7 +56,7 @@ export default function Header() {
 
           <Link
             href="/industrialbrand"
-            className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 font-medium text-white"
+            className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
             <span>{SITE_CONFIG.ctas.viewCaseStudies}</span>
             <ArrowRight />
@@ -76,12 +80,12 @@ export default function Header() {
 
       <button
         type="button"
-        onClick={() =>
-          window.scrollBy({
-            top: window.innerHeight,
+        onClick={() => {
+          document.getElementById("case-studies")?.scrollIntoView({
             behavior: "smooth",
-          })
-        }
+            block: "start",
+          });
+        }}
         className="relative z-10 mx-auto mb-4 mt-6 flex w-full max-w-7xl cursor-pointer select-none items-center justify-center gap-2 px-4 md:mb-0 md:mt-12 lg:justify-start xl:px-0"
       >
         <span className="text-[18px] font-semibold tracking-wide text-black transition-colors duration-200 hover:text-primary">

@@ -187,14 +187,16 @@ export default function Navbar() {
 
 <Link
   href="/connect"
-  className="hidden md:flex items-center gap-2 bg-black text-white font-medium pl-5.5 pr-6 py-4 rounded-full"
+  className="group hidden md:flex items-center gap-2 rounded-full bg-black pl-5.5 pr-6 py-4 font-medium text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary hover:shadow-lg"
 >
-  <ArrowRight />
-  <span className="text-sm tracking-wide text-[16px]">
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    <ArrowRight />
+  </span>
+
+  <span className="text-[16px] tracking-wide">
     {SITE_CONFIG.ctas.contactUs}
   </span>
-</Link>
-      {/* Mobile Menu */}
+</Link>      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-15 left-0 w-full bg-white flex flex-col items-center shadow-lg py-6 gap-2 z-10 md:hidden">
           <ul className="flex flex-col items-center gap-1 w-full">

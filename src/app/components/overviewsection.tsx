@@ -7,7 +7,7 @@ import Target from "../Icons/target";
 import LightboxImage from "./lightboximage";
 
 const INDUSTRIAL_GALLERY = [
-  "/LVA BRANDS.jpg",
+  "/LVA BRANDS.png",
   "/Elite Letterhead_Final_1.jpg",
   "/Elite_Business Card_Finals-2.jpg",
   "/LVA Business Card2.png",
@@ -216,7 +216,7 @@ export default function OverViewSection() {
 
         <div className="grid items-center gap-8 lg:grid-cols-[1.35fr_0.65fr]">
           <LightboxImage
-            src="/LVA BRANDS.jpg"
+            src="/LVA BRANDS.png"
             alt="Lehigh Valley Abrasives brand standards and identity system"
             width={1530}
             height={990}

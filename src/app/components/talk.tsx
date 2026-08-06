@@ -49,7 +49,7 @@ export default function Talk() {
               <span>Connect on LinkedIn</span>
 
               <span className="hidden transition-transform group-hover:translate-x-1 sm:block">
-                <LongArrow />
+                <LongArrow className="text-primary transition-colors group-hover:text-white" />
               </span>
 
               <span className="flex h-8 w-8 items-center justify-center rounded-full border border-current">
