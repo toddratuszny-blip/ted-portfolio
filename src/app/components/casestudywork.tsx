@@ -122,7 +122,7 @@ const works = [
     layout: "half",
     useFill: false,
     hasBorder: true,
-    href: "/customerbrand",
+    href: "/mary-anns-chocolates",
   },
   {
     src: "/homecasestudy/SPR-Home.jpg",
@@ -140,7 +140,7 @@ const works = [
     layout: "half",
     useFill: false,
     hasBorder: true,
-    href: "/accelerate",
+    href: "/accelerate360",
   },
   {
     src: "/homecasestudy/creative.jpg",
