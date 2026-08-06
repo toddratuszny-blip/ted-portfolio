@@ -63,7 +63,8 @@ export default function LightboxImage({
       <button
         type="button"
         onClick={() => setActiveIndex(index)}
-className="flex h-fit w-full self-start cursor-zoom-in justify-center text-left"        aria-label={`Open image ${index + 1}`}
+        className="flex h-fit w-full self-start cursor-zoom-in justify-center text-left"
+        aria-label={`Open image ${index + 1}`}
       >
         <Image
           src={src}
@@ -86,7 +87,7 @@ className="flex h-fit w-full self-start cursor-zoom-in justify-center text-left"
           <button
             type="button"
             onClick={closeLightbox}
-            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"
+            className="absolute right-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"
             aria-label="Close gallery"
           >
             <svg
@@ -164,6 +165,7 @@ className="flex h-fit w-full self-start cursor-zoom-in justify-center text-left"
                 alt={`${alt} ${activeIndex + 1}`}
                 width={1600}
                 height={1600}
+                unoptimized
                 className="max-h-[85vh] w-full object-contain"
               />
             </div>

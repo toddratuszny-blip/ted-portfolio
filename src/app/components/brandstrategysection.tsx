@@ -9,8 +9,8 @@ import LightboxImage from "./lightboximage";
 
 const BRAND_STRATEGY_IMAGES = [
   "/brandstrategy/SPR-Web.png",
-  "/brandstrategy/image (1).png",
-  "/brandstrategy/image (2).png",
+  "/brandstrategy/image (1) copy.jpg",
+  "/brandstrategy/image (2).jpg",
   "/brandstrategy/image (3).png",
   "/brandstrategy/image (4).png",
   "/brandstrategy/image (5).png",
@@ -19,8 +19,8 @@ const BRAND_STRATEGY_IMAGES = [
   "/brandstrategy/image (7)B.png",
   "/brandstrategy/image (9)B.png",
   "/brandstrategy/image (10).png",
-  "/brandstrategy/image (11).png",
-  "/brandstrategy/image (12).png",
+  "/brandstrategy/SPR_Campaign_CommercialTrifold_01.png",
+  "/brandstrategy/SPR_Campaign_CommercialTrifold_02.png",
   "/brandstrategy/image (13)B.png",
   "/brandstrategy/image (14)B.png",
   "/brandstrategy/image (15)B.png",
@@ -153,7 +153,7 @@ export default function BrandStrategySection() {
 
           <div className="grid gap-4 md:grid-cols-2 md:gap-10.5">
             <LightboxImage
-              src="/brandstrategy/image (1).png"
+              src="/brandstrategy/image (1) copy.jpg"
               alt="Summit Point Roofing website content and service pages"
               width={1512}
               height={2064}
@@ -163,7 +163,7 @@ export default function BrandStrategySection() {
             />
 
             <LightboxImage
-              src="/brandstrategy/image (2).png"
+              src="/brandstrategy/image (2).jpg"
               alt="Summit Point Roofing website project and service content"
               width={1512}
               height={2064}
@@ -335,7 +335,7 @@ export default function BrandStrategySection() {
 
           <div className="grid gap-4 md:grid-cols-2 md:gap-8">
             <LightboxImage
-              src="/brandstrategy/image (11).png"
+              src="/brandstrategy/SPR_Campaign_CommercialTrifold_01.png"
               alt="Summit Point Roofing print and digital marketing campaign"
               width={651}
               height={400}
@@ -345,7 +345,7 @@ export default function BrandStrategySection() {
             />
 
             <LightboxImage
-              src="/brandstrategy/image (12).png"
+              src="/brandstrategy/SPR_Campaign_CommercialTrifold_02.png"
               alt="Summit Point Roofing social media campaign"
               width={651}
               height={400}
