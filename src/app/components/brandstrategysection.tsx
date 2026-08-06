@@ -8,13 +8,13 @@ import Sparcles from "../Icons/sparkles";
 import LightboxImage from "./lightboximage";
 
 const BRAND_STRATEGY_IMAGES = [
-  "/brandstrategy/SPR-Web.png",
+  "/brandstrategy/SPR-Web.jpg",
   "/brandstrategy/image (1) copy.jpg",
   "/brandstrategy/image (2).jpg",
-  "/brandstrategy/image (3).png",
-  "/brandstrategy/image (4).png",
-  "/brandstrategy/image (5).png",
-  "/brandstrategy/image (6).png",
+  "/brandstrategy/image (3).jpg",
+  "/brandstrategy/image (4).jpg",
+  "/brandstrategy/image (5).jpg",
+  "/brandstrategy/image (6).jpg",
   "/brandstrategy/image (8)B..png",
   "/brandstrategy/image (7)B.png",
   "/brandstrategy/image (9)B.png",
@@ -141,7 +141,7 @@ export default function BrandStrategySection() {
         <div className="grid gap-4 md:gap-10.5">
           <div className="w-full overflow-hidden border border-[#CFCFCF] bg-white">
             <LightboxImage
-              src="/brandstrategy/SPR-Web.png"
+              src="/brandstrategy/SPR-Web.jpg"
               alt="Summit Point Roofing website homepage and digital experience"
               width={1200}
               height={600}
@@ -175,7 +175,7 @@ export default function BrandStrategySection() {
 
           <div className="hidden gap-4 md:grid md:grid-cols-3 md:gap-8.5">
             <LightboxImage
-              src="/brandstrategy/image (3).png"
+              src="/brandstrategy/image (3).jpg"
               alt="Summit Point Roofing digital content example"
               width={1512}
               height={2064}
@@ -185,7 +185,7 @@ export default function BrandStrategySection() {
             />
 
             <LightboxImage
-              src="/brandstrategy/image (4).png"
+              src="/brandstrategy/image (4).jpg"
               alt="Summit Point Roofing digital content example"
               width={1512}
               height={2064}
@@ -195,7 +195,7 @@ export default function BrandStrategySection() {
             />
 
             <LightboxImage
-              src="/brandstrategy/image (5).png"
+              src="/brandstrategy/image (5).jpg"
               alt="Summit Point Roofing digital content example"
               width={1512}
               height={2064}
@@ -207,7 +207,7 @@ export default function BrandStrategySection() {
 
           <div className="w-full">
             <LightboxImage
-              src="/brandstrategy/image (6).png"
+              src="/brandstrategy/image (6).jpg"
               alt="Summit Point Roofing blog and content marketing experience"
               width={1512}
               height={600}
