@@ -37,7 +37,7 @@ export default function AboutUsHeader() {
 
         {/* Mobile */}
         <Image
-          src="/conical global brand mobile.jpg"
+          src="/conical global brand mobile2.jpg"
           alt="Selected creative and marketing work"
           width={900}
           height={1600}
