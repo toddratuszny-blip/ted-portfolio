@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Business from "../Icons/business";
 import OverView from "../Icons/overview";
 import Setting from "../Icons/setting";
@@ -83,6 +84,30 @@ function RolePill({ label }: { label: string }) {
   );
 }
 
+function MobileDisclosure({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <details className="group md:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between border-y border-neutral-300 py-3 font-sora text-base font-semibold">
+        <span>{label}</span>
+        <span
+          aria-hidden="true"
+          className="text-xl leading-none transition-transform group-open:rotate-45"
+        >
+          +
+        </span>
+      </summary>
+
+      <div className="pt-4">{children}</div>
+    </details>
+  );
+}
+
 function OutcomeCard({
   title,
   label,
@@ -93,16 +118,16 @@ function OutcomeCard({
   highlight: boolean;
 }) {
   return (
-    <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
+    <div className="border border-neutral-300 bg-[#FAFAFA] p-4 md:p-7.5">
       <p
-        className={`font-sora text-[28px] font-semibold leading-tight md:text-[36px] ${
+        className={`font-sora text-2xl font-semibold leading-tight md:text-[36px] ${
           highlight ? "text-primary" : "text-neutral-900"
         }`}
       >
         {title}
       </p>
 
-      <p className="mt-2 font-sora text-lg leading-snug text-[#404040] md:text-xl">
+      <p className="mt-2 font-sora text-sm leading-snug text-[#404040] md:text-xl">
         {label}
       </p>
     </div>
@@ -160,7 +185,15 @@ export default function MaryAnnOverViewSection() {
             nearly every customer touchpoint.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <MobileDisclosure label="View roles">
+            <div className="flex flex-wrap gap-3">
+              {ROLES.map((role) => (
+                <RolePill key={role} label={role} />
+              ))}
+            </div>
+          </MobileDisclosure>
+
+          <div className="hidden flex-wrap gap-4 md:flex">
             {ROLES.map((role) => (
               <RolePill key={role} label={role} />
             ))}
@@ -222,7 +255,26 @@ export default function MaryAnnOverViewSection() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <MobileDisclosure label="View 4 strategic priorities">
+          <div className="grid gap-4">
+            {STRATEGIC_PRIORITIES.map((priority) => (
+              <article
+                key={priority.title}
+                className="border border-neutral-300 bg-[#FAFAFA] p-5"
+              >
+                <h3 className="font-sora text-xl font-semibold">
+                  {priority.title}
+                </h3>
+
+                <p className="mt-2 font-sora text-base leading-relaxed text-[#404040]">
+                  {priority.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </MobileDisclosure>
+
+        <div className="hidden gap-5 md:grid md:grid-cols-2">
           {STRATEGIC_PRIORITIES.map((priority) => (
             <article
               key={priority.title}
@@ -393,7 +445,7 @@ export default function MaryAnnOverViewSection() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
           {OUTCOMES.map((item, index) => (
             <OutcomeCard
               key={item.label}

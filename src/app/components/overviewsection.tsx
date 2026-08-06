@@ -669,60 +669,57 @@ export default function OverViewSection() {
           </div>
         </div>
 
-        <MobileDisclosure label="View more sales enablement work">
-          <div className="grid gap-6">
-            <LightboxImage
-              src="/Elite line cardB.png"
-              alt="Elite Abrasives product line card"
-              width={1500}
-              height={971}
-              gallery={INDUSTRIAL_GALLERY}
-              index={15}
-              className="mx-auto block h-auto w-full object-contain"
-            />
+<div className="grid gap-6 md:hidden">
+  <LightboxImage
+    src="/Elite line cardB.png"
+    alt="Elite Abrasives product line card"
+    width={1500}
+    height={971}
+    gallery={INDUSTRIAL_GALLERY}
+    index={15}
+    className="mx-auto block h-auto w-full object-contain"
+  />
 
-            <LightboxImage
-              src="/Global vortex4 coverB.png"
-              alt="Global Cutting Tools Vortex4 product literature"
-              width={1500}
-              height={971}
-              gallery={INDUSTRIAL_GALLERY}
-              index={16}
-              className="mx-auto block h-auto w-full object-contain"
-            />
+  <LightboxImage
+    src="/Global vortex4 coverB.png"
+    alt="Global Cutting Tools Vortex4 product literature"
+    width={1500}
+    height={971}
+    gallery={INDUSTRIAL_GALLERY}
+    index={16}
+    className="mx-auto block h-auto w-full object-contain"
+  />
 
-            <LightboxImage
-              src="/LVA insert 3.png"
-              alt="Lehigh Valley Abrasives product insert"
-              width={1558}
-              height={803}
-              gallery={INDUSTRIAL_GALLERY}
-              index={17}
-              className="mx-auto block h-auto w-full object-contain"
-            />
+  <LightboxImage
+    src="/LVA insert 3.png"
+    alt="Lehigh Valley Abrasives product insert"
+    width={1558}
+    height={803}
+    gallery={INDUSTRIAL_GALLERY}
+    index={17}
+    className="mx-auto block h-auto w-full object-contain"
+  />
 
-            <LightboxImage
-              src="/conical build ass.jpg"
-              alt="Conical Cutting Tools technical build assembly documentation"
-              width={1275}
-              height={1650}
-              gallery={INDUSTRIAL_GALLERY}
-              index={18}
-              className="mx-auto block h-auto w-full object-contain"
-            />
+  <LightboxImage
+    src="/conical build ass.jpg"
+    alt="Conical Cutting Tools technical build assembly documentation"
+    width={1275}
+    height={1650}
+    gallery={INDUSTRIAL_GALLERY}
+    index={18}
+    className="mx-auto block h-auto w-full object-contain"
+  />
 
-            <LightboxImage
-              src="/Elite Sales-Promotion.jpg"
-              alt="Elite Abrasives sales promotion sheet"
-              width={1500}
-              height={1500}
-              gallery={INDUSTRIAL_GALLERY}
-              index={19}
-              className="mx-auto block h-auto w-full object-contain"
-            />
-          </div>
-        </MobileDisclosure>
-      </section>
+  <LightboxImage
+    src="/Elite Sales-Promotion.jpg"
+    alt="Elite Abrasives sales promotion sheet"
+    width={1500}
+    height={1500}
+    gallery={INDUSTRIAL_GALLERY}
+    index={19}
+    className="mx-auto block h-auto w-full object-contain"
+  />
+</div>      </section>
 
       <Divider />
 

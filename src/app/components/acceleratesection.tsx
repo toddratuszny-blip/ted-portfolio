@@ -68,6 +68,29 @@ function RolePill({ label }: { label: string }) {
   );
 }
 
+function MobileDisclosure({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <details className="group md:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between border-y border-neutral-300 py-3 text-base font-semibold">
+        <span>{label}</span>
+        <span
+          aria-hidden="true"
+          className="text-xl leading-none transition-transform group-open:rotate-45"
+        >
+          +
+        </span>
+      </summary>
+      <div className="pt-4">{children}</div>
+    </details>
+  );
+}
+
 function MediaCard({
   children,
   className = "",
@@ -121,7 +144,15 @@ export default function AccelerateSection() {
           </h1>
         </div>
 
-        <div className="mt-2 flex flex-wrap gap-3 md:gap-4">
+        <MobileDisclosure label="View roles">
+          <div className="flex flex-wrap gap-3">
+            {ROLES.map((role) => (
+              <RolePill key={role} label={role} />
+            ))}
+          </div>
+        </MobileDisclosure>
+
+        <div className="mt-2 hidden flex-wrap gap-3 md:flex md:gap-4">
           {ROLES.map((role) => (
             <RolePill key={role} label={role} />
           ))}
@@ -191,23 +222,43 @@ export default function AccelerateSection() {
             />
           </MediaCard>
 
-          {[
-            "/accelerate/life16.png",
-            "/accelerate/life17.png",
-            "/accelerate/life19B.png",
-          ].map((src) => (
-            <MediaCard key={src} className="md:col-span-4 md:min-h-[350px]">
+          <div className="grid gap-6 md:col-span-12 md:grid-cols-3">
+            <MediaCard className="hidden md:flex md:min-h-[350px]">
               <LightboxImage
-                src={src}
+                src="/accelerate/life16.png"
                 alt="LifeToGo Immunity campaign extension"
                 width={1512}
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
-                index={getImageIndex(src)}
+                index={getImageIndex("/accelerate/life16.png")}
                 className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[430px] md:max-w-none"
               />
             </MediaCard>
-          ))}
+
+            <MediaCard className="md:min-h-[350px]">
+              <LightboxImage
+                src="/accelerate/life17.png"
+                alt="LifeToGo Immunity campaign extension"
+                width={1512}
+                height={2064}
+                gallery={ACCELERATE_IMAGES}
+                index={getImageIndex("/accelerate/life17.png")}
+                className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[430px] md:max-w-none"
+              />
+            </MediaCard>
+
+            <MediaCard className="hidden md:flex md:min-h-[350px]">
+              <LightboxImage
+                src="/accelerate/life19B.png"
+                alt="LifeToGo Immunity campaign extension"
+                width={1512}
+                height={2064}
+                gallery={ACCELERATE_IMAGES}
+                index={getImageIndex("/accelerate/life19B.png")}
+                className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[430px] md:max-w-none"
+              />
+            </MediaCard>
+          </div>
 
           <div className="overflow-hidden md:col-span-12">
             <LightboxImage
@@ -270,7 +321,7 @@ export default function AccelerateSection() {
             />
           </div>
 
-          <MediaCard className="md:col-span-5 md:min-h-[520px]">
+          <MediaCard className="hidden md:col-span-5 md:flex md:min-h-[520px]">
             <LightboxImage
               src="/accelerate/life40.jpg"
               alt="Performance Inspired vertical promotional creative"

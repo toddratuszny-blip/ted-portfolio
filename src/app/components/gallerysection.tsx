@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import OverView from "../Icons/overview";
 import Setting from "../Icons/setting";
 import LightboxImage from "./lightboximage";
@@ -22,8 +23,8 @@ const GALLERY_IMAGES = [
   "/gallery/gallery17B.png",
   "/gallery/conical_23.png",
   "/gallery/gallery18.jpg",
-  "/gallery/gallery19.png",
-  "/gallery/11_03_Campaign_2 copy2.jpg",
+  "/MT2.png",
+  "/MT1.png",
 ];
 
 const CAPABILITIES = [
@@ -37,7 +38,7 @@ const CAPABILITIES = [
 
 function Divider() {
   return (
-    <div className="my-14 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-20" />
+    <div className="my-10 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-20" />
   );
 }
 
@@ -48,6 +49,30 @@ function CapabilityPill({ label }: { label: string }) {
         {label}
       </p>
     </div>
+  );
+}
+
+function MobileDisclosure({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <details className="group md:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between border-y border-neutral-300 py-3 font-sora text-base font-semibold">
+        <span>{label}</span>
+        <span
+          aria-hidden="true"
+          className="text-xl leading-none transition-transform group-open:rotate-45"
+        >
+          +
+        </span>
+      </summary>
+
+      <div className="pt-4">{children}</div>
+    </details>
   );
 }
 
@@ -100,7 +125,15 @@ export default function GallerySection() {
           final delivery across print and digital channels.
         </p>
 
-        <div className="flex flex-wrap gap-3 md:gap-4">
+        <MobileDisclosure label="View creative capabilities">
+          <div className="flex flex-wrap gap-3">
+            {CAPABILITIES.map((capability) => (
+              <CapabilityPill key={capability} label={capability} />
+            ))}
+          </div>
+        </MobileDisclosure>
+
+        <div className="hidden flex-wrap gap-3 md:flex md:gap-4">
           {CAPABILITIES.map((capability) => (
             <CapabilityPill key={capability} label={capability} />
           ))}
@@ -146,15 +179,17 @@ export default function GallerySection() {
               className="block h-auto w-full object-contain"
             />
 
-            <LightboxImage
-              src="/gallery/gallery1.png"
-              alt="Publication and packaging design details"
-              width={1512}
-              height={2064}
-              gallery={GALLERY_IMAGES}
-              index={2}
-              className="block h-auto w-full object-contain"
-            />
+            <div className="hidden md:block">
+              <LightboxImage
+                src="/gallery/gallery1.png"
+                alt="Publication and packaging design details"
+                width={1512}
+                height={2064}
+                gallery={GALLERY_IMAGES}
+                index={2}
+                className="block h-auto w-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -187,15 +222,17 @@ export default function GallerySection() {
             className="block h-auto w-full object-contain"
           />
 
-          <LightboxImage
-            src="/gallery/gallery10.png"
-            alt="Furniture marketing catalog and campaign spread"
-            width={1512}
-            height={600}
-            gallery={GALLERY_IMAGES}
-            index={9}
-            className="block h-auto w-full object-contain"
-          />
+          <div className="hidden md:block">
+            <LightboxImage
+              src="/gallery/gallery10.png"
+              alt="Furniture marketing catalog and campaign spread"
+              width={1512}
+              height={600}
+              gallery={GALLERY_IMAGES}
+              index={9}
+              className="block h-auto w-full object-contain"
+            />
+          </div>
 
           <div className="grid items-start gap-6 md:grid-cols-2 md:gap-8">
             <LightboxImage
@@ -319,45 +356,44 @@ export default function GallerySection() {
             </div>
           </div>
 
-          {/* All three supporting logos stay in one row on mobile */}
-          <div className="mx-auto grid w-full max-w-6xl grid-cols-3 items-center gap-3 md:gap-8">
-            <div className="flex items-center justify-center">
-              <LightboxImage
-                src="/gallery/gallery14.png"
-                alt="Kramer Medical Supplies brand identity"
-                width={1512}
-                height={500}
-                gallery={GALLERY_IMAGES}
-                index={13}
-                className="mx-auto block h-auto w-full object-contain md:max-w-[320px]"
-              />
-            </div>
+{/* Supporting logos stay in one row on mobile */}
+<div className="mx-auto grid w-full max-w-6xl grid-cols-3 items-center gap-3 md:gap-8">
+  <div className="flex items-center justify-center">
+    <LightboxImage
+      src="/gallery/gallery14.png"
+      alt="Kramer Medical Supplies brand identity"
+      width={1512}
+      height={500}
+      gallery={GALLERY_IMAGES}
+      index={13}
+      className="mx-auto block h-auto w-full object-contain md:max-w-[320px]"
+    />
+  </div>
 
-            <div className="flex items-center justify-center">
-              <LightboxImage
-                src="/gallery/gallery15.png"
-                alt="Waterfront Mills brand identity"
-                width={1512}
-                height={500}
-                gallery={GALLERY_IMAGES}
-                index={15}
-                className="mx-auto block h-auto w-full object-contain md:max-w-[320px]"
-              />
-            </div>
+  <div className="flex items-center justify-center">
+    <LightboxImage
+      src="/gallery/gallery16.png"
+      alt="Rapid Metal Solutions brand identity"
+      width={1512}
+      height={500}
+      gallery={GALLERY_IMAGES}
+      index={14}
+      className="mx-auto block h-auto w-full object-contain md:max-w-[320px]"
+    />
+  </div>
 
-            <div className="flex items-center justify-center">
-              <LightboxImage
-                src="/gallery/gallery16.png"
-                alt="Rapid Metal Solutions brand identity"
-                width={1512}
-                height={500}
-                gallery={GALLERY_IMAGES}
-                index={14}
-                className="mx-auto block h-auto w-full object-contain md:max-w-[320px]"
-              />
-            </div>
-          </div>
-        </div>
+  <div className="flex items-center justify-center">
+    <LightboxImage
+      src="/gallery/gallery15.png"
+      alt="Waterfront Mills brand identity"
+      width={1512}
+      height={500}
+      gallery={GALLERY_IMAGES}
+      index={15}
+      className="mx-auto block h-auto w-full object-contain md:max-w-[320px]"
+    />
+  </div>
+</div>        </div>
       </section>
 
       <Divider />
@@ -425,42 +461,46 @@ export default function GallerySection() {
           </p>
         </div>
 
-        <div className="grid gap-7 md:gap-10.5">
-          <div className="mx-auto w-[64%] md:w-full">
-            <LightboxImage
-              src="/gallery/gallery18.jpg"
-              alt="Mel Trotter Ministries cause-based advertising campaign"
-              width={1512}
-              height={600}
-              gallery={GALLERY_IMAGES}
-              index={18}
-              className="block h-auto w-full object-contain"
-            />
-          </div>
+<div className="grid gap-7 md:gap-10.5">
+  <div className="mx-auto w-[64%] md:w-full">
+    <LightboxImage
+      src="/gallery/gallery18.jpg"
+      alt="Mel Trotter Ministries cause-based advertising campaign"
+      width={1512}
+      height={600}
+      gallery={GALLERY_IMAGES}
+      index={18}
+      className="block h-auto w-full object-contain"
+    />
+  </div>
 
-          <div className="grid grid-cols-2 items-start gap-4 md:gap-8">
-            <LightboxImage
-              src="/gallery/gallery19.png"
-              alt="Mel Trotter Ministries nonprofit campaign"
-              width={1512}
-              height={2064}
-              gallery={GALLERY_IMAGES}
-              index={19}
-              className="block h-auto w-full object-contain"
-            />
-
-            <LightboxImage
-              src="/gallery/11_03_Campaign_2 copy2.jpg"
-              alt="Mel Trotter Ministries awareness campaign"
-              width={1512}
-              height={2064}
-              gallery={GALLERY_IMAGES}
-              index={20}
-              className="block h-auto w-full object-contain"
-            />
-          </div>
-        </div>
-      </section>
+  <div className="grid grid-cols-2 items-start gap-4 md:gap-8">
+    <div className="flex items-center justify-center md:h-[500px]">
+      <LightboxImage
+        src="/MT2.png"
+        alt="Mel Trotter Ministries nonprofit campaign"
+        width={1512}
+        height={2064}
+        gallery={GALLERY_IMAGES}
+        index={19}
+        className="block h-auto max-h-full w-full object-contain"
+      />
     </div>
-  );
+
+    <div className="flex items-center justify-center md:h-[500px]">
+      <LightboxImage
+        src="/MT1.png"
+        alt="Mel Trotter Ministries awareness campaign"
+        width={1512}
+        height={2064}
+        gallery={GALLERY_IMAGES}
+        index={20}
+        className="block h-auto max-h-full w-full object-contain"
+      />
+    </div>
+  </div>
+</div>
+</section>
+</div>
+);
 }

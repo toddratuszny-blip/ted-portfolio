@@ -46,6 +46,29 @@ function RolePill({ label }: { label: string }) {
   );
 }
 
+function MobileDisclosure({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <details className="group md:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between border-y border-neutral-300 py-3 font-sora text-base font-semibold">
+        <span>{label}</span>
+        <span
+          aria-hidden="true"
+          className="text-xl leading-none transition-transform group-open:rotate-45"
+        >
+          +
+        </span>
+      </summary>
+      <div className="pt-4">{children}</div>
+    </details>
+  );
+}
+
 export default function BrandStrategySection() {
   return (
     <div className="mx-auto max-w-7xl">
@@ -81,7 +104,15 @@ export default function BrandStrategySection() {
           </h2>
         </div>
 
-        <div className="flex flex-wrap gap-3 md:gap-4">
+        <MobileDisclosure label="View roles">
+          <div className="flex flex-wrap gap-3">
+            {ROLES.map((role) => (
+              <RolePill key={role} label={role} />
+            ))}
+          </div>
+        </MobileDisclosure>
+
+        <div className="hidden flex-wrap gap-3 md:flex md:gap-4">
           {ROLES.map((role) => (
             <RolePill key={role} label={role} />
           ))}
@@ -142,7 +173,7 @@ export default function BrandStrategySection() {
             />
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3 md:gap-8.5">
+          <div className="hidden gap-4 md:grid md:grid-cols-3 md:gap-8.5">
             <LightboxImage
               src="/brandstrategy/image (3).png"
               alt="Summit Point Roofing digital content example"
@@ -417,29 +448,29 @@ export default function BrandStrategySection() {
           internal sales support.
         </p>
 
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
-          <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
-            <p className="text-[32px] font-semibold text-primary md:text-[40px]">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-8">
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-4 md:p-7.5">
+            <p className="text-2xl font-semibold text-primary md:text-[40px]">
               $30M
             </p>
-            <p className="text-[24px] text-[#404040]">Organization</p>
+            <p className="text-sm text-[#404040] md:text-[24px]">Organization</p>
           </div>
 
-          <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
-            <p className="text-[32px] font-semibold md:text-[40px]">04</p>
-            <p className="text-[24px] text-[#404040]">Divisions</p>
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-4 md:p-7.5">
+            <p className="text-2xl font-semibold md:text-[40px]">04</p>
+            <p className="text-sm text-[#404040] md:text-[24px]">Divisions</p>
           </div>
 
-          <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
-            <p className="text-[32px] font-semibold text-primary md:text-[40px]">
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-4 md:p-7.5">
+            <p className="text-2xl font-semibold text-primary md:text-[40px]">
               03
             </p>
-            <p className="text-[24px] text-[#404040]">Locations</p>
+            <p className="text-sm text-[#404040] md:text-[24px]">Locations</p>
           </div>
 
-          <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
-            <p className="text-[32px] font-semibold md:text-[40px]">10+</p>
-            <p className="text-[24px] text-[#404040]">Service Lines</p>
+          <div className="border border-neutral-300 bg-[#FAFAFA] p-4 md:p-7.5">
+            <p className="text-2xl font-semibold md:text-[40px]">10+</p>
+            <p className="text-sm text-[#404040] md:text-[24px]">Service Lines</p>
           </div>
         </div>
       </section>
