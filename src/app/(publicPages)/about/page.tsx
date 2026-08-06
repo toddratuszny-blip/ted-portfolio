@@ -12,7 +12,22 @@ export default function Aboutpage() {
         imgSrcOne="/LTG Mask.png"
         badgeText="About Me"
         heading="Creative leadership grounded in practical execution."
-        description="Marketing is strongest when strategy and execution work together. Because I've led everything from brand development and digital experiences to sales enablement and campaign production, I understand how decisions made in one area affect the entire customer journey. That perspective helps me build marketing systems that are cohesive, practical, and aligned with business goals."
+        description={
+          <>
+            <p>
+              Marketing is strongest when strategy and execution work together.
+              I’ve led work across brand development, digital experiences, sales
+              enablement, and campaign production.
+            </p>
+
+            <p className="mt-6">
+              That experience helps me understand how decisions in one area
+              affect the entire customer journey. It allows me to build
+              marketing systems that are cohesive, practical, and aligned with
+              business goals.
+            </p>
+          </>
+        }
       />
 
       <div className="relative">

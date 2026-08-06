@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 
 interface AboutSectionProps {
   badgeText: string;
   heading: string;
-  description: string;
+  description: ReactNode;
   imgSrcOne?: string;
   imageAlt?: string;
 }
@@ -47,9 +48,9 @@ export default function About({
               {heading}
             </h2>
 
-            <h3 className="max-w-xl text-base font-light leading-[1.45] text-white md:text-2xl">
+            <div className="max-w-xl text-base font-light leading-[1.45] text-white md:text-2xl">
               {description}
-            </h3>
+            </div>
           </div>
         </div>
       </div>
