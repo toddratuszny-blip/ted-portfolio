@@ -63,8 +63,7 @@ export default function LightboxImage({
       <button
         type="button"
         onClick={() => setActiveIndex(index)}
-        className="flex w-full cursor-zoom-in justify-center text-left"
-        aria-label={`Open image ${index + 1}`}
+className="flex h-fit w-full self-start cursor-zoom-in justify-center text-left"        aria-label={`Open image ${index + 1}`}
       >
         <Image
           src={src}

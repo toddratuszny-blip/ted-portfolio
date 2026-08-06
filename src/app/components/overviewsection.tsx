@@ -432,41 +432,39 @@ export default function OverViewSection() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-5xl items-center gap-7 md:grid-cols-[1.15fr_0.85fr]">
-          <LightboxImage
-            src="/Elite bB.png"
-            alt="Elite Abrasives product packaging"
-            width={1613}
-            height={1421}
-            gallery={INDUSTRIAL_GALLERY}
-            index={8}
-            className="mx-auto block max-h-[620px] w-auto max-w-full object-contain"
-          />
+<div className="mx-auto grid max-w-5xl items-center gap-7 md:grid-cols-[1.15fr_0.85fr]">
+  <LightboxImage
+    src="/Elite bB.png"
+    alt="Elite Abrasives product packaging"
+    width={1613}
+    height={1421}
+    gallery={INDUSTRIAL_GALLERY}
+    index={8}
+    className="mx-auto block h-auto w-full max-w-[450px] object-contain md:max-h-[620px] md:w-auto md:max-w-full"
+  />
 
-          <div className="grid items-center gap-7 sm:grid-cols-2 md:grid-cols-1">
-            <LightboxImage
-              src="/Elite IMG_20190607_082339134.png"
-              alt="Elite Abrasives packaged industrial product"
-              width={1062}
-              height={1107}
-              gallery={INDUSTRIAL_GALLERY}
-              index={7}
-              className="mx-auto block max-h-[285px] w-auto max-w-full object-contain"
-            />
+  <div className="grid items-center gap-7 sm:grid-cols-2 md:grid-cols-1">
+    <LightboxImage
+      src="/Elite IMG_20190607_082339134.png"
+      alt="Elite Abrasives packaged industrial product"
+      width={1062}
+      height={1107}
+      gallery={INDUSTRIAL_GALLERY}
+      index={7}
+      className="mx-auto block h-auto w-full max-w-[300px] object-contain md:max-h-[285px] md:w-auto md:max-w-full"
+    />
 
-            <LightboxImage
-              src="/Elite Label 4.5_FD_CG_T27_SD.png"
-              alt="Elite Abrasives product label system"
-              width={1199}
-              height={1193}
-              gallery={INDUSTRIAL_GALLERY}
-              index={9}
-              className="mx-auto block max-h-[285px] w-auto max-w-full object-contain"
-            />
-          </div>
-        </div>
-
-        <div className="grid gap-7 md:grid-cols-2">
+    <LightboxImage
+      src="/Elite Label 4.5_FD_CG_T27_SD.png"
+      alt="Elite Abrasives product label system"
+      width={1199}
+      height={1193}
+      gallery={INDUSTRIAL_GALLERY}
+      index={9}
+      className="mx-auto block max-h-[285px] w-auto max-w-full object-contain"
+    />
+  </div>
+</div>        <div className="grid gap-7 md:grid-cols-2">
           <LightboxImage
             src="/Elite -24-web banner.jpg"
             alt="Elite Abrasives product marketing campaign banner"
@@ -542,38 +540,37 @@ export default function OverViewSection() {
           />
         </div>
 
-        <div className="grid items-center gap-7 md:grid-cols-[1fr_1fr_1.15fr]">
-          <LightboxImage
-            src="/Elite line cardB.png"
-            alt="Elite Abrasives product line card"
-            width={1500}
-            height={971}
-            gallery={INDUSTRIAL_GALLERY}
-            index={15}
-            className="mx-auto block max-h-[260px] w-auto max-w-full object-contain"
-          />
+<div className="grid items-center gap-7 md:grid-cols-[1fr_1fr_1.15fr]">
+  <LightboxImage
+    src="/Elite line cardB.png"
+    alt="Elite Abrasives product line card"
+    width={1500}
+    height={971}
+    gallery={INDUSTRIAL_GALLERY}
+    index={15}
+    className="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[260px] md:w-auto"
+  />
 
-          <LightboxImage
-            src="/Global vortex4 coverB.png"
-            alt="Global Cutting Tools Vortex4 product literature"
-            width={1500}
-            height={971}
-            gallery={INDUSTRIAL_GALLERY}
-            index={16}
-            className="mx-auto block max-h-[260px] w-auto max-w-full object-contain"
-          />
+  <LightboxImage
+    src="/Global vortex4 coverB.png"
+    alt="Global Cutting Tools Vortex4 product literature"
+    width={1500}
+    height={971}
+    gallery={INDUSTRIAL_GALLERY}
+    index={16}
+    className="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[260px] md:w-auto"
+  />
 
-          <LightboxImage
-            src="/LVA insert 3.png"
-            alt="Lehigh Valley Abrasives product insert"
-            width={1558}
-            height={803}
-            gallery={INDUSTRIAL_GALLERY}
-            index={17}
-            className="mx-auto block max-h-[260px] w-auto max-w-full object-contain"
-          />
-        </div>
-
+  <LightboxImage
+    src="/LVA insert 3.png"
+    alt="Lehigh Valley Abrasives product insert"
+    width={1558}
+    height={803}
+    gallery={INDUSTRIAL_GALLERY}
+    index={17}
+    className="mx-auto block max-h-[260px] w-auto max-w-full object-contain"
+  />
+</div>
         <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2">
           <LightboxImage
             src="/conical build ass.jpg"
@@ -619,32 +616,32 @@ export default function OverViewSection() {
           </p>
         </div>
 
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          <div className="flex min-h-[520px] items-center justify-center">
-            <LightboxImage
-              src="/Elite trade.png"
-              alt="Elite Abrasives trade show and environmental brand execution"
-              width={1440}
-              height={880}
-              gallery={INDUSTRIAL_GALLERY}
-              index={20}
-              className="block h-auto w-full max-w-[700px] object-contain"
-            />
-          </div>
+<div className="grid items-start gap-6 md:grid-cols-2 md:items-center md:gap-10">
+  <div className="flex h-fit min-h-0 items-start justify-center md:min-h-[520px] md:items-center">
+    <LightboxImage
+      src="/Elite trade.png"
+      alt="Elite Abrasives trade show and environmental brand execution"
+      width={1440}
+      height={880}
+      gallery={INDUSTRIAL_GALLERY}
+      index={20}
+      className="block h-auto w-full max-w-[700px] object-contain"
+    />
+  </div>
 
-          <div className="flex min-h-[520px] items-center justify-center">
-            <LightboxImage
-              src="/LVA_Email_Selection_082715_Offline_03.jpg"
-              alt="Lehigh Valley Abrasives email marketing campaign"
-              width={620}
-              height={753}
-              gallery={INDUSTRIAL_GALLERY}
-              index={21}
-              className="block h-auto max-h-[520px] w-auto max-w-full object-contain"
-            />
-          </div>
-        </div>
-      </section>
+  <div className="flex h-fit min-h-0 items-start justify-center md:min-h-[520px] md:items-center">
+    <LightboxImage
+      src="/LVA_Email_Selection_082715_Offline_03.jpg"
+      alt="Lehigh Valley Abrasives email marketing campaign"
+      width={620}
+      height={753}
+      gallery={INDUSTRIAL_GALLERY}
+      index={21}
+      className="block h-auto max-h-none w-auto max-w-full object-contain md:max-h-[520px]"
+    />
+</div>
+</div>
+</section>
 
       <Divider />
 
