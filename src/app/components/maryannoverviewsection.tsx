@@ -7,7 +7,7 @@ import LightboxImage from "./lightboximage";
 const MARYANN_IMAGES = [
   "/maryannnew2.png",
   "/maryann002.png",
-  "/scope012.webp",
+  "/scope012.png",
   "/scope2.jpg",
   "/scope3.jpg",
   "/scope042.png",
@@ -266,13 +266,13 @@ export default function MaryAnnOverViewSection() {
         </div>
 
         <LightboxImage
-          src="/scope012.webp"
+          src="/scope012.png"
           alt="Mary Ann's Chocolates coordinated brand identity, stationery, packaging, and product materials"
-          width={1600}
-          height={1120}
+          width={1300}
+          height={980}
           gallery={MARYANN_IMAGES}
           index={2}
-          className="block h-auto w-full object-contain"
+          className="mx-auto block h-auto w-full object-contain md:max-w-[950px]"
         />
 
         <div className="grid items-center gap-10.5 md:grid-cols-2">
@@ -331,16 +331,17 @@ export default function MaryAnnOverViewSection() {
           </div>
         </div>
 
-        <LightboxImage
-          src="/scope042.png"
-          alt="Mary Ann's Chocolates catalog featuring retail displays and product information"
-          width={1750}
-          height={864}
-          gallery={MARYANN_IMAGES}
-          index={5}
-          className="block h-auto w-full object-contain"
-        />
-
+<div className="my-6 w-full overflow-hidden py-8 md:my-0 md:overflow-visible md:py-0">
+  <LightboxImage
+    src="/scope042.png"
+    alt="Mary Ann's Chocolates catalog featuring retail displays and product information"
+    width={1750}
+    height={864}
+    gallery={MARYANN_IMAGES}
+    index={5}
+    className="mx-auto block h-auto w-full scale-[1.35] object-contain md:scale-100"
+  />
+</div>
         <div className="grid items-center gap-10.5 md:grid-cols-2">
           <LightboxImage
             src="/scopenew.png"

@@ -125,16 +125,16 @@ function MetricCard({
   highlight: boolean;
 }) {
   return (
-    <div className="border border-neutral-300 bg-[#FAFAFA] p-6 md:p-7.5">
+    <div className="border border-neutral-300 bg-[#FAFAFA] p-4 md:p-7.5">
       <p
-        className={`font-sora text-[32px] font-semibold md:text-[40px] ${
+        className={`font-sora text-2xl font-semibold md:text-[40px] ${
           highlight ? "text-primary" : "text-neutral-900"
         }`}
       >
         {metric}
       </p>
 
-      <p className="mt-1 font-sora text-lg leading-snug text-[#404040] md:text-xl">
+      <p className="mt-1 font-sora text-sm leading-snug text-[#404040] md:text-xl">
         {label}
       </p>
     </div>
@@ -155,6 +155,29 @@ function SectionHeading({
         {children}
       </h2>
     </div>
+  );
+}
+
+function MobileDisclosure({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <details className="group md:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between border-y border-neutral-300 py-3 font-sora text-base font-semibold">
+        <span>{label}</span>
+        <span
+          aria-hidden="true"
+          className="text-xl leading-none transition-transform group-open:rotate-45"
+        >
+          +
+        </span>
+      </summary>
+      <div className="pt-4">{children}</div>
+    </details>
   );
 }
 
@@ -198,7 +221,7 @@ export default function OverViewSection() {
           Brand Strategy <span className="text-primary">& Identity.</span>
         </SectionHeading>
 
-        <div className="space-y-5">
+        <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
             Created and evolved corporate and product brands across the
             portfolio, balancing distinct market positioning with shared
@@ -206,12 +229,19 @@ export default function OverViewSection() {
             scale.
           </p>
 
-          <p className="font-sora text-xl leading-relaxed">
-            The work included naming, messaging, identity development, brand
-            standards, stationery systems, acquisition integration, and
-            customer-facing implementation across established and newly built
-            brands.
+          <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
+            <span className="font-semibold text-black">Scope:</span> Naming ·
+            Messaging · Identity systems · Brand standards · Stationery ·
+            Acquisition integration · Customer-facing implementation
           </p>
+
+          <MobileDisclosure label="View scope">
+            <p className="font-sora text-sm font-medium leading-relaxed text-[#555]">
+              Naming · Messaging · Identity systems · Brand standards ·
+              Stationery · Acquisition integration · Customer-facing
+              implementation
+            </p>
+          </MobileDisclosure>
         </div>
 
         <div className="grid items-center gap-8 lg:grid-cols-[1.35fr_0.65fr]">
@@ -262,83 +292,117 @@ export default function OverViewSection() {
       <Divider />
 
       <section className="space-y-8">
-        <SectionHeading icon={<Business />}>
-          Business <span className="text-primary">Challenge.</span>
-        </SectionHeading>
-
-        <div className="space-y-5">
-          <p className="font-sora text-xl leading-relaxed">
-            The portfolio included distinct manufacturing, distribution, and
-            ecommerce companies serving different industrial audiences. Many
-            shared overlapping products, distributors, customers, vendors, and
-            operational resources, but each required its own positioning,
-            customer experience, and market identity.
-          </p>
-
-          <p className="font-sora text-xl leading-relaxed">
-            The challenge was to strengthen individual brands while building
-            scalable systems capable of supporting acquisitions, product
-            marketing, ecommerce growth, sales teams, and customer
-            communications across the broader organization.
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2">
-          {BUSINESS_CHALLENGES.map((challenge) => (
-            <article
-              key={challenge.title}
-              className="border border-neutral-300 bg-[#FAFAFA] p-7"
-            >
-              <h3 className="font-sora text-2xl font-semibold">
-                {challenge.title}
-              </h3>
-              <p className="mt-3 font-sora text-lg leading-relaxed text-[#404040]">
-                {challenge.description}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <Divider />
-
-      <section className="space-y-8">
         <SectionHeading icon={<Target />}>
-          Strategic <span className="text-primary">Approach.</span>
+          Challenge <span className="text-primary">& Approach.</span>
         </SectionHeading>
 
-        <div className="space-y-5">
-          <p className="font-sora text-xl leading-relaxed">
-            Developed a scalable marketing framework across the portfolio by
-            aligning business priorities, brand positioning, digital
-            experiences, product marketing, sales enablement, and creative
-            production.
-          </p>
+        <p className="font-sora text-xl leading-relaxed">
+          The portfolio included distinct industrial companies with overlapping
+          products, customers, vendors, and operational resources. The work
+          required strengthening each brand while building shared systems that
+          could support acquisitions, ecommerce growth, product marketing,
+          sales teams, and customer communications.
+        </p>
 
-          <p className="font-sora text-xl leading-relaxed">
+        <div className="space-y-4 md:hidden">
+          <MobileDisclosure label="The Challenge — 4 items">
+            <div className="grid gap-3">
+              {BUSINESS_CHALLENGES.map((challenge) => (
+                <article
+                  key={challenge.title}
+                  className="border border-neutral-300 bg-[#FAFAFA] p-4"
+                >
+                  <h4 className="font-sora text-lg font-semibold">
+                    {challenge.title}
+                  </h4>
+                  <p className="mt-1 font-sora text-sm leading-relaxed text-[#404040]">
+                    {challenge.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </MobileDisclosure>
+
+          <MobileDisclosure label="The Approach — 4 items">
+            <div className="grid gap-3">
+              {STRATEGIC_PILLARS.map((pillar) => (
+                <article
+                  key={pillar.title}
+                  className="border border-neutral-300 bg-white p-4 shadow-[0_0_25px_0_rgba(0,0,0,0.06)]"
+                >
+                  <h4 className="font-sora text-lg font-semibold">
+                    {pillar.title}
+                  </h4>
+                  <p className="mt-1 font-sora text-sm leading-relaxed text-[#404040]">
+                    {pillar.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </MobileDisclosure>
+        </div>
+
+        <div className="hidden gap-10 md:grid lg:grid-cols-2">
+          <div className="space-y-5">
+            <h3 className="font-sora text-2xl font-semibold">
+              The <span className="text-primary">Challenge.</span>
+            </h3>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              {BUSINESS_CHALLENGES.map((challenge) => (
+                <article
+                  key={challenge.title}
+                  className="border border-neutral-300 bg-[#FAFAFA] p-6"
+                >
+                  <h4 className="font-sora text-xl font-semibold">
+                    {challenge.title}
+                  </h4>
+                  <p className="mt-2 font-sora text-base leading-relaxed text-[#404040]">
+                    {challenge.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-5">
+            <h3 className="font-sora text-2xl font-semibold">
+              The <span className="text-primary">Approach.</span>
+            </h3>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              {STRATEGIC_PILLARS.map((pillar) => (
+                <article
+                  key={pillar.title}
+                  className="border border-neutral-300 bg-white p-6 shadow-[0_0_25px_0_rgba(0,0,0,0.06)]"
+                >
+                  <h4 className="font-sora text-xl font-semibold">
+                    {pillar.title}
+                  </h4>
+                  <p className="mt-2 font-sora text-base leading-relaxed text-[#404040]">
+                    {pillar.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
+          <span className="font-semibold text-black">Execution:</span> Built two
+          flagship corporate brands, created multiple product brands, and led
+          three rebrands—including a 75-year-old company—through naming,
+          positioning, messaging, launch planning, and implementation.
+        </p>
+
+        <MobileDisclosure label="View execution details">
+          <p className="font-sora text-sm font-medium leading-relaxed text-[#555]">
             Built two flagship corporate brands, created multiple product
-            brands, and led the rebranding of three established organizations,
-            including a 75-year-old company. The work included naming,
-            positioning, messaging, identity systems, launch planning, and
-            customer-facing implementation.
+            brands, and led three rebrands—including a 75-year-old
+            company—through naming, positioning, messaging, launch planning,
+            and implementation.
           </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2">
-          {STRATEGIC_PILLARS.map((pillar) => (
-            <article
-              key={pillar.title}
-              className="border border-neutral-300 bg-white p-7 shadow-[0_0_25px_0_rgba(0,0,0,0.06)]"
-            >
-              <h3 className="font-sora text-2xl font-semibold">
-                {pillar.title}
-              </h3>
-              <p className="mt-3 font-sora text-lg leading-relaxed text-[#404040]">
-                {pillar.description}
-              </p>
-            </article>
-          ))}
-        </div>
+        </MobileDisclosure>
       </section>
 
       <Divider />
@@ -348,19 +412,26 @@ export default function OverViewSection() {
           Digital Experience <span className="text-primary">& Ecommerce.</span>
         </SectionHeading>
 
-        <div className="space-y-5">
+        <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
             Launched and managed seven ecommerce platforms supporting more than
             $3 million in annual ecommerce revenue and approximately 10,000
             products across multiple brands.
           </p>
 
-          <p className="font-sora text-xl leading-relaxed">
-            Directed website strategy, responsive design, product discovery,
-            merchandising, content development, product information, and ongoing
-            ecommerce operations across business-to-business and
-            direct-to-consumer environments.
+          <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
+            <span className="font-semibold text-black">Scope:</span> Website
+            strategy · Responsive design · Product discovery · Merchandising ·
+            Content development · Product information · B2B and DTC operations
           </p>
+
+          <MobileDisclosure label="View scope">
+            <p className="font-sora text-sm font-medium leading-relaxed text-[#555]">
+              Website strategy · Responsive design · Product discovery ·
+              Merchandising · Content development · Product information · B2B
+              and DTC operations
+            </p>
+          </MobileDisclosure>
         </div>
 
         <div className="grid gap-7 md:grid-cols-2">
@@ -395,20 +466,6 @@ export default function OverViewSection() {
           className="mx-auto block h-auto w-full max-w-3xl object-contain"
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <MetricCard metric="07" label="Ecommerce Platforms" highlight />
-          <MetricCard
-            metric="$3M+"
-            label="Annual Ecommerce Revenue"
-            highlight={false}
-          />
-          <MetricCard metric="10K" label="Products and SKUs" highlight />
-          <MetricCard
-            metric="50K+"
-            label="Email Subscribers"
-            highlight={false}
-          />
-        </div>
       </section>
 
       <Divider />
@@ -418,21 +475,28 @@ export default function OverViewSection() {
           Product <span className="text-primary">Marketing.</span>
         </SectionHeading>
 
-        <div className="space-y-5">
+        <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
             Positioned, launched, merchandised, and promoted complex industrial
             products across distributor, ecommerce, and direct-to-consumer
             channels.
           </p>
 
-          <p className="font-sora text-xl leading-relaxed">
-            Product marketing connected messaging, packaging, labels,
-            photography, competitive differentiation, campaign creative, and
-            promotional content into a consistent customer-facing system.
+          <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
+            <span className="font-semibold text-black">Scope:</span> Messaging ·
+            Packaging · Labels · Photography · Competitive differentiation ·
+            Campaign creative · Promotional content
           </p>
+
+          <MobileDisclosure label="View scope">
+            <p className="font-sora text-sm font-medium leading-relaxed text-[#555]">
+              Messaging · Packaging · Labels · Photography · Competitive
+              differentiation · Campaign creative · Promotional content
+            </p>
+          </MobileDisclosure>
         </div>
 
-<div className="mx-auto grid max-w-5xl items-center gap-7 md:grid-cols-[1.15fr_0.85fr]">
+        <div className="mx-auto grid max-w-5xl items-center gap-7 md:grid-cols-[1.15fr_0.85fr]">
   <LightboxImage
     src="/Elite bB.png"
     alt="Elite Abrasives product packaging"
@@ -464,7 +528,9 @@ export default function OverViewSection() {
       className="mx-auto block max-h-[285px] w-auto max-w-full object-contain"
     />
   </div>
-</div>        <div className="grid gap-7 md:grid-cols-2">
+</div>
+
+        <div className="grid gap-7 md:grid-cols-2">
           <LightboxImage
             src="/Elite -24-web banner.jpg"
             alt="Elite Abrasives product marketing campaign banner"
@@ -504,18 +570,25 @@ export default function OverViewSection() {
           Sales <span className="text-primary">Enablement.</span>
         </SectionHeading>
 
-        <div className="space-y-5">
+        <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
             Developed tools that helped sales teams, distributors, and customers
             understand product options, compare technical information, and move
             through complex industrial purchasing decisions.
           </p>
 
-          <p className="font-sora text-xl leading-relaxed">
-            Major initiatives included leading the development of a 276-page
-            catalog supported by line cards, inserts, product literature,
-            promotional sheets, and technical build documentation.
+          <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
+            <span className="font-semibold text-black">Scope:</span> 276-page
+            catalog · Line cards · Product inserts · Literature · Promotional
+            sheets · Technical build documentation
           </p>
+
+          <MobileDisclosure label="View scope">
+            <p className="font-sora text-sm font-medium leading-relaxed text-[#555]">
+              276-page catalog · Line cards · Product inserts · Literature ·
+              Promotional sheets · Technical build documentation
+            </p>
+          </MobileDisclosure>
         </div>
 
         <div className="grid gap-7 md:grid-cols-2">
@@ -540,58 +613,115 @@ export default function OverViewSection() {
           />
         </div>
 
-<div className="grid items-center gap-7 md:grid-cols-[1fr_1fr_1.15fr]">
-  <LightboxImage
-    src="/Elite line cardB.png"
-    alt="Elite Abrasives product line card"
-    width={1500}
-    height={971}
-    gallery={INDUSTRIAL_GALLERY}
-    index={15}
-    className="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[260px] md:w-auto"
-  />
+        <div className="hidden md:block">
+          <div className="grid items-center gap-7 md:grid-cols-[1fr_1fr_1.15fr]">
+            <LightboxImage
+              src="/Elite line cardB.png"
+              alt="Elite Abrasives product line card"
+              width={1500}
+              height={971}
+              gallery={INDUSTRIAL_GALLERY}
+              index={15}
+              className="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[260px] md:w-auto"
+            />
 
-  <LightboxImage
-    src="/Global vortex4 coverB.png"
-    alt="Global Cutting Tools Vortex4 product literature"
-    width={1500}
-    height={971}
-    gallery={INDUSTRIAL_GALLERY}
-    index={16}
-    className="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[260px] md:w-auto"
-  />
+            <LightboxImage
+              src="/Global vortex4 coverB.png"
+              alt="Global Cutting Tools Vortex4 product literature"
+              width={1500}
+              height={971}
+              gallery={INDUSTRIAL_GALLERY}
+              index={16}
+              className="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[260px] md:w-auto"
+            />
 
-  <LightboxImage
-    src="/LVA insert 3.png"
-    alt="Lehigh Valley Abrasives product insert"
-    width={1558}
-    height={803}
-    gallery={INDUSTRIAL_GALLERY}
-    index={17}
-    className="mx-auto block max-h-[260px] w-auto max-w-full object-contain"
-  />
-</div>
-        <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2">
-          <LightboxImage
-            src="/conical build ass.jpg"
-            alt="Conical Cutting Tools technical build assembly documentation"
-            width={1275}
-            height={1650}
-            gallery={INDUSTRIAL_GALLERY}
-            index={18}
-            className="mx-auto block h-auto max-h-[560px] w-full object-contain md:h-[520px]"
-          />
+            <LightboxImage
+              src="/LVA insert 3.png"
+              alt="Lehigh Valley Abrasives product insert"
+              width={1558}
+              height={803}
+              gallery={INDUSTRIAL_GALLERY}
+              index={17}
+              className="mx-auto block max-h-[260px] w-auto max-w-full object-contain"
+            />
+          </div>
 
-          <LightboxImage
-            src="/Elite Sales-Promotion.jpg"
-            alt="Elite Abrasives sales promotion sheet"
-            width={1500}
-            height={1500}
-            gallery={INDUSTRIAL_GALLERY}
-            index={19}
-            className="mx-auto block h-auto max-h-[560px] w-full object-contain md:h-[520px]"
-          />
+          <div className="mx-auto mt-7 grid max-w-5xl items-center gap-10 md:grid-cols-2">
+            <LightboxImage
+              src="/conical build ass.jpg"
+              alt="Conical Cutting Tools technical build assembly documentation"
+              width={1275}
+              height={1650}
+              gallery={INDUSTRIAL_GALLERY}
+              index={18}
+              className="mx-auto block h-auto max-h-[560px] w-full object-contain md:h-[520px]"
+            />
+
+            <LightboxImage
+              src="/Elite Sales-Promotion.jpg"
+              alt="Elite Abrasives sales promotion sheet"
+              width={1500}
+              height={1500}
+              gallery={INDUSTRIAL_GALLERY}
+              index={19}
+              className="mx-auto block h-auto max-h-[560px] w-full object-contain md:h-[520px]"
+            />
+          </div>
         </div>
+
+        <MobileDisclosure label="View more sales enablement work">
+          <div className="grid gap-6">
+            <LightboxImage
+              src="/Elite line cardB.png"
+              alt="Elite Abrasives product line card"
+              width={1500}
+              height={971}
+              gallery={INDUSTRIAL_GALLERY}
+              index={15}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/Global vortex4 coverB.png"
+              alt="Global Cutting Tools Vortex4 product literature"
+              width={1500}
+              height={971}
+              gallery={INDUSTRIAL_GALLERY}
+              index={16}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/LVA insert 3.png"
+              alt="Lehigh Valley Abrasives product insert"
+              width={1558}
+              height={803}
+              gallery={INDUSTRIAL_GALLERY}
+              index={17}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/conical build ass.jpg"
+              alt="Conical Cutting Tools technical build assembly documentation"
+              width={1275}
+              height={1650}
+              gallery={INDUSTRIAL_GALLERY}
+              index={18}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/Elite Sales-Promotion.jpg"
+              alt="Elite Abrasives sales promotion sheet"
+              width={1500}
+              height={1500}
+              gallery={INDUSTRIAL_GALLERY}
+              index={19}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+          </div>
+        </MobileDisclosure>
       </section>
 
       <Divider />
@@ -601,22 +731,30 @@ export default function OverViewSection() {
           Integrated Marketing <span className="text-primary">Execution.</span>
         </SectionHeading>
 
-        <div className="space-y-5">
+        <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
             Extended brand and product strategies across digital and physical
-            customer touchpoints, including email, trade shows, campaign assets,
-            environmental graphics, and distributor communications.
+            customer touchpoints while directing internal and external creative
+            partners across multiple companies, channels, and business units.
           </p>
 
-          <p className="font-sora text-xl leading-relaxed">
-            Directed designers, developers, freelancers, agencies,
-            photographers, printers, and domestic and international vendors to
-            deliver consistent work across multiple companies, channels, and
-            business units.
+          <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
+            <span className="font-semibold text-black">Scope:</span> Email ·
+            Trade shows · Campaign assets · Environmental graphics · Distributor
+            communications · Designers · Developers · Agencies · Photographers ·
+            Printers · Domestic and international vendors
           </p>
+
+          <MobileDisclosure label="View scope">
+            <p className="font-sora text-sm font-medium leading-relaxed text-[#555]">
+              Email · Trade shows · Campaign assets · Environmental graphics ·
+              Distributor communications · Designers · Developers · Agencies ·
+              Photographers · Printers · Domestic and international vendors
+            </p>
+          </MobileDisclosure>
         </div>
 
-<div className="grid items-start gap-6 md:grid-cols-2 md:items-center md:gap-10">
+        <div className="grid items-start gap-6 md:grid-cols-2 md:items-center md:gap-10">
   <div className="flex h-fit min-h-0 items-start justify-center md:min-h-[520px] md:items-center">
     <LightboxImage
       src="/Elite trade.png"
@@ -658,7 +796,7 @@ export default function OverViewSection() {
           and sales teams.
         </p>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
           {OUTCOMES.map((item, index) => (
             <MetricCard
               key={item.label}
