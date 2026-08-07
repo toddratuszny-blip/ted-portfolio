@@ -19,7 +19,7 @@ const GALLERY_IMAGES = [
   "/gallery/gallery13.png",                        // 12
   "/gallery/gallery14.png",                        // 13
   "/gallery/gallery16.png",                        // 14
-  "/gallery/gallery15.png",                        // 15
+  "/gallery/gallery15B.png",                        // 15
   "/gallery/gallery17B.png",                       // 16
   "/gallery/conical_23.png",                       // 17
   "/gallery/gallery18.jpg",                        // 18
@@ -383,7 +383,7 @@ export default function GallerySection() {
 
   <div className="flex items-center justify-center">
     <LightboxImage
-      src="/gallery/gallery15.png"
+      src="/gallery/gallery15B.png"
       alt="Waterfront Mills brand identity"
       width={1512}
       height={500}

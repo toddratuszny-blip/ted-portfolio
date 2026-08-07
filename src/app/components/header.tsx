@@ -9,7 +9,7 @@ import { SITE_CONFIG } from "../constants/site-config";
 
 export default function Header() {
   return (
-    <section className="relative w-full overflow-hidden bg-white md:pb-8 md:pt-16">
+    <section className="relative w-full overflow-hidden bg-white pt-4 md:pb-8 md:pt-16">
       <Image
         src="/heroEllipse.png"
         alt=""

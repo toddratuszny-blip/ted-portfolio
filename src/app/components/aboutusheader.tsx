@@ -2,8 +2,7 @@ import Image from "next/image";
 
 export default function AboutUsHeader() {
   return (
-    <section className="mx-auto flex max-w-7xl flex-col gap-8 px-4 pb-12 pt-8 md:gap-12 md:pb-20 md:pt-16 xl:px-0">
-      <div className="max-w-6xl">
+<section className="mx-auto flex max-w-7xl flex-col gap-8 px-4 pb-12 pt-5 md:gap-12 md:pb-20 md:pt-16 xl:px-0">      <div className="max-w-6xl">
         <h1 className="text-center font-sora text-[40px] font-bold leading-[1.1] tracking-tight text-black sm:text-[64px] md:text-left md:text-[80px]">
           Connecting Strategy, Creativity,{" "}
           <span className="text-primary">and Execution.</span>
