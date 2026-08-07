@@ -4,27 +4,27 @@ import Setting from "../Icons/setting";
 import LightboxImage from "./lightboximage";
 
 const GALLERY_IMAGES = [
-  "/gallery/gallery3.png",
-  "/gallery/gallery2.png",
-  "/gallery/gallery1.png",
-  "/gallery/gallery4.png",
-  "/gallery/gallery5.png",
-  "/gallery/gallery6.png",
-  "/gallery/gallery7.jpg",
-  "/gallery/gallery8.jpg",
-  "/gallery/gallery9.jpg",
-  "/gallery/gallery10.png",
-  "/gallery/gallery11.png",
-  "/gallery/gallery12.1.png",
-  "/gallery/gallery13.png",
-  "/gallery/gallery14.png",
-  "/gallery/gallery16.png",
-  "/gallery/gallery15.png",
-  "/gallery/gallery17B.png",
-  "/gallery/conical_23.png",
-  "/gallery/gallery18.jpg",
-  "/MT2.png",
-  "/MT1.png",
+  "/gallery/gallery3.png",                         // 0
+  "/gallery/gallery2.png",                         // 1
+  "/gallery/gallery1.png",                         // 2
+  "/gallery/gallery4BA.jpg",                       // 3
+  "/gallery/gallery10.png",                        // 4
+  "/gallery/furniture-campaign-detail.jpg",        // 5
+  "/gallery/gallery6.png",                         // 6
+  "/gallery/gallery7.jpg",                         // 7
+  "/gallery/gallery8.jpg",                         // 8
+  "/gallery/gallery9.jpg",                         // 9
+  "/gallery/gallery11.png",                        // 10
+  "/gallery/gallery12.1.png",                      // 11
+  "/gallery/gallery13.png",                        // 12
+  "/gallery/gallery14.png",                        // 13
+  "/gallery/gallery16.png",                        // 14
+  "/gallery/gallery15.png",                        // 15
+  "/gallery/gallery17B.png",                       // 16
+  "/gallery/conical_23.png",                       // 17
+  "/gallery/gallery18.jpg",                        // 18
+  "/MT2.png",                                      // 19
+  "/MT1.png",                                      // 20
 ];
 
 const CAPABILITIES = [
@@ -212,7 +212,7 @@ export default function GallerySection() {
 
         <div className="grid gap-7 md:gap-10.5">
           <LightboxImage
-            src="/gallery/gallery4.png"
+            src="/gallery/gallery4BA.jpg"
             alt="Furniture advertising and campaign creative"
             width={1512}
             height={600}
@@ -228,19 +228,19 @@ export default function GallerySection() {
               width={1512}
               height={600}
               gallery={GALLERY_IMAGES}
-              index={9}
+              index={4}
               className="block h-auto w-full object-contain"
             />
           </div>
 
           <div className="grid items-start gap-6 md:grid-cols-2 md:gap-8">
             <LightboxImage
-              src="/gallery/gallery5.png"
+              src="/gallery/furniture-campaign-detail.jpg"
               alt="Furniture campaign design and product details"
               width={1512}
               height={2064}
               gallery={GALLERY_IMAGES}
-              index={4}
+              index={5}
               className="block h-auto w-full object-contain"
             />
 
@@ -250,7 +250,7 @@ export default function GallerySection() {
               width={1512}
               height={2064}
               gallery={GALLERY_IMAGES}
-              index={5}
+              index={6}
               className="block h-auto w-full object-contain"
             />
           </div>
@@ -264,7 +264,7 @@ export default function GallerySection() {
                 width={1512}
                 height={2064}
                 gallery={GALLERY_IMAGES}
-                index={6}
+                index={7}
                 className="block h-auto w-full object-contain"
               />
             </div>
@@ -276,7 +276,7 @@ export default function GallerySection() {
                 width={1512}
                 height={2064}
                 gallery={GALLERY_IMAGES}
-                index={7}
+                index={8}
                 className="block h-auto w-full object-contain"
               />
             </div>
@@ -288,7 +288,7 @@ export default function GallerySection() {
                 width={1512}
                 height={2064}
                 gallery={GALLERY_IMAGES}
-                index={8}
+                index={9}
                 className="block h-auto w-full object-contain"
               />
             </div>
