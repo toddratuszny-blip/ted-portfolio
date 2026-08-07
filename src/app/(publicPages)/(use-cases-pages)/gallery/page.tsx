@@ -45,7 +45,7 @@ const features = [
 export default function CreativeGallery() {
   return (
     <>
-      <div className="relative min-h-[620px] w-full overflow-hidden md:min-h-[calc(100dvh-220px)]">
+      <div className="relative w-full min-h-[620px] md:min-h-[calc(100dvh-220px)] overflow-hidden">
         {/* Mobile hero */}
         <Image
           src="/gallery/Creative Mobile.png"
@@ -70,8 +70,8 @@ export default function CreativeGallery() {
         <div className="absolute inset-0 bg-black/65 md:bg-black/30" />
 
         {/* Hero content */}
-        <div className="relative z-10 mx-auto grid px-4 pb-10 pt-16 md:grid-cols-2 md:px-12 md:py-16">
-          <div className="flex w-[52%] max-w-[220px] flex-col gap-5 md:w-auto md:max-w-[560px] md:gap-8">
+        <div className="relative z-10 mx-auto grid px-4 pb-10 pt-10 md:grid-cols-2 md:px-12 md:py-16">
+          <div className="flex w-[60%] max-w-[260px] flex-col gap-4 md:w-auto md:max-w-[560px] md:gap-8">
             <div className="flex w-fit items-center justify-center rounded-full bg-[#2F3334] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
                 Case Study

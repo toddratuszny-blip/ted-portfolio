@@ -70,8 +70,8 @@ export default function Accelerate() {
         <div className="absolute inset-0 bg-black/65 md:bg-black/50" />
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto grid md:grid-cols-2 px-4 pt-16 pb-10 md:px-12 md:py-16">
-          <div className="flex max-w-[420px] flex-col gap-5 md:max-w-[520px] md:gap-8">
+        <div className="relative z-10 mx-auto grid md:grid-cols-2 px-4 pt-10 pb-10 md:px-12 md:py-16">
+          <div className="flex max-w-[420px] flex-col gap-4 md:max-w-[520px] md:gap-8">
             <div className="flex w-fit items-center justify-center rounded-full bg-[#35A9E5] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
                 Case Study
