@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import OverView from "../Icons/overview";
 import Setting from "../Icons/setting";
 import LightboxImage from "./lightboximage";
@@ -100,7 +101,7 @@ function MediaCard({
 }) {
   return (
     <div
-      className={`flex w-full min-h-0 items-center justify-center overflow-hidden ${className}`}
+      className={`flex min-h-0 w-full items-center justify-center overflow-hidden ${className}`}
     >
       {children}
     </div>
@@ -139,6 +140,7 @@ export default function AccelerateSection() {
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
           <Setting />
+
           <h1 className="text-3xl font-semibold md:text-5xl">
             My<span className="text-primary"> Role.</span>
           </h1>
@@ -172,10 +174,10 @@ export default function AccelerateSection() {
         <div className="grid max-w-6xl gap-3.5">
           <p className="text-xl leading-relaxed">
             Led creative execution for the launch of LifeToGo Immunity Drink
-            Mixes, a LifeToGo-owned product line. I developed the campaign system
-            across packaging, product presentation, ecommerce merchandising,
-            responsive digital advertising, publisher promotions, and launch
-            creative.
+            Mixes, a LifeToGo-owned product line. I developed the campaign
+            system across packaging, product presentation, ecommerce
+            merchandising, responsive digital advertising, publisher
+            promotions, and launch creative.
           </p>
 
           <p className="text-xl leading-relaxed">
@@ -301,11 +303,11 @@ export default function AccelerateSection() {
         </div>
 
         <p className="max-w-6xl text-xl leading-relaxed">
-          Led the LifeToGo creative execution for Performance Inspired products,
-          including ecommerce merchandising, promotional assets, and campaign
-          content featuring cofounder Mark Wahlberg. I adapted the established
-          partner brand for the LifeToGo marketplace while preserving its visual
-          identity and product positioning.
+          Led the LifeToGo creative execution for Performance Inspired
+          products, including ecommerce merchandising, promotional assets, and
+          campaign content featuring cofounder Mark Wahlberg. I adapted the
+          established partner brand for the LifeToGo marketplace while
+          preserving its visual identity and product positioning.
         </p>
 
         <div className="mt-3 grid gap-6 md:mt-4 md:grid-cols-12 md:gap-6">
@@ -358,15 +360,15 @@ export default function AccelerateSection() {
         </div>
 
         <p className="max-w-6xl text-xl leading-relaxed">
-          Developed and executed publisher promotions connecting LifeToGo offers
-          with Accelerate360's portfolio of national media properties and consumer
-          brands. I adapted campaign creative for distinct audiences and channels
-          while maintaining consistent messaging and a cohesive LifeToGo brand
-          experience.
+          Developed and executed publisher promotions connecting LifeToGo
+          offers with Accelerate360&apos;s portfolio of national media
+          properties and consumer brands. I adapted campaign creative for
+          distinct audiences and channels while maintaining consistent
+          messaging and a cohesive LifeToGo brand experience.
         </p>
 
-        <div className="mt-3 grid gap-6 md:mt-4 md:grid-cols-12 md:gap-6">
-          <MediaCard className="md:col-span-12">
+        <div className="mt-3 grid gap-8 md:mt-4 md:grid-cols-12">
+          <div className="md:col-span-12">
             <LightboxImage
               src="/accelerate/Brand Banner.jpg"
               alt="Selected Accelerate360 publisher properties and consumer brand partnerships"
@@ -376,9 +378,9 @@ export default function AccelerateSection() {
               index={getImageIndex("/accelerate/Brand Banner.jpg")}
               className="block h-auto w-full object-contain"
             />
-          </MediaCard>
+          </div>
 
-          <MediaCard className="md:col-span-7 md:min-h-[560px]">
+          <div className="md:col-span-8">
             <LightboxImage
               src="/accelerate/life15.jpg"
               alt="The Telegraph LifeToGo promotional campaign"
@@ -386,11 +388,11 @@ export default function AccelerateSection() {
               height={686}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life15.jpg")}
-              className="mx-auto block h-auto w-full max-w-[520px] object-contain md:h-full md:max-h-[520px] md:max-w-none"
+              className="block h-auto w-full object-contain"
             />
-          </MediaCard>
+          </div>
 
-          <MediaCard className="md:col-span-5 md:min-h-[760px]">
+          <div className="flex items-start justify-center md:col-span-4">
             <LightboxImage
               src="/accelerate/life18B.jpg"
               alt="Miami Herald LifeToGo promotion"
@@ -398,11 +400,11 @@ export default function AccelerateSection() {
               height={400}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life18B.jpg")}
-              className="mx-auto block h-auto w-full max-w-[400px] object-contain md:h-full md:max-h-[740px] md:max-w-none"
+              className="block h-auto w-full max-w-[300px] object-contain"
             />
-          </MediaCard>
+          </div>
 
-          <div className="overflow-hidden md:col-span-12">
+          <div className="mt-2 overflow-hidden md:col-span-12">
             <LightboxImage
               src="/accelerate/life31.jpg"
               alt="LifeToGo wellness lifestyle banner"
@@ -429,17 +431,37 @@ export default function AccelerateSection() {
         <div className="grid max-w-6xl gap-3.5">
           <p className="text-xl leading-relaxed">
             Owned marketplace creative and ecommerce merchandising across
-            technology, food, wellness, accessories, and lifestyle categories. I
-            developed product-launch systems that included campaign banners,
-            feature graphics, product imagery, marketplace assets, email creative,
-            and digital advertising.
+            technology, food, wellness, accessories, and lifestyle categories.
+            I developed product-launch systems that included campaign banners,
+            feature graphics, product imagery, marketplace assets, email
+            creative, and digital advertising.
           </p>
 
           <p className="text-xl leading-relaxed">
-            Partner brands retained their established identities and packaging.
-            I translated their products into clear, cohesive LifeToGo storefront,
-            promotional, and campaign experiences while preserving each brand's
-            established identity and product positioning.
+            I onboarded and merchandised partner brands across
+            LifeToGo-supported storefronts, developing promotional and campaign
+            creative while preserving each brand&apos;s established identity,
+            packaging, and product positioning.
+          </p>
+        </div>
+
+        <div className="mt-4 grid gap-3 md:mt-6">
+          <div className="mx-auto w-full max-w-5xl overflow-hidden rounded-sm border border-neutral-200 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
+            <Image
+              src="/accelerate/usnow.com.png"
+              alt="US Weekly ecommerce marketplace supported through LifeToGo"
+              width={1096}
+              height={2048}
+              className="block h-auto w-full"
+            />
+          </div>
+
+          <p className="mx-auto mt-2 w-full max-w-5xl text-base leading-relaxed text-neutral-600 md:mt-3 md:text-lg">
+            <span className="font-semibold text-black">
+              US Weekly Ecommerce Marketplace
+            </span>{" "}
+            — Supported brand onboarding, merchandising, campaign placement,
+            promotional creative, and launch QA within the existing storefront.
           </p>
         </div>
 
@@ -584,11 +606,11 @@ export default function AccelerateSection() {
 
         <p className="max-w-6xl text-xl leading-relaxed">
           Accelerate360 demonstrates my ability to serve as the primary creative
-          resource for an ecommerce division, lead integrated campaign execution,
-          and translate established partner brands across marketplace, publisher,
-          email, and digital advertising channels. The work combined packaging,
-          product launches, ecommerce merchandising, product marketing, and
-          high-volume hands-on creative execution.
+          resource for an ecommerce division, lead integrated campaign
+          execution, and translate established partner brands across
+          marketplace, publisher, email, and digital advertising channels. The
+          work combined packaging, product launches, ecommerce merchandising,
+          product marketing, and high-volume hands-on creative execution.
         </p>
       </section>
     </div>
