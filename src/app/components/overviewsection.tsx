@@ -642,7 +642,7 @@ export default function OverViewSection() {
               height={803}
               gallery={INDUSTRIAL_GALLERY}
               index={17}
-              className="mx-auto block max-h-[260px] w-auto max-w-full object-contain"
+              className="mx-auto block max-h-[260px] w-auto max-w-full object-contain md:translate-y-2"
             />
           </div>
 

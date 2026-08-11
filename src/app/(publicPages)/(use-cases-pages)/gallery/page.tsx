@@ -11,31 +11,31 @@ import {
 
 const features = [
   {
-    icon: <PalateIcon width={60} height={60} />,
+    icon: <PalateIcon />,
     title: "BRAND IDENTITY & ICONOGRAPHY",
     description:
       "Logos, visual systems, illustration, and custom iconography developed for organizations across multiple industries.",
   },
   {
-    icon: <BookOpenIcon width={60} height={60} />,
+    icon: <BookOpenIcon />,
     title: "EDITORIAL & PRINT DESIGN",
     description:
       "Publications, catalogs, books, posters, brochures, and collateral designed across varied formats.",
   },
   {
-    icon: <MegaPhoneIcon width={60} height={60} />,
+    icon: <MegaPhoneIcon />,
     title: "CAMPAIGNS & ADVERTISING",
     description:
       "B2B, B2C, D2C, and nonprofit creative developed across print, promotional, and digital channels.",
   },
   {
-    icon: <MonitorIcon width={60} height={60} />,
+    icon: <MonitorIcon />,
     title: "DIGITAL DESIGN",
     description:
       "Websites, ecommerce experiences, social content, and digital assets developed for diverse audiences.",
   },
   {
-    icon: <ChartLineIcon width={60} height={60} />,
+    icon: <ChartLineIcon />,
     title: "RESULTS & IMPACT",
     description:
       "Represents 15+ years across agency, in-house, B2B, B2C, D2C, ecommerce, manufacturing, publishing, and professional services.",
@@ -45,7 +45,7 @@ const features = [
 export default function CreativeGallery() {
   return (
     <>
-      <div className="relative w-full min-h-[620px] md:min-h-[calc(100dvh-220px)] overflow-hidden">
+      <div className="relative min-h-[500px] w-full overflow-hidden md:min-h-[520px]">
         {/* Mobile hero */}
         <Image
           src="/gallery/Creative Mobile.png"
@@ -53,7 +53,7 @@ export default function CreativeGallery() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center md:hidden"
+          className="object-cover object-[center_65%] md:hidden"
         />
 
         {/* Desktop hero */}
