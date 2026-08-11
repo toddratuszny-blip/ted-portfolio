@@ -11,31 +11,31 @@ import {
 
 const features = [
   {
-    icon: <TargetIcon width={60} height={60} />,
+    icon: <TargetIcon />,
     title: "BRAND STRATEGY & INTEGRATION",
     description:
       "Built two flagship brands, created product brands, rebranded three organizations, and integrated three acquisitions.",
   },
   {
-    icon: <MonitorIcon width={60} height={60} />,
+    icon: <MonitorIcon />,
     title: "DIGITAL & ECOMMERCE",
     description:
       "Websites, seven ecommerce platforms, and email programs reaching 50,000+ subscribers supported digital growth.",
   },
   {
-    icon: <MegaPhoneIcon width={60} height={60} />,
+    icon: <MegaPhoneIcon />,
     title: "PRODUCT MARKETING & SALES ENABLEMENT",
     description:
       "Product launches, packaging, campaigns, technical content, and a 276-page catalog supported sales and distribution.",
   },
   {
-    icon: <UsersIcon width={60} height={60} />,
+    icon: <UsersIcon />,
     title: "CREATIVE & MARKETING LEADERSHIP",
     description:
       "Directed five designers, four developers, agencies, freelancers, photographers, printers, and international vendors.",
   },
   {
-    icon: <ChartLineIcon width={60} height={60} />,
+    icon: <ChartLineIcon />,
     title: "RESULTS & IMPACT",
     description:
       "Led an eight-company ecosystem supporting approximately 10,000 SKUs and $3M+ in annual ecommerce revenue.",
@@ -45,15 +45,15 @@ const features = [
 export default function IndustrialBrand() {
   return (
     <>
-      <div className="relative w-full min-h-[620px] md:min-h-[calc(100dvh-220px)] overflow-hidden">
+      <div className="relative min-h-[500px] w-full overflow-hidden md:min-h-[520px]">
         {/* Mobile hero */}
         <Image
-          src="/Industrial Mobile 3.png"
+          src="/industrial mobile 3.png"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center md:hidden"
+          className="object-cover object-[center_65%] md:hidden"
         />
 
         {/* Desktop hero */}
@@ -70,15 +70,15 @@ export default function IndustrialBrand() {
         <div className="absolute inset-0 bg-black/60 md:bg-black/30" />
 
         {/* Hero content */}
-        <div className="relative z-10 mx-auto grid px-4 pb-10 pt-10 md:grid-cols-2 md:px-12 md:py-16">
-          <div className="flex w-[60%] max-w-[260px] flex-col gap-4 md:w-auto md:max-w-[560px] md:gap-8">
+        <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-5 py-10 md:grid md:min-h-[520px] md:grid-cols-2 md:px-12 md:py-16">
+          <div className="flex w-full max-w-[360px] flex-col gap-4 md:w-auto md:max-w-[560px] md:gap-8">
             <div className="flex w-fit items-center justify-center rounded-full bg-[#B12A2F] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
                 Case Study
               </p>
             </div>
 
-            <h1 className="text-3xl font-bold uppercase leading-[1.05] text-white md:text-5xl md:leading-tight">
+            <h1 className="text-[34px] font-bold uppercase leading-[1.05] text-white md:text-5xl md:leading-tight">
               Industrial Brand Ecosystem
             </h1>
 
@@ -86,7 +86,7 @@ export default function IndustrialBrand() {
               Unifying Industrial Brands
             </h2>
 
-            <p className="text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
+            <p className="max-w-[340px] text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
               Marketing and creative leader supporting seven ecommerce
               platforms, 10,000 SKUs, and $3M+ in annual ecommerce revenue.
             </p>
