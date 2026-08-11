@@ -45,7 +45,7 @@ const features = [
 export default function BrandStrategy() {
   return (
     <div>
-      <div className="relative min-h-[560px] overflow-hidden md:min-h-[620px]">
+      <div className="relative w-full min-h-[620px] overflow-hidden md:min-h-[calc(100dvh-220px)]">
         {/* Mobile hero */}
         <Image
           src="/brandstrategy/SPR MobileB.jpg"
