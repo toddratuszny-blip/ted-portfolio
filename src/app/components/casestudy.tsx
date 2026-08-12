@@ -3,22 +3,6 @@ import Link from "next/link";
 
 const works = [
   {
-    src: "/homecasestudy/industrial-hero-CS.jpg",
-    alt: "Industrial Brand Ecosystem case study",
-    title: "Industrial Brand\nEcosystem",
-    layout: "half",
-    hasBorder: true,
-    href: "/industrialbrand",
-  },
-  {
-    src: "/homecasestudy/mary_home.png",
-    alt: "Mary Ann's Chocolates case study",
-    title: "Mary Ann's\nChocolates",
-    layout: "half",
-    hasBorder: true,
-    href: "/mary-anns-chocolates",
-  },
-  {
     src: "/homecasestudy/SPR-Home.jpg",
     alt: "Summit Point Roofing case study",
     title: "Summit Point\nRoofing",
@@ -27,12 +11,28 @@ const works = [
     href: "/brandstrategy",
   },
   {
+    src: "/homecasestudy/industrial-hero-CS.jpg",
+    alt: "Industrial Brand Ecosystem case study",
+    title: "Industrial Brand\nEcosystem",
+    layout: "half",
+    hasBorder: true,
+    href: "/industrialbrand",
+  },
+  {
     src: "/homecasestudy/lifetogo_homepage_1200.png",
     alt: "Accelerate360 LifeToGo case study",
     title: "Accelerate360\nLifeToGo",
     layout: "half",
     hasBorder: true,
     href: "/accelerate360",
+  },
+  {
+    src: "/homecasestudy/mary_home.png",
+    alt: "Mary Ann's Chocolates case study",
+    title: "Mary Ann's\nChocolates",
+    layout: "half",
+    hasBorder: true,
+    href: "/mary-anns-chocolates",
   },
   {
     src: "/homecasestudy/creative.jpg",
@@ -129,26 +129,27 @@ function WorkCard({ item }: { item: WorkItem }) {
 }
 
 export default function CaseStudyWork() {
+  const fullWork = works.find((work) => work.layout === "full");
   const halfWorks = works.filter((work) => work.layout === "half");
-  const fullWorks = works.filter((work) => work.layout === "full");
 
   return (
-    <div className="mx-auto mt-6 grid max-w-7xl gap-6 px-0 md:mt-12 md:gap-12 xl:px-0">
-      {/* Row 1 */}
+    <div
+      id="case-studies"
+      className="mx-auto mt-6 grid max-w-7xl scroll-mt-8 gap-6 px-0 md:mt-12 md:gap-12 xl:px-0"
+    >
+      {/* Lead case study */}
+      {fullWork && <WorkCard item={fullWork as WorkItem} />}
+
+      {/* Row 1: Industrial + Accelerate360 */}
       <div className="flex flex-col justify-between gap-6 md:flex-row md:gap-12">
         {halfWorks.slice(0, 2).map((item) => (
           <WorkCard key={item.href} item={item as WorkItem} />
         ))}
       </div>
 
-      {/* Full-width case study */}
-      {fullWorks.map((item) => (
-        <WorkCard key={item.href} item={item as WorkItem} />
-      ))}
-
-      {/* Row 2 */}
+      {/* Row 2: Mary Ann's + Creative Gallery */}
       <div className="flex flex-col justify-between gap-6 md:flex-row md:gap-12">
-        {halfWorks.slice(2).map((item) => (
+        {halfWorks.slice(2, 4).map((item) => (
           <WorkCard key={item.href} item={item as WorkItem} />
         ))}
       </div>

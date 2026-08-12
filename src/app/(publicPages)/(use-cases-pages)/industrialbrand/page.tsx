@@ -87,8 +87,8 @@ export default function IndustrialBrand() {
             </h2>
 
             <p className="text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
-              Marketing and creative leader supporting seven ecommerce
-              platforms, 10,000 SKUs, and $3M+ in annual ecommerce revenue.
+              Led marketing and creative across seven ecommerce platforms,
+              10,000 SKUs, and $3M+ in annual ecommerce revenue.
             </p>
           </div>
         </div>

@@ -87,9 +87,9 @@ export default function CustomerBrand() {
             </h2>
 
             <p className="text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
-              Creative lead developing a unified premium brand across packaging,
-              retail displays, catalogs, promotions, and customer-facing
-              collateral.
+              Led creative development of a unified premium brand across
+              packaging, retail displays, catalogs, promotions, and
+              customer-facing collateral.
             </p>
           </div>
         </div>

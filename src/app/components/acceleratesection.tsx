@@ -87,6 +87,7 @@ function MobileDisclosure({
           +
         </span>
       </summary>
+
       <div className="pt-4">{children}</div>
     </details>
   );
@@ -111,6 +112,7 @@ function MediaCard({
 export default function AccelerateSection() {
   return (
     <div className="mx-auto max-w-7xl font-sora">
+      {/* Overview */}
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
           <OverView />
@@ -137,6 +139,7 @@ export default function AccelerateSection() {
 
       <Divider />
 
+      {/* My Role */}
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
           <Setting />
@@ -163,6 +166,7 @@ export default function AccelerateSection() {
 
       <Divider />
 
+      {/* LifeToGo Immunity Drink Mix */}
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
           <h1 className="text-3xl font-semibold md:text-5xl">
@@ -294,6 +298,7 @@ export default function AccelerateSection() {
 
       <Divider />
 
+      {/* Performance Inspired */}
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
           <h1 className="text-3xl font-semibold md:text-5xl">
@@ -351,6 +356,7 @@ export default function AccelerateSection() {
 
       <Divider />
 
+      {/* Publisher Promotions */}
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
           <h1 className="text-3xl font-semibold md:text-5xl">
@@ -420,6 +426,7 @@ export default function AccelerateSection() {
 
       <Divider />
 
+      {/* Ecommerce Campaigns */}
       <section className="grid gap-6">
         <div className="flex items-center gap-2.5">
           <h1 className="text-3xl font-semibold md:text-5xl">
@@ -580,7 +587,8 @@ export default function AccelerateSection() {
 
       <Divider />
 
-      <section className="grid gap-6 md:mb-16">
+      {/* Results & Impact */}
+      <section className="grid gap-8 md:mb-16">
         <div className="flex items-center gap-2.5">
           <h1 className="text-3xl font-semibold md:text-5xl">
             Results <span className="text-primary">& Impact.</span>
@@ -588,15 +596,99 @@ export default function AccelerateSection() {
         </div>
 
         <p className="max-w-6xl text-xl leading-relaxed">
-          Led creative execution for the launch and marketing of 47 consumer
-          brands through the LifeToGo ecommerce division. I developed LifeToGo
-          packaging and integrated campaign assets while owning partner-brand
-          marketplace creative, product imagery, ecommerce merchandising,
-          publisher promotions, email marketing, and digital advertising across
-          multiple consumer categories.
+          Supported the launch and marketing of nationally recognized consumer
+          brands across ecommerce, digital marketing, merchandising, publisher
+          promotions, and creative production—combining hands-on creative
+          ownership with the operational work required to bring products and
+          campaigns to market.
         </p>
+
+        {/* Scope Summary */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-xl border border-neutral-200 bg-white p-6">
+            <p className="text-2xl font-semibold text-primary md:text-3xl">
+              47
+            </p>
+
+            <h3 className="mt-3 text-lg font-semibold">Consumer Brands</h3>
+
+            <p className="mt-2 text-base leading-relaxed text-neutral-600">
+              Supported across product launches, ecommerce, campaigns, and
+              marketplace marketing.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-neutral-200 bg-white p-6">
+            <p className="text-2xl font-semibold text-primary md:text-3xl">
+              B2C + D2C
+            </p>
+
+            <h3 className="mt-3 text-lg font-semibold">
+              Ecommerce Marketing
+            </h3>
+
+            <p className="mt-2 text-base leading-relaxed text-neutral-600">
+              Consumer marketing spanning owned products, partner brands, and
+              multi-brand ecommerce marketplaces.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-neutral-200 bg-white p-6">
+            <p className="text-2xl font-semibold text-primary md:text-3xl">
+              National
+            </p>
+
+            <h3 className="mt-3 text-lg font-semibold">
+              Publisher Promotions
+            </h3>
+
+            <p className="mt-2 text-base leading-relaxed text-neutral-600">
+              Creative supporting Us Weekly, Men&apos;s Journal, Life &amp;
+              Style, In Touch Weekly, Closer, and The Miami Herald.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-neutral-200 bg-white p-6">
+            <p className="whitespace-nowrap text-2xl font-semibold text-primary md:text-3xl">
+              Multi-Category
+            </p>
+
+            <h3 className="mt-3 text-lg font-semibold">Consumer Portfolio</h3>
+
+            <p className="mt-2 text-base leading-relaxed text-neutral-600">
+              Beauty, fashion, wellness, fitness, technology, food, and other
+              consumer products.
+            </p>
+          </div>
+        </div>
+
+        {/* Operational Scope */}
+        <div className="grid gap-6 border-l-2 border-primary pl-5 md:grid-cols-2 md:gap-10 md:pl-6">
+          <div>
+            <h3 className="text-lg font-semibold">Creative & Campaign Scope</h3>
+
+            <p className="mt-2 text-base leading-relaxed text-neutral-600">
+              Packaging, product launches, digital advertising, ecommerce
+              experiences, email, social, motion, video, publisher promotions,
+              product photography, and marketplace creative.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold">
+              Ecommerce & Launch Operations
+            </h3>
+
+            <p className="mt-2 text-base leading-relaxed text-neutral-600">
+              Product onboarding and merchandising, product imagery, feature
+              graphics, product variants, vendor-asset coordination, and launch
+              QA using Shopify and TrueCommerce.
+            </p>
+          </div>
+        </div>
       </section>
 
+      {/* Takeaway */}
       <section className="mt-10 grid gap-6 md:mt-0">
         <div className="flex items-center gap-2.5">
           <h1 className="text-3xl font-semibold md:text-5xl">
@@ -605,12 +697,11 @@ export default function AccelerateSection() {
         </div>
 
         <p className="max-w-6xl text-xl leading-relaxed">
-          Accelerate360 demonstrates my ability to serve as the primary creative
-          resource for an ecommerce division, lead integrated campaign
-          execution, and translate established partner brands across
-          marketplace, publisher, email, and digital advertising channels. The
-          work combined packaging, product launches, ecommerce merchandising,
-          product marketing, and high-volume hands-on creative execution.
+          Accelerate360 demonstrates my ability to operate across brand,
+          creative, ecommerce, and marketing execution within a fast-moving
+          consumer environment—bringing together multiple brands, channels,
+          partners, and stakeholders to create cohesive go-to-market
+          experiences.
         </p>
       </section>
     </div>

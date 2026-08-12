@@ -9,7 +9,7 @@ import { SITE_CONFIG } from "../constants/site-config";
 
 export default function Header() {
   return (
-    <section className="relative w-full overflow-hidden bg-white pt-4 md:pb-8 md:pt-16">
+    <section className="relative w-full overflow-hidden bg-white pb-6 pt-4 md:pb-8 md:pt-16">
       <Image
         src="/heroEllipse.png"
         alt=""
@@ -28,8 +28,8 @@ export default function Header() {
           </h1>
         </div>
 
-        {/* LinkedIn CTA */}
-        <div className="col-span-12 flex justify-center pt-8 lg:col-span-1 lg:justify-self-end lg:pt-4">
+        {/* Desktop LinkedIn CTA */}
+        <div className="hidden lg:col-span-1 lg:flex lg:justify-self-end lg:pt-4">
           <Link
             href={SITE_CONFIG.contact.linkedin}
             target="_blank"
@@ -78,6 +78,7 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Desktop-only Scroll CTA */}
       <button
         type="button"
         onClick={() => {
@@ -86,7 +87,7 @@ export default function Header() {
             block: "start",
           });
         }}
-        className="relative z-10 mx-auto mb-4 mt-6 flex w-full max-w-7xl cursor-pointer select-none items-center justify-center gap-2 px-4 md:mb-0 md:mt-12 lg:justify-start xl:px-0"
+        className="relative z-10 mx-auto mb-0 mt-12 hidden w-full max-w-7xl cursor-pointer select-none items-center justify-start gap-2 px-4 lg:flex xl:px-0"
       >
         <span className="text-[18px] font-semibold tracking-wide text-black transition-colors duration-200 hover:text-primary">
           Scroll

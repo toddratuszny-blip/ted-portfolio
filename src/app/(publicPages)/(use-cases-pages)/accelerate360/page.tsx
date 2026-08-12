@@ -38,14 +38,14 @@ const features = [
     icon: <ChartLineIcon width={60} height={60} />,
     title: "RESULTS & IMPACT",
     description:
-      "Primary creative resource supporting the launch of 47 consumer brands across multiple ecommerce marketplaces, including LifeToGo.",
+      "Primary creative resource supporting 47 consumer brands across multiple ecommerce marketplaces, including LifeToGo.",
   },
 ];
 
 export default function Accelerate() {
   return (
     <>
-      <div className="relative w-full min-h-[620px] md:min-h-[calc(100dvh-220px)] overflow-hidden">
+      <div className="relative min-h-[620px] w-full overflow-hidden md:min-h-[calc(100dvh-220px)]">
         {/* Mobile Hero */}
         <Image
           src="/accelerate/LTG Mobile.png"
@@ -70,7 +70,7 @@ export default function Accelerate() {
         <div className="absolute inset-0 bg-black/65 md:bg-black/50" />
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto grid md:grid-cols-2 px-4 pt-10 pb-10 md:px-12 md:py-16">
+        <div className="relative z-10 mx-auto grid px-4 pb-10 pt-10 md:grid-cols-2 md:px-12 md:py-16">
           <div className="flex max-w-[420px] flex-col gap-4 md:max-w-[520px] md:gap-8">
             <div className="flex w-fit items-center justify-center rounded-full bg-[#35A9E5] px-5 py-2.5">
               <p className="whitespace-nowrap text-base text-white">
@@ -86,9 +86,9 @@ export default function Accelerate() {
               Launching Consumer Brands
             </h2>
 
-            <p className="max-w-[340px] text-base leading-relaxed font-medium text-white md:max-w-[520px] md:text-xl">
-              Creative marketing lead supporting 47 consumer brand launches
-              across ecommerce, integrated campaigns, and publisher media.
+            <p className="max-w-[340px] text-base font-medium leading-relaxed text-white md:max-w-[520px] md:text-xl">
+              Creative marketing lead supporting 47 consumer brands across
+              ecommerce, integrated campaigns, and publisher media.
             </p>
           </div>
         </div>
