@@ -11,12 +11,11 @@ export default function HomePage() {
 
       <About
         badgeText="About"
-        heading="A Broad Marketing Background. A Creative Point of View."
+        heading="Creative at the Core. Marketing-Minded by Experience."
         description={
           <>
             <p>
-              For 15+ years, I’ve worked across brand strategy, creative
-              direction, ecommerce, web, content, and sales enablement.
+              For 15+ years, I've built my career at the intersection of creative and marketing—starting in design and art direction and expanding into brand strategy, digital, ecommerce, content, and sales enablement.
             </p>
 
             <p className="mt-8">

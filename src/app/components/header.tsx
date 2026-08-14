@@ -49,9 +49,7 @@ export default function Header() {
       <div className="relative z-10 mx-auto mt-6 grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:mt-16 md:grid-cols-[1fr_1fr] xl:px-0">
         <div className="flex w-full flex-col items-center gap-8 text-center md:items-start md:text-left lg:ml-[6%] lg:max-w-[500px]">
           <p className="text-[18px] font-normal leading-relaxed text-[#171717] sm:text-xl md:text-[24px]">
-            I build brands and creative experiences that connect strategy with
-            execution—turning business goals into clear, cohesive work across
-            campaigns, digital, content, and customer touchpoints.
+            I bring a creative leader's perspective to marketing—combining deep design and art direction experience with the strategic understanding to connect creative decisions to business goals.
           </p>
 
           <Link

@@ -48,17 +48,16 @@ export default function Aboutpage() {
         description={
           <>
             <p>
-              Marketing is strongest when strategy and execution work together.
-              My background combines strategic marketing leadership with deep
-              creative experience, giving me a practical understanding of how
-              ideas move from business objectives to market execution.
+              My career began in design and art direction and expanded into
+              broader marketing leadership, giving me a practical understanding
+              of how creative decisions connect to positioning, customer
+              experience, sales, and business objectives.
             </p>
 
             <p className="mt-6">
-              That perspective helps me see how decisions across brand,
-              creative, digital, product, and sales affect the larger customer
-              experience—and build marketing that is cohesive, practical, and
-              aligned with business goals.
+              That perspective helps me see both the creative problem and the
+              larger business problem—then build work that is cohesive, useful,
+              and executable.
             </p>
           </>
         }
@@ -76,24 +75,23 @@ export default function Aboutpage() {
               </div>
 
               <h2 className="mb-4 font-sora text-3xl font-semibold leading-[1.15] text-white md:text-4xl">
-                Strategy through execution.
+                Creative leadership across the marketing ecosystem.
               </h2>
 
               {/* Mobile Intro */}
               <p className="text-base font-light leading-[1.55] text-white/80 md:hidden">
-                Broad experience connecting brand strategy, creative leadership,
-                integrated marketing, product marketing, digital and ecommerce,
-                sales enablement, and marketing operations across B2B, B2C, and
-                D2C organizations.
+                Experience spanning brand strategy, creative direction,
+                integrated marketing, digital and ecommerce, product marketing,
+                and sales enablement across B2B, B2C, and D2C organizations.
               </p>
 
               {/* Tablet / Desktop Intro */}
               <p className="hidden text-base font-light leading-[1.6] text-white/80 md:block md:text-xl">
-                My experience spans brand strategy, creative leadership,
+                My experience spans brand strategy, creative direction,
                 integrated marketing, digital and ecommerce, product marketing,
-                sales enablement, and marketing operations—across B2B, B2C, and
-                D2C organizations ranging from individual brands to complex
-                multi-brand portfolios.
+                sales enablement, and marketing operations—giving me a broader
+                understanding of how creative decisions connect across the
+                customer experience and the business.
               </p>
             </div>
 
@@ -154,30 +152,12 @@ export default function Aboutpage() {
                 to marketing for a $30M multi-division organization.
               </p>
 
-              <p className="mt-4 text-base font-light leading-[1.6] text-white/70 md:hidden">
-                My experience has covered brand strategy and architecture,
-                creative direction, integrated marketing, product marketing and
-                launches, digital and ecommerce, content, sales enablement, and
-                marketing operations—leading internal teams and external
-                partners while carrying initiatives from strategy through
-                execution.
-              </p>
-
               {/* Tablet / Desktop */}
               <p className="hidden font-sora text-lg font-normal leading-[1.55] text-white md:block md:text-xl">
                 15+ years across agency and in-house environments, spanning B2B,
                 B2C, and D2C organizations—from multi-brand portfolios and
                 consumer ecommerce to marketing for a $30M multi-division
                 organization.
-              </p>
-
-              <p className="mt-5 hidden text-base font-light leading-[1.6] text-white/70 md:block md:text-lg">
-                My experience has covered brand strategy and architecture,
-                creative direction, integrated marketing, product marketing and
-                launches, digital and ecommerce, content, sales enablement, and
-                marketing operations—leading internal teams and external
-                partners while carrying initiatives from strategy through
-                execution.
               </p>
             </div>
           </div>
