@@ -44,19 +44,19 @@ export default function Aboutpage() {
       <About
         imgSrcOne="/LTG Mask.png"
         badgeText="About Me"
-        heading="Creative leadership grounded in practical execution."
+        heading="A broader perspective on the work."
         description={
           <>
             <p>
               My career began in design and art direction and expanded into
               broader marketing leadership, giving me a practical understanding
-              of how creative decisions connect to positioning, customer
-              experience, sales, and business objectives.
+              of how brand and marketing decisions connect to positioning,
+              customer experience, sales, and business objectives.
             </p>
 
             <p className="mt-6">
-              That perspective helps me see both the creative problem and the
-              larger business problem—then build work that is cohesive, useful,
+              That perspective helps me see both the immediate challenge and the
+              larger business context—then build work that is cohesive, useful,
               and executable.
             </p>
           </>
@@ -75,7 +75,7 @@ export default function Aboutpage() {
               </div>
 
               <h2 className="mb-4 font-sora text-3xl font-semibold leading-[1.15] text-white md:text-4xl">
-                Creative depth. Marketing breadth.
+                Where strategy meets execution.
               </h2>
 
               {/* Mobile Intro */}
@@ -90,8 +90,8 @@ export default function Aboutpage() {
                 My experience spans brand strategy, creative direction,
                 integrated marketing, digital and ecommerce, product marketing,
                 sales enablement, and marketing operations—giving me a broader
-                understanding of how creative decisions connect across the
-                customer experience and the business.
+                understanding of how decisions connect across the customer
+                experience and the business.
               </p>
             </div>
 

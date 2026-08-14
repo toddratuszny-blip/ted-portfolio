@@ -47,21 +47,20 @@ export default function Approach() {
           <h2 className="mt-5 font-sora text-3xl font-light leading-tight text-white md:text-[52px]">
             Strategy Informed.
             <br />
-            Creatively Driven.
+            Purposefully Built.
           </h2>
 
           <p className="mt-6 text-lg font-light leading-relaxed text-neutral-200 md:text-2xl">
             I start by understanding the business and defining a clear
-            direction, then translate that thinking into creative solutions
-            that connect the brand, message, and experience across
-            touchpoints.
+            direction, then turn that thinking into work that connects the
+            brand, message, and customer experience across touchpoints.
           </p>
         </div>
 
         <div className="grid w-full grid-cols-1 gap-6">
-          {processSteps.map((item, index) => (
+          {processSteps.map((item) => (
             <ApproachCard
-              key={index}
+              key={item.step}
               stepNumber={item.step}
               title={item.title}
               description={item.desc}

@@ -10,8 +10,8 @@ export default function GetInTouch() {
         <div className="w-full md:col-span-2 flex flex-col justify-between text-center pb-7.5 md:pb-14 md:text-left gap-8 md:gap-0">
           <div className="space-y-3">
             <h1 className="font-bold text-3xl font-sora md:text-5xl leading-[130%]">
-              Where Creative Thinking Meets{" "}
-              <span className="text-primary">Business Strategy.</span>
+              Ideas Built Around{" "}
+              <span className="text-primary">Business Goals.</span>
             </h1>
 
             <h2 className="text-base font-sora md:text-xl leading-[160%]">
