@@ -21,8 +21,8 @@ export default function Header() {
       <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-start px-4 xl:px-0">
         <div className="col-span-12 text-center lg:col-span-11 lg:text-left">
           <h1 className="font-sora text-[40px] font-bold leading-[1.1] tracking-tight text-black sm:text-[64px] md:text-[80px]">
-            Strategic Thinking. <br className="hidden md:block" />
-            <span className="text-primary">Creative Leadership.</span>{" "}
+            Creative Direction. <br className="hidden md:block" />
+            <span className="text-primary">Brand Strategy.</span>{" "}
             <br className="hidden md:block" />
             Marketing Execution.
           </h1>
@@ -49,9 +49,9 @@ export default function Header() {
       <div className="relative z-10 mx-auto mt-6 grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:mt-16 md:grid-cols-[1fr_1fr] xl:px-0">
         <div className="flex w-full flex-col items-center gap-8 text-center md:items-start md:text-left lg:ml-[6%] lg:max-w-[500px]">
           <p className="text-[18px] font-normal leading-relaxed text-[#171717] sm:text-xl md:text-[24px]">
-            I build brands, marketing systems, and digital experiences that
-            help organizations communicate more clearly, compete more
-            effectively, and grow with confidence.
+            I build brands and creative experiences that connect strategy with
+            execution—turning business goals into clear, cohesive work across
+            campaigns, digital, content, and customer touchpoints.
           </p>
 
           <Link

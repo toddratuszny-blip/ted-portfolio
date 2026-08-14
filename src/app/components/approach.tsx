@@ -10,7 +10,7 @@ const processSteps = [
   {
     step: "02",
     title: "Define",
-    desc: "Develop the strategy, messaging, creative direction, and roadmap that align business goals with customer needs.",
+    desc: "Shape the strategy, messaging, and creative direction that connect business goals with customer needs.",
   },
   {
     step: "03",
@@ -19,45 +19,46 @@ const processSteps = [
   },
   {
     step: "04",
-    title: "Optimize",
-    desc: "Measure results, refine execution, and continuously improve the experience as the business grows.",
+    title: "Refine",
+    desc: "Use feedback, performance insights, and evolving business needs to strengthen the work and improve the experience over time.",
   },
 ];
 
 export default function Approach() {
   return (
-    <div className="relative w-full py-10 md:py-24 overflow-hidden bg-black px-4 xl:px-0">
+    <div className="relative w-full overflow-hidden bg-black px-4 py-10 md:py-24 xl:px-0">
       <Image
         src="/blackbg.jpg"
         alt="Creative strategy workspace"
         fill
         sizes="100vw"
-        className="object-cover object-center z-0"
+        className="z-0 object-cover object-center"
         priority
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
-        <div className="w-full lg:max-w-xl text-center lg:text-left">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row">
+        <div className="w-full text-center lg:max-w-xl lg:text-left">
           <div className="inline-flex items-center justify-center rounded-full border border-primary bg-[#B31F3C66] px-4 py-1">
-            <p className="text-white text-sm md:text-base uppercase tracking-[0.15em]">
+            <p className="text-sm uppercase tracking-[0.15em] text-white md:text-base">
               How I Work
             </p>
           </div>
 
-          <h2 className="mt-5 text-white text-3xl md:text-[52px] font-sora font-light leading-tight">
-            Strategy First.
+          <h2 className="mt-5 font-sora text-3xl font-light leading-tight text-white md:text-[52px]">
+            Strategy Informed.
             <br />
-            Execution Always.
+            Creatively Driven.
           </h2>
 
-          <p className="mt-6 text-lg md:text-2xl font-light text-neutral-200 leading-relaxed">
-            Every engagement begins with understanding the business, defining a
-            clear direction, and building creative solutions that are both
-            strategically sound and practical to implement.
+          <p className="mt-6 text-lg font-light leading-relaxed text-neutral-200 md:text-2xl">
+            I start by understanding the business and defining a clear
+            direction, then translate that thinking into creative solutions
+            that connect the brand, message, and experience across
+            touchpoints.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 w-full">
+        <div className="grid w-full grid-cols-1 gap-6">
           {processSteps.map((item, index) => (
             <ApproachCard
               key={index}
