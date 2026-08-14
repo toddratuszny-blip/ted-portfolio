@@ -75,7 +75,7 @@ export default function Aboutpage() {
               </div>
 
               <h2 className="mb-4 font-sora text-3xl font-semibold leading-[1.15] text-white md:text-4xl">
-                Creative leadership across the marketing ecosystem.
+                Creative depth. Marketing breadth.
               </h2>
 
               {/* Mobile Intro */}
