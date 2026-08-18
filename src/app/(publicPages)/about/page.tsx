@@ -154,7 +154,7 @@ export default function Aboutpage() {
 
               {/* Tablet / Desktop */}
               <p className="hidden font-sora text-lg font-normal leading-[1.55] text-white md:block md:text-xl">
-                15+ years across agency and in-house environments, spanning B2B,
+                Experience across agency and in-house environments, spanning B2B,
                 B2C, and D2C organizations—from multi-brand portfolios and
                 consumer ecommerce to marketing for a $30M multi-division
                 organization.

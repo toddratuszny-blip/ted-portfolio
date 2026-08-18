@@ -15,7 +15,7 @@ export default function HomePage() {
         description={
           <>
             <p>
-              For 15+ years, I've built my career at the intersection of creative and marketing—starting in design and art direction and expanding into brand strategy, digital, ecommerce, content, and sales enablement.
+              I've built my career at the intersection of creative and marketing—starting in design and art direction and expanding into brand strategy, digital, ecommerce, content, and sales enablement.
             </p>
 
             <p className="mt-8">
