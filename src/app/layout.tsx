@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway, Sora } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import { SITE_CONFIG } from "./constants/site-config";
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
