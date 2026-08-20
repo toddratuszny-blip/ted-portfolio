@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway, Sora } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
@@ -52,11 +53,26 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
+
       <body>
         <Navbar />
         {children}
         <Footer />
         <Analytics />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DMLKRB1EH8"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DMLKRB1EH8');
+          `}
+        </Script>
       </body>
     </html>
   );
