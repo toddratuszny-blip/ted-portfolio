@@ -14,7 +14,7 @@ const GALLERY_IMAGES = [
   "/gallery/gallery7.jpg",                         // 7
   "/gallery/gallery8.jpg",                         // 8
   "/gallery/gallery9.jpg",                         // 9
-  "/gallery/gallery11.png",                        // 10
+  "/gallery/gallery11B.png",                        // 10
   "/gallery/gallery12.1.png",                      // 11
   "/gallery/gallery13.png",                        // 12
   "/gallery/gallery14.png",                        // 13
@@ -318,7 +318,7 @@ export default function GallerySection() {
           {/* Family Tree */}
           <div className="mx-auto w-[88%] max-w-2xl md:w-full">
             <LightboxImage
-              src="/gallery/gallery11.png"
+              src="/gallery/gallery11B.png"
               alt="Family Tree Therapies brand identity"
               width={1512}
               height={600}
