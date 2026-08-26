@@ -41,17 +41,13 @@ function getImageIndex(src: string) {
 }
 
 const ROLES = [
-  "Integrated Campaigns",
   "Creative Direction",
-  "LifeToGo Brand Marketing",
-  "Packaging Design",
+  "Integrated Campaigns",
+  "Brand & Campaign Systems",
   "Product Launches",
-  "Ecommerce Merchandising",
-  "Marketplace Creative",
-  "Email Marketing",
-  "Display Advertising",
-  "Publisher Promotions",
-  "Product Photography",
+  "Packaging & Product Creative",
+  "Ecommerce & Marketplace Creative",
+  "Publisher Partnerships",
   "Cross-Functional Collaboration",
 ];
 
@@ -64,7 +60,7 @@ function Divider() {
 function RolePill({ label }: { label: string }) {
   return (
     <div className="flex items-center justify-center whitespace-nowrap rounded-full bg-white px-4 py-2.5 shadow-[0_0_25px_0_rgba(0,0,0,0.12)]">
-      <p className="text-base font-sora md:text-lg">{label}</p>
+      <p className="font-sora text-base md:text-lg">{label}</p>
     </div>
   );
 }
@@ -122,17 +118,19 @@ export default function AccelerateSection() {
         <div className="grid max-w-6xl gap-3.5">
           <p className="text-xl leading-relaxed">
             As the primary creative resource for the LifeToGo ecommerce
-            division, I led creative execution for the launch and marketing of
-            47 consumer brands spanning wellness, fitness, food, fashion,
-            technology, and lifestyle products.
+            division, I shaped brand and campaign execution as the marketplace
+            grew from launch to $18.7M in revenue in under two years while
+            supporting the launch and marketing of 47 consumer brands spanning
+            wellness, fitness, food, fashion, technology, and lifestyle.
           </p>
 
           <p className="text-xl leading-relaxed">
             LifeToGo operated as both an owned consumer brand and a multi-brand
             ecommerce marketplace. I owned hands-on creative across packaging,
             integrated campaigns, ecommerce merchandising, product launches,
-            marketplace creative, publisher promotions, email marketing, and
-            digital advertising for LifeToGo and its partner brands.
+            marketplace creative, publisher promotions, email, digital
+            advertising, and supporting launch systems for LifeToGo and partner
+            brands.
           </p>
         </div>
       </section>
@@ -191,7 +189,91 @@ export default function AccelerateSection() {
           </p>
         </div>
 
-        <div className="mt-3 grid gap-6 md:mt-4 md:grid-cols-12 md:gap-6">
+        {/* Mobile curated view */}
+        <div className="mt-3 grid gap-6 md:hidden">
+          <MediaCard>
+            <LightboxImage
+              src="/accelerate/1000x1000 (1)B.jpg"
+              alt="LifeToGo Immunity Drink Mix campaign"
+              width={1512}
+              height={1512}
+              gallery={ACCELERATE_IMAGES}
+              index={getImageIndex("/accelerate/1000x1000 (1)B.jpg")}
+              className="mx-auto block h-auto w-full max-w-[520px] object-contain"
+            />
+          </MediaCard>
+
+          <div className="overflow-hidden">
+            <LightboxImage
+              src="/accelerate/life21.jpg"
+              alt="LifeToGo Immunity Drink Mix horizontal campaign"
+              width={1512}
+              height={600}
+              gallery={ACCELERATE_IMAGES}
+              index={getImageIndex("/accelerate/life21.jpg")}
+              className="block h-auto w-full object-contain"
+            />
+          </div>
+
+          <MobileDisclosure label="View more campaign work">
+            <div className="grid gap-6">
+              <MediaCard>
+                <LightboxImage
+                  src="/accelerate/life5.png"
+                  alt="LifeToGo Immunity Drink Mix promotional creative"
+                  width={1512}
+                  height={2064}
+                  gallery={ACCELERATE_IMAGES}
+                  index={getImageIndex("/accelerate/life5.png")}
+                  className="mx-auto block h-auto w-full max-w-[420px] object-contain"
+                />
+              </MediaCard>
+
+              <MediaCard>
+                <LightboxImage
+                  src="/accelerate/life7.png"
+                  alt="LifeToGo Immunity and Calm campaign creative"
+                  width={1512}
+                  height={2064}
+                  gallery={ACCELERATE_IMAGES}
+                  index={getImageIndex("/accelerate/life7.png")}
+                  className="mx-auto block h-auto w-full max-w-[420px] object-contain"
+                />
+              </MediaCard>
+
+              <MediaCard>
+                <LightboxImage
+                  src="/accelerate/life17.png"
+                  alt="LifeToGo Immunity campaign extension"
+                  width={1512}
+                  height={2064}
+                  gallery={ACCELERATE_IMAGES}
+                  index={getImageIndex("/accelerate/life17.png")}
+                  className="mx-auto block h-auto w-full max-w-[420px] object-contain"
+                />
+              </MediaCard>
+            </div>
+          </MobileDisclosure>
+
+          <div className="mt-2 flex justify-center">
+            <div className="w-full max-w-md overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="block aspect-square h-auto w-full object-cover"
+              >
+                <source src="/accelerate/Immunity.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop view — unchanged */}
+        <div className="mt-4 hidden gap-6 md:grid md:grid-cols-12">
           <MediaCard className="md:col-span-8 md:row-span-2">
             <LightboxImage
               src="/accelerate/1000x1000 (1)B.jpg"
@@ -200,7 +282,7 @@ export default function AccelerateSection() {
               height={1512}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/1000x1000 (1)B.jpg")}
-              className="mx-auto block h-auto w-full max-w-[520px] object-contain md:h-full md:max-h-[760px] md:max-w-none"
+              className="mx-auto block h-full w-full max-h-[760px] object-contain"
             />
           </MediaCard>
 
@@ -212,7 +294,7 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life5.png")}
-              className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[360px] md:max-w-none"
+              className="mx-auto block h-full w-full max-h-[360px] object-contain"
             />
           </MediaCard>
 
@@ -224,12 +306,12 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life7.png")}
-              className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[360px] md:max-w-none"
+              className="mx-auto block h-full w-full max-h-[360px] object-contain"
             />
           </MediaCard>
 
           <div className="grid gap-6 md:col-span-12 md:grid-cols-3">
-            <MediaCard className="hidden md:flex md:min-h-[350px]">
+            <MediaCard className="md:min-h-[350px]">
               <LightboxImage
                 src="/accelerate/life16.png"
                 alt="LifeToGo Immunity campaign extension"
@@ -237,7 +319,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life16.png")}
-                className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[430px] md:max-w-none"
+                className="mx-auto block h-full w-full max-h-[430px] object-contain"
               />
             </MediaCard>
 
@@ -249,11 +331,11 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life17.png")}
-                className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[430px] md:max-w-none"
+                className="mx-auto block h-full w-full max-h-[430px] object-contain"
               />
             </MediaCard>
 
-            <MediaCard className="hidden md:flex md:min-h-[350px]">
+            <MediaCard className="md:min-h-[350px]">
               <LightboxImage
                 src="/accelerate/life19B.png"
                 alt="LifeToGo Immunity campaign extension"
@@ -261,7 +343,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life19B.png")}
-                className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[430px] md:max-w-none"
+                className="mx-auto block h-full w-full max-h-[430px] object-contain"
               />
             </MediaCard>
           </div>
@@ -472,7 +554,125 @@ export default function AccelerateSection() {
           </p>
         </div>
 
-        <div className="mt-3 grid gap-6 md:mt-4 md:grid-cols-12 md:gap-6">
+        {/* Mobile curated view */}
+        <div className="mt-3 grid gap-6 md:hidden">
+          <div className="overflow-hidden">
+            <LightboxImage
+              src="/accelerate/life25.jpg"
+              alt="LifeToGo consumer technology campaign"
+              width={1512}
+              height={600}
+              gallery={ACCELERATE_IMAGES}
+              index={getImageIndex("/accelerate/life25.jpg")}
+              className="block h-auto w-full object-contain"
+            />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <MediaCard>
+              <LightboxImage
+                src="/accelerate/life26.png"
+                alt="Anker portable charger ecommerce creative"
+                width={1512}
+                height={2064}
+                gallery={ACCELERATE_IMAGES}
+                index={getImageIndex("/accelerate/life26.png")}
+                className="mx-auto block h-auto w-full object-contain"
+              />
+            </MediaCard>
+
+            <MediaCard>
+              <LightboxImage
+                src="/accelerate/life27.png"
+                alt="Soundcore headphones ecommerce creative"
+                width={1512}
+                height={2064}
+                gallery={ACCELERATE_IMAGES}
+                index={getImageIndex("/accelerate/life27.png")}
+                className="mx-auto block h-auto w-full object-contain"
+              />
+            </MediaCard>
+          </div>
+
+          <MobileDisclosure label="View more marketplace work">
+            <div className="grid grid-cols-2 gap-4">
+              <MediaCard>
+                <LightboxImage
+                  src="/accelerate/life3.png"
+                  alt="Strong Coffee ecommerce promotional creative"
+                  width={1512}
+                  height={2064}
+                  gallery={ACCELERATE_IMAGES}
+                  index={getImageIndex("/accelerate/life3.png")}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+              </MediaCard>
+
+              <MediaCard>
+                <LightboxImage
+                  src="/accelerate/life33.png"
+                  alt="Shar Snacks ecommerce creative"
+                  width={1512}
+                  height={2064}
+                  gallery={ACCELERATE_IMAGES}
+                  index={getImageIndex("/accelerate/life33.png")}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+              </MediaCard>
+
+              <MediaCard>
+                <LightboxImage
+                  src="/accelerate/life35.png"
+                  alt="Hope and Sesame ecommerce creative"
+                  width={1512}
+                  height={2064}
+                  gallery={ACCELERATE_IMAGES}
+                  index={getImageIndex("/accelerate/life35.png")}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+              </MediaCard>
+
+              <MediaCard>
+                <LightboxImage
+                  src="/accelerate/life43.jpg"
+                  alt="Barney Butter product photography"
+                  width={1512}
+                  height={2064}
+                  gallery={ACCELERATE_IMAGES}
+                  index={getImageIndex("/accelerate/life43.jpg")}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+              </MediaCard>
+
+              <MediaCard>
+                <LightboxImage
+                  src="/accelerate/life44.jpg"
+                  alt="Barney Butter lifestyle product photography"
+                  width={1512}
+                  height={2064}
+                  gallery={ACCELERATE_IMAGES}
+                  index={getImageIndex("/accelerate/life44.jpg")}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+              </MediaCard>
+
+              <MediaCard>
+                <LightboxImage
+                  src="/accelerate/life23B.png"
+                  alt="Partner-brand marketplace campaign"
+                  width={1512}
+                  height={600}
+                  gallery={ACCELERATE_IMAGES}
+                  index={getImageIndex("/accelerate/life23B.png")}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+              </MediaCard>
+            </div>
+          </MobileDisclosure>
+        </div>
+
+        {/* Desktop view — unchanged */}
+        <div className="mt-4 hidden gap-6 md:grid md:grid-cols-12">
           <div className="overflow-hidden md:col-span-12">
             <LightboxImage
               src="/accelerate/life25.jpg"
@@ -493,7 +693,7 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life26.png")}
-              className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[440px] md:max-w-none"
+              className="mx-auto block h-full w-full max-h-[440px] object-contain"
             />
           </MediaCard>
 
@@ -505,7 +705,7 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life27.png")}
-              className="mx-auto block h-auto w-full max-w-[420px] object-contain md:h-full md:max-h-[440px] md:max-w-none"
+              className="mx-auto block h-full w-full max-h-[440px] object-contain"
             />
           </MediaCard>
 
@@ -517,7 +717,7 @@ export default function AccelerateSection() {
               height={2064}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life3.png")}
-              className="mx-auto block h-auto w-full max-w-[320px] object-contain md:h-full md:max-h-[430px] md:max-w-none"
+              className="mx-auto block h-full w-full max-h-[430px] object-contain"
             />
           </MediaCard>
 
@@ -530,7 +730,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life33.png")}
-                className="mx-auto block h-auto w-full max-w-[340px] object-contain md:h-full md:max-h-[260px] md:max-w-none"
+                className="mx-auto block h-full w-full max-h-[260px] object-contain"
               />
             </MediaCard>
 
@@ -542,7 +742,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life35.png")}
-                className="mx-auto block h-auto w-full max-w-[340px] object-contain md:h-full md:max-h-[260px] md:max-w-none"
+                className="mx-auto block h-full w-full max-h-[260px] object-contain"
               />
             </MediaCard>
 
@@ -554,7 +754,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life43.jpg")}
-                className="mx-auto block h-auto w-full max-w-[340px] object-contain md:h-full md:max-h-[240px] md:max-w-none"
+                className="mx-auto block h-full w-full max-h-[240px] object-contain"
               />
             </MediaCard>
 
@@ -566,7 +766,7 @@ export default function AccelerateSection() {
                 height={2064}
                 gallery={ACCELERATE_IMAGES}
                 index={getImageIndex("/accelerate/life44.jpg")}
-                className="mx-auto block h-auto w-full max-w-[340px] object-contain md:h-full md:max-h-[240px] md:max-w-none"
+                className="mx-auto block h-full w-full max-h-[240px] object-contain"
               />
             </MediaCard>
           </div>
@@ -579,7 +779,7 @@ export default function AccelerateSection() {
               height={600}
               gallery={ACCELERATE_IMAGES}
               index={getImageIndex("/accelerate/life23B.png")}
-              className="mx-auto block h-auto w-full max-w-[520px] object-contain md:h-full md:max-h-[340px] md:max-w-none"
+              className="mx-auto block h-full w-full max-h-[340px] object-contain"
             />
           </MediaCard>
         </div>
@@ -597,21 +797,28 @@ export default function AccelerateSection() {
 
         <p className="max-w-6xl text-xl leading-relaxed">
           Supported the launch and marketing of nationally recognized consumer
-          brands across ecommerce, digital marketing, merchandising, publisher
-          promotions, and creative production—combining hands-on creative
-          ownership with the operational work required to bring products and
-          campaigns to market.
+          brands across ecommerce, integrated campaigns, publisher promotions,
+          and creative production—combining hands-on creative ownership with
+          the operational work required to bring products and campaigns to
+          market.
         </p>
 
-        {/* Scope Summary */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-xl border border-neutral-200 bg-white p-6">
+            <p className="text-2xl font-semibold text-primary md:text-3xl">
+              $18.7M
+            </p>
+            <h3 className="mt-3 text-lg font-semibold">Marketplace Revenue</h3>
+            <p className="mt-2 text-base leading-relaxed text-neutral-600">
+              LifeToGo grew from launch to $18.7M in revenue in under two years.
+            </p>
+          </div>
+
           <div className="rounded-xl border border-neutral-200 bg-white p-6">
             <p className="text-2xl font-semibold text-primary md:text-3xl">
               47
             </p>
-
             <h3 className="mt-3 text-lg font-semibold">Consumer Brands</h3>
-
             <p className="mt-2 text-base leading-relaxed text-neutral-600">
               Supported across product launches, ecommerce, campaigns, and
               marketplace marketing.
@@ -620,28 +827,11 @@ export default function AccelerateSection() {
 
           <div className="rounded-xl border border-neutral-200 bg-white p-6">
             <p className="text-2xl font-semibold text-primary md:text-3xl">
-              B2C + D2C
-            </p>
-
-            <h3 className="mt-3 text-lg font-semibold">
-              Ecommerce Marketing
-            </h3>
-
-            <p className="mt-2 text-base leading-relaxed text-neutral-600">
-              Consumer marketing spanning owned products, partner brands, and
-              multi-brand ecommerce marketplaces.
-            </p>
-          </div>
-
-          <div className="rounded-xl border border-neutral-200 bg-white p-6">
-            <p className="text-2xl font-semibold text-primary md:text-3xl">
               National
             </p>
-
             <h3 className="mt-3 text-lg font-semibold">
-              Publisher Promotions
+              Publisher Partnerships
             </h3>
-
             <p className="mt-2 text-base leading-relaxed text-neutral-600">
               Creative supporting Us Weekly, Men&apos;s Journal, Life &amp;
               Style, In Touch Weekly, Closer, and The Miami Herald.
@@ -650,27 +840,25 @@ export default function AccelerateSection() {
 
           <div className="rounded-xl border border-neutral-200 bg-white p-6">
             <p className="whitespace-nowrap text-2xl font-semibold text-primary md:text-3xl">
-              Multi-Category
+              B2C + D2C
             </p>
-
-            <h3 className="mt-3 text-lg font-semibold">Consumer Portfolio</h3>
-
+            <h3 className="mt-3 text-lg font-semibold">
+              Consumer Ecommerce
+            </h3>
             <p className="mt-2 text-base leading-relaxed text-neutral-600">
-              Beauty, fashion, wellness, fitness, technology, food, and other
-              consumer products.
+              Creative and merchandising across owned products, partner brands,
+              and multi-brand ecommerce marketplaces.
             </p>
           </div>
         </div>
 
-        {/* Operational Scope */}
         <div className="grid gap-6 border-l-2 border-primary pl-5 md:grid-cols-2 md:gap-10 md:pl-6">
           <div>
             <h3 className="text-lg font-semibold">Creative & Campaign Scope</h3>
-
             <p className="mt-2 text-base leading-relaxed text-neutral-600">
-              Packaging, product launches, digital advertising, ecommerce
-              experiences, email, social, motion, video, publisher promotions,
-              product photography, and marketplace creative.
+              Packaging, product launches, integrated campaigns, ecommerce
+              experiences, email, display, social, motion, video, publisher
+              promotions, product photography, and marketplace creative.
             </p>
           </div>
 
@@ -678,7 +866,6 @@ export default function AccelerateSection() {
             <h3 className="text-lg font-semibold">
               Ecommerce & Launch Operations
             </h3>
-
             <p className="mt-2 text-base leading-relaxed text-neutral-600">
               Product onboarding and merchandising, product imagery, feature
               graphics, product variants, vendor-asset coordination, and launch
@@ -697,11 +884,11 @@ export default function AccelerateSection() {
         </div>
 
         <p className="max-w-6xl text-xl leading-relaxed">
-          Accelerate360 demonstrates my ability to operate across brand,
-          creative, ecommerce, and marketing execution within a fast-moving
-          consumer environment—bringing together multiple brands, channels,
-          partners, and stakeholders to create cohesive go-to-market
-          experiences.
+          Accelerate360 demonstrates my ability to operate across creative
+          direction, brand systems, integrated campaigns, ecommerce, and
+          hands-on execution within a fast-moving consumer environment—bringing
+          together multiple brands, channels, partners, and stakeholders into
+          cohesive customer-facing experiences.
         </p>
       </section>
     </div>

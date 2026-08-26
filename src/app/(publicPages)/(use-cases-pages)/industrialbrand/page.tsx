@@ -12,33 +12,33 @@ import {
 const features = [
   {
     icon: <TargetIcon />,
-    title: "BRAND STRATEGY & INTEGRATION",
+    title: "CREATIVE DIRECTION & BRAND STRATEGY",
     description:
-      "Built two flagship brands, created product brands, rebranded three organizations, and integrated three acquisitions.",
+      "Built two flagship corporate brands, created multiple product brands, and led three rebrands across a complex eight-company portfolio.",
+  },
+  {
+    icon: <UsersIcon />,
+    title: "CREATIVE LEADERSHIP",
+    description:
+      "Managed five designers and four developers while directing freelancers, agencies, photographers, printers, and international vendors.",
+  },
+  {
+    icon: <MegaPhoneIcon />,
+    title: "INTEGRATED BRAND & PRODUCT CAMPAIGNS",
+    description:
+      "Brand launches, packaging, campaigns, technical content, sales enablement, and a 276-page catalog supported product marketing and distribution.",
   },
   {
     icon: <MonitorIcon />,
     title: "DIGITAL & ECOMMERCE",
     description:
-      "Websites, seven ecommerce platforms, and email programs reaching 50,000+ subscribers supported digital growth.",
-  },
-  {
-    icon: <MegaPhoneIcon />,
-    title: "PRODUCT MARKETING & SALES ENABLEMENT",
-    description:
-      "Product launches, packaging, campaigns, technical content, and a 276-page catalog supported sales and distribution.",
-  },
-  {
-    icon: <UsersIcon />,
-    title: "CREATIVE & MARKETING LEADERSHIP",
-    description:
-      "Directed five designers, four developers, agencies, freelancers, photographers, printers, and international vendors.",
+      "Seven ecommerce platforms, websites, merchandising systems, and email programs reaching 50,000+ subscribers supported digital growth.",
   },
   {
     icon: <ChartLineIcon />,
-    title: "RESULTS & IMPACT",
+    title: "SCALE & IMPACT",
     description:
-      "Led an eight-company ecosystem supporting approximately 10,000 SKUs and $3M+ in annual ecommerce revenue.",
+      "Led brand and creative across eight companies, approximately 10,000 SKUs, three acquisitions, and $3M+ in annual ecommerce revenue.",
   },
 ];
 
@@ -83,12 +83,13 @@ export default function IndustrialBrand() {
             </h1>
 
             <h2 className="text-xl font-bold leading-tight text-white md:text-2xl">
-              Unifying Industrial Brands
+              Building a Multi-Brand Creative System
             </h2>
 
             <p className="text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
-              Led marketing and creative across seven ecommerce platforms,
-              10,000 SKUs, and $3M+ in annual ecommerce revenue.
+              Led brand strategy, creative direction, and marketing execution
+              across an eight-company portfolio spanning approximately 10,000
+              SKUs and $3M+ in annual ecommerce revenue.
             </p>
           </div>
         </div>

@@ -11,34 +11,34 @@ import {
 
 const features = [
   {
-    icon: <ShoppingCartIcon width={60} height={60} />,
-    title: "ECOMMERCE & MERCHANDISING",
+    icon: <PencilIcon width={60} height={60} />,
+    title: "CREATIVE DIRECTION & CAMPAIGNS",
     description:
-      "Shopify and TrueCommerce onboarding, product imagery, feature graphics, variants, merchandising, and launch QA.",
+      "Brand, campaign, packaging, promotional, motion, video, and multi-format creative developed across consumer launches and ongoing marketing.",
   },
   {
     icon: <MegaPhoneIcon width={60} height={60} />,
-    title: "INTEGRATED CAMPAIGNS",
+    title: "INTEGRATED BRAND MARKETING",
     description:
-      "Digital advertising, email, social, promotional content, and marketplace campaigns supporting launches and online sales.",
+      "Creative spanning ecommerce, email, display advertising, social, publisher promotions, marketplace campaigns, and product launches.",
   },
   {
-    icon: <PencilIcon width={60} height={60} />,
-    title: "CREATIVE PRODUCTION",
+    icon: <ShoppingCartIcon width={60} height={60} />,
+    title: "ECOMMERCE & MERCHANDISING",
     description:
-      "Marketplace creative, motion graphics, video, and multi-format assets produced with minimal creative oversight.",
+      "Marketplace creative, product imagery, feature graphics, merchandising, vendor assets, product onboarding, and launch QA.",
   },
   {
     icon: <NewpaperIcon width={60} height={60} />,
-    title: "PUBLISHER MEDIA",
+    title: "PUBLISHER PARTNERSHIPS",
     description:
-      "Marketing assets created for Us Weekly, Men’s Journal, Life & Style, In Touch, Closer, and The Miami Herald.",
+      "Campaign and brand assets created for Us Weekly, Men’s Journal, Life & Style, In Touch, Closer, and The Miami Herald.",
   },
   {
     icon: <ChartLineIcon width={60} height={60} />,
-    title: "RESULTS & IMPACT",
+    title: "SCALE & IMPACT",
     description:
-      "Primary creative resource supporting 47 consumer brands across multiple ecommerce marketplaces, including LifeToGo.",
+      "Primary creative resource for LifeToGo as the marketplace grew from launch to $18.7M in revenue in under two years while supporting 47 consumer brands.",
   },
 ];
 
@@ -87,8 +87,9 @@ export default function Accelerate() {
             </h2>
 
             <p className="max-w-[340px] text-base font-medium leading-relaxed text-white md:max-w-[520px] md:text-xl">
-              Creative marketing lead supporting 47 consumer brands across
-              ecommerce, integrated campaigns, and publisher media.
+              Primary creative resource for LifeToGo, shaping brand and campaign
+              execution as the ecommerce marketplace grew from launch to $18.7M
+              in revenue in under two years while supporting 47 consumer brands.
             </p>
           </div>
         </div>

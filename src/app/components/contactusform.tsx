@@ -14,6 +14,7 @@ const contactItems = [
   {
     title: "LinkedIn",
     value: SITE_CONFIG.contact.linkedinLabel,
+    mobileValue: "Todd Ratuszny on LinkedIn",
     href: SITE_CONFIG.contact.linkedin,
     icon: <LinkedIn fill="currentColor" />,
     action: "View",
@@ -38,10 +39,11 @@ export default function ContactUsForm() {
         </h2>
 
         <p className="max-w-3xl text-[16px] leading-relaxed text-gray-700 md:text-[20px]">
-          Email is the best way to reach me regarding remote opportunities.
-          You can also connect with me on LinkedIn or review my resume for a
-          detailed overview of my experience in brand strategy, creative
-          direction, and integrated marketing.
+          Email is the best way to reach me regarding remote creative, brand,
+          and integrated marketing opportunities. You can also connect with me
+          on LinkedIn or review my resume for a more detailed overview of my
+          experience in creative direction, brand strategy, integrated
+          campaigns, and hands-on execution.
         </p>
       </div>
 
@@ -55,18 +57,30 @@ export default function ContactUsForm() {
             className="group flex flex-col gap-4 rounded-3xl border border-neutral-200 bg-white px-5 py-5 shadow-[0_0_25px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:shadow-xl md:flex-row md:items-center md:justify-between md:px-7 md:py-6"
           >
             <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FCEBEB] text-primary">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#FCEBEB] text-primary">
                 {item.icon}
               </div>
 
-              <div>
+              <div className="min-w-0">
                 <p className="mb-1 text-sm uppercase tracking-[0.12em] text-neutral-500">
                   {item.title}
                 </p>
 
-                <p className="break-all text-[18px] font-semibold text-black md:text-[22px]">
-                  {item.value}
-                </p>
+                {"mobileValue" in item ? (
+                  <>
+                    <p className="text-[18px] font-semibold text-black md:hidden">
+                      {item.mobileValue}
+                    </p>
+
+                    <p className="hidden break-all text-[22px] font-semibold text-black md:block">
+                      {item.value}
+                    </p>
+                  </>
+                ) : (
+                  <p className="break-all text-[18px] font-semibold text-black md:text-[22px]">
+                    {item.value}
+                  </p>
+                )}
               </div>
             </div>
 

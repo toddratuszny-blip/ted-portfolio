@@ -21,14 +21,15 @@ export default function Talk() {
             </p>
 
             <p className="text-[18px] leading-[1.6] text-[#404040] md:text-[22px]">
-              Whether the solution is a website, campaign, product launch, sales
-              tool, or brand refresh, I focus on simplifying complexity,
-              aligning stakeholders, and creating work that serves a clear
-              business purpose.
+              Whether the solution is a brand system, campaign, website, sales
+              tool, product launch, or broader creative program, I focus on
+              clarifying the challenge, aligning priorities, and defining what
+              the work needs to accomplish.
             </p>
 
             <p className="font-sora text-[19px] font-semibold leading-[1.5] text-black md:text-[24px]">
-              Strategy guides the direction. Execution brings it to life.
+              Strategy guides the direction. Creative makes it distinctive.
+              Execution brings it to life.
             </p>
 
             <p className="text-[18px] leading-[1.6] text-[#404040] md:text-[22px]">

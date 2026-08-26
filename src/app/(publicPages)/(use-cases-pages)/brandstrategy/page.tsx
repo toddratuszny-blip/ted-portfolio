@@ -12,33 +12,33 @@ import BrandStrategySection from "../../../components/brandstrategysection";
 const features = [
   {
     icon: <TargetIcon />,
-    title: "BRAND STRATEGY & GOVERNANCE",
+    title: "CREATIVE DIRECTION & BRAND STRATEGY",
     description:
-      "Positioning, messaging, standards, and implementation processes unified the brand across four business divisions.",
+      "Creative direction, positioning, messaging, brand standards, and implementation systems unified the customer experience across four business divisions.",
   },
   {
     icon: <MonitorIcon />,
-    title: "DIGITAL EXPERIENCE & CONTENT",
+    title: "WEBSITE & CONTENT STRATEGY",
     description:
-      "Website strategy and 50+ SEO pages expanded service, content, and geographic search coverage.",
+      "Website strategy and 50+ service, landing, location, and educational pages expanded geographic and service-line coverage.",
   },
   {
     icon: <BookOpenIcon />,
-    title: "SALES ENABLEMENT & CAMPAIGNS",
+    title: "INTEGRATED CAMPAIGNS & SALES ENABLEMENT",
     description:
-      "Pitchbooks, proposals, referral programs, brochures, educational content, and campaigns supported teams and customers.",
+      "Pitchbooks, proposals, referral programs, brochures, educational content, direct mail, and customer communications supported a nine-person sales team.",
   },
   {
     icon: <SliderIcon />,
-    title: "MARKETING OPERATIONS",
+    title: "CREATIVE OPERATIONS",
     description:
-      "Directed three agencies and 40+ vendors while auditing thousands of CRM, call-tracking, and advertising records.",
+      "Oversaw three external agencies and 40+ vendors while establishing creative standards, workflows, brand governance, and cross-functional execution.",
   },
   {
     icon: <ChartLineIcon />,
-    title: "RESULTS & IMPACT",
+    title: "SCALE & IMPACT",
     description:
-      "Built a unified marketing ecosystem for a $30M organization spanning four divisions, three locations, and 10+ services.",
+      "Supported significant company expansion across four divisions, three locations, 10+ service lines, a new Detroit location, and the launch of a new division.",
   },
 ];
 
@@ -46,7 +46,6 @@ export default function BrandStrategy() {
   return (
     <div>
       <div className="relative w-full min-h-[620px] overflow-hidden md:min-h-[calc(100dvh-220px)]">
-        {/* Mobile hero */}
         <Image
           src="/brandstrategy/SPR MobileB.jpg"
           alt=""
@@ -56,7 +55,6 @@ export default function BrandStrategy() {
           className="object-cover object-center scale-[1.06] md:hidden"
         />
 
-        {/* Desktop hero */}
         <Image
           src="/brandstrategy/bsBanner.jpg"
           alt=""
@@ -66,10 +64,8 @@ export default function BrandStrategy() {
           className="hidden object-cover object-center md:block"
         />
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/65 md:bg-black/30" />
 
-        {/* Hero content */}
         <div className="relative z-10 mx-auto grid px-4 pb-10 pt-10 md:grid-cols-2 md:px-12 md:py-16">
           <div className="flex w-[62%] max-w-[270px] flex-col gap-4 md:w-auto md:max-w-[560px] md:gap-8">
             <div className="flex w-fit items-center justify-center rounded-full bg-[#567791] px-5 py-2.5">
@@ -83,12 +79,13 @@ export default function BrandStrategy() {
             </h1>
 
             <h2 className="text-xl font-bold leading-tight text-white md:text-2xl">
-              Building a Unified Marketing Ecosystem
+              Building a Unified Brand & Marketing Ecosystem
             </h2>
 
             <p className="text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
-              Marketing and creative lead for a $30M roofing organization
-              spanning four divisions, three locations, and 10+ service lines.
+              Creative and brand marketing lead supporting significant company
+              expansion across four divisions, three locations, and 10+ service
+              lines.
             </p>
           </div>
         </div>

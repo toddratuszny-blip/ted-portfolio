@@ -5,34 +5,35 @@ import FooterNav from "./footernav";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[url('/footerBg.png')] bg-cover bg-center px-4 py-16 md:py-24 lg:px-0">
-      <div className="max-w-7xl mx-auto">
-
-        <div className="max-w-3xl mb-16">
+    <footer className="w-full bg-[url('/footerBg.png')] bg-cover bg-center px-4 py-10 md:py-24 lg:px-0">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 max-w-3xl md:mb-16">
           <Image
             src="/logowhite.svg"
             alt={SITE_CONFIG.brand.logoAlt}
-            width={110}
-            height={110}
+            width={96}
+            height={96}
+            className="md:h-auto md:w-[110px]"
           />
 
-          <h2 className="mt-8 text-white text-3xl md:text-5xl font-sora font-light leading-tight">
+          <h2 className="mt-6 font-sora text-3xl font-light leading-tight text-white md:mt-8 md:text-5xl">
             Let's build something meaningful.
           </h2>
 
-          <p className="mt-6 text-lg md:text-xl text-neutral-300 leading-relaxed max-w-2xl">
-            Great marketing happens when strategy, creativity, and execution work together—not in silos.
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-300 md:mt-6 md:text-xl">
+            Great marketing happens when strategy, creativity, and execution
+            work together—not in silos.
           </p>
         </div>
 
         <FooterNav />
 
-        <div className="mt-16 border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-neutral-400 text-sm md:text-base">
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 md:mt-16 md:flex-row md:gap-6 md:pt-8">
+          <p className="text-sm text-neutral-400 md:text-base">
             {SITE_CONFIG.brand.copyright}
           </p>
 
-          <ul className="flex flex-wrap justify-center gap-5 text-sm md:text-base">
+          <ul className="flex flex-wrap justify-center gap-4 text-sm md:gap-5 md:text-base">
             {SITE_CONFIG.footer.legalLinks.map((item) => (
               <li key={item.label}>
                 <Link

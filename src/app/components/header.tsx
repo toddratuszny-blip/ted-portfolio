@@ -20,11 +20,19 @@ export default function Header() {
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-start px-4 xl:px-0">
         <div className="col-span-12 text-center lg:col-span-11 lg:text-left">
-          <h1 className="font-sora text-[40px] font-bold leading-[1.1] tracking-tight text-black sm:text-[64px] md:text-[80px]">
+          {/* Mobile headline only */}
+          <h1 className="font-sora text-[36px] font-bold leading-[1.08] tracking-tight text-black md:hidden">
+            <span className="block">Creative Direction.</span>
+            <span className="block text-primary">Brand Strategy.</span>
+            <span className="block">Marketing Integration.</span>
+          </h1>
+
+          {/* Tablet/Desktop headline — unchanged */}
+          <h1 className="hidden font-sora font-bold leading-[1.1] tracking-tight text-black md:block md:text-[80px]">
             Creative Direction. <br className="hidden md:block" />
             <span className="text-primary">Brand Strategy.</span>{" "}
             <br className="hidden md:block" />
-            Marketing Execution.
+            Marketing Integration.
           </h1>
         </div>
 
@@ -49,7 +57,9 @@ export default function Header() {
       <div className="relative z-10 mx-auto mt-6 grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:mt-16 md:grid-cols-[1fr_1fr] xl:px-0">
         <div className="flex w-full flex-col items-center gap-8 text-center md:items-start md:text-left lg:ml-[6%] lg:max-w-[500px]">
           <p className="text-[18px] font-normal leading-relaxed text-[#171717] sm:text-xl md:text-[24px]">
-            I bring a creative leader's perspective to marketing—combining deep design and art direction experience with the strategic understanding to connect creative decisions to business goals.
+            I bring a creative leader&apos;s perspective to marketing—combining
+            deep design and art direction experience with the strategic
+            understanding to connect creative decisions to business goals.
           </p>
 
           <Link

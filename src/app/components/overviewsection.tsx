@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Business from "../Icons/business";
 import Idea from "../Icons/idea";
 import OverView from "../Icons/overview";
@@ -32,14 +33,14 @@ const INDUSTRIAL_GALLERY = [
 ];
 
 const ROLES = [
-  "Brand Strategy",
   "Creative Direction",
-  "Brand Development",
-  "Product Marketing",
-  "Ecommerce",
-  "Acquisition Integration",
-  "Sales Enablement",
+  "Brand Strategy & Design Systems",
   "Team Leadership",
+  "Brand Development",
+  "Integrated Campaigns",
+  "Sales Enablement",
+  "Digital & Ecommerce",
+  "Acquisition Integration",
 ];
 
 const BUSINESS_CHALLENGES = [
@@ -145,8 +146,8 @@ function SectionHeading({
   icon,
   children,
 }: {
-  icon?: React.ReactNode;
-  children: React.ReactNode;
+  icon?: ReactNode;
+  children: ReactNode;
 }) {
   return (
     <div className="flex items-center gap-2.5">
@@ -163,7 +164,7 @@ function MobileDisclosure({
   children,
 }: {
   label: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <details className="group md:hidden">
@@ -176,6 +177,7 @@ function MobileDisclosure({
           +
         </span>
       </summary>
+
       <div className="pt-4">{children}</div>
     </details>
   );
@@ -184,30 +186,41 @@ function MobileDisclosure({
 export default function OverViewSection() {
   return (
     <div className="mx-auto max-w-7xl">
+      {/* Overview */}
       <section className="space-y-6">
         <SectionHeading icon={<OverView />}>Overview.</SectionHeading>
 
         <p className="font-sora text-xl leading-relaxed">
           Over eight years, I partnered directly with executive leadership to
-          build and grow an ecosystem of eight manufacturing, distribution, and
-          ecommerce companies.
+          build and grow a multi-brand ecosystem of eight manufacturing,
+          distribution, and ecommerce companies—leading creative direction,
+          brand development, and customer-facing execution across the portfolio.
         </p>
       </section>
 
       <Divider />
 
+      {/* My Role */}
       <section className="grid gap-6">
         <SectionHeading icon={<Setting />}>
           My<span className="text-primary"> Role.</span>
         </SectionHeading>
 
         <p className="font-sora text-xl leading-relaxed">
-          Led brand strategy, creative direction, ecommerce, product marketing,
-          acquisition integration, and customer-facing communications across the
-          portfolio.
+          Led creative direction, brand strategy, design systems, team
+          leadership, integrated campaigns, ecommerce, acquisition integration,
+          and sales enablement across a complex portfolio of industrial brands.
         </p>
 
-        <div className="flex flex-wrap gap-4">
+        <MobileDisclosure label="View roles">
+          <div className="flex flex-wrap gap-3">
+            {ROLES.map((role) => (
+              <RolePill key={role} label={role} />
+            ))}
+          </div>
+        </MobileDisclosure>
+
+        <div className="hidden flex-wrap gap-4 md:flex">
           {ROLES.map((role) => (
             <RolePill key={role} label={role} />
           ))}
@@ -216,6 +229,7 @@ export default function OverViewSection() {
 
       <Divider />
 
+      {/* Brand Strategy & Identity */}
       <section className="space-y-8">
         <SectionHeading icon={<Setting />}>
           Brand Strategy <span className="text-primary">& Identity.</span>
@@ -224,9 +238,9 @@ export default function OverViewSection() {
         <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
             Created and evolved corporate and product brands across the
-            portfolio, balancing distinct market positioning with shared
-            standards that made the broader organization easier to manage and
-            scale.
+            portfolio, balancing distinct market positioning with shared visual
+            standards and design systems that made the broader organization
+            easier to manage, scale, and integrate.
           </p>
 
           <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
@@ -244,7 +258,8 @@ export default function OverViewSection() {
           </MobileDisclosure>
         </div>
 
-        <div className="grid items-center gap-8 lg:grid-cols-[1.35fr_0.65fr]">
+        {/* Mobile curated view */}
+        <div className="grid gap-6 md:hidden">
           <LightboxImage
             src="/LVA BRANDS.png"
             alt="Lehigh Valley Abrasives brand standards and identity system"
@@ -252,45 +267,97 @@ export default function OverViewSection() {
             height={990}
             gallery={INDUSTRIAL_GALLERY}
             index={0}
-            className="mx-auto block max-h-[560px] w-auto max-w-full object-contain"
+            className="mx-auto block h-auto w-full object-contain"
           />
 
-          <LightboxImage
-            src="/Elite Letterhead_Final_1.jpg"
-            alt="Elite Abrasives letterhead and corporate identity system"
-            width={2550}
-            height={3300}
-            gallery={INDUSTRIAL_GALLERY}
-            index={1}
-            className="mx-auto block max-h-[560px] w-auto max-w-full object-contain"
-          />
+          <MobileDisclosure label="View more identity work">
+            <div className="grid gap-6">
+              <LightboxImage
+                src="/Elite Letterhead_Final_1.jpg"
+                alt="Elite Abrasives letterhead and corporate identity system"
+                width={2550}
+                height={3300}
+                gallery={INDUSTRIAL_GALLERY}
+                index={1}
+                className="mx-auto block h-auto w-full max-w-[340px] object-contain"
+              />
+
+              <div className="grid grid-cols-2 gap-4">
+                <LightboxImage
+                  src="/Elite_Business Card_Finals-2.jpg"
+                  alt="Elite Abrasives business card identity application"
+                  width={1050}
+                  height={600}
+                  gallery={INDUSTRIAL_GALLERY}
+                  index={2}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+
+                <LightboxImage
+                  src="/LVA Business Card2.png"
+                  alt="Lehigh Valley Abrasives business card identity application"
+                  width={1050}
+                  height={600}
+                  gallery={INDUSTRIAL_GALLERY}
+                  index={3}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+              </div>
+            </div>
+          </MobileDisclosure>
         </div>
 
-        <div className="mx-auto grid max-w-3xl items-center gap-8 sm:grid-cols-2">
-          <LightboxImage
-            src="/Elite_Business Card_Finals-2.jpg"
-            alt="Elite Abrasives business card identity application"
-            width={1050}
-            height={600}
-            gallery={INDUSTRIAL_GALLERY}
-            index={2}
-            className="mx-auto block max-h-[190px] w-auto max-w-full object-contain"
-          />
+        {/* Desktop view — unchanged */}
+        <div className="hidden md:block">
+          <div className="grid items-center gap-8 lg:grid-cols-[1.35fr_0.65fr]">
+            <LightboxImage
+              src="/LVA BRANDS.png"
+              alt="Lehigh Valley Abrasives brand standards and identity system"
+              width={1530}
+              height={990}
+              gallery={INDUSTRIAL_GALLERY}
+              index={0}
+              className="mx-auto block max-h-[560px] w-auto max-w-full object-contain"
+            />
 
-          <LightboxImage
-            src="/LVA Business Card2.png"
-            alt="Lehigh Valley Abrasives business card identity application"
-            width={1050}
-            height={600}
-            gallery={INDUSTRIAL_GALLERY}
-            index={3}
-            className="mx-auto block max-h-[190px] w-auto max-w-full object-contain"
-          />
+            <LightboxImage
+              src="/Elite Letterhead_Final_1.jpg"
+              alt="Elite Abrasives letterhead and corporate identity system"
+              width={2550}
+              height={3300}
+              gallery={INDUSTRIAL_GALLERY}
+              index={1}
+              className="mx-auto block max-h-[560px] w-auto max-w-full object-contain"
+            />
+          </div>
+
+          <div className="mx-auto mt-8 grid max-w-3xl items-center gap-8 sm:grid-cols-2">
+            <LightboxImage
+              src="/Elite_Business Card_Finals-2.jpg"
+              alt="Elite Abrasives business card identity application"
+              width={1050}
+              height={600}
+              gallery={INDUSTRIAL_GALLERY}
+              index={2}
+              className="mx-auto block max-h-[190px] w-auto max-w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/LVA Business Card2.png"
+              alt="Lehigh Valley Abrasives business card identity application"
+              width={1050}
+              height={600}
+              gallery={INDUSTRIAL_GALLERY}
+              index={3}
+              className="mx-auto block max-h-[190px] w-auto max-w-full object-contain"
+            />
+          </div>
         </div>
       </section>
 
       <Divider />
 
+      {/* Challenge & Approach */}
       <section className="space-y-8">
         <SectionHeading icon={<Target />}>
           Challenge <span className="text-primary">& Approach.</span>
@@ -298,10 +365,10 @@ export default function OverViewSection() {
 
         <p className="font-sora text-xl leading-relaxed">
           The portfolio included distinct industrial companies with overlapping
-          products, customers, vendors, and operational resources. The work
-          required strengthening each brand while building shared systems that
-          could support acquisitions, ecommerce growth, product marketing,
-          sales teams, and customer communications.
+          products, customers, vendors, and operational resources. The challenge
+          was to strengthen each brand while building shared creative and
+          marketing systems that could support acquisitions, ecommerce growth,
+          product launches, sales teams, and customer communications.
         </p>
 
         <div className="space-y-4 md:hidden">
@@ -315,6 +382,7 @@ export default function OverViewSection() {
                   <h4 className="font-sora text-lg font-semibold">
                     {challenge.title}
                   </h4>
+
                   <p className="mt-1 font-sora text-sm leading-relaxed text-[#404040]">
                     {challenge.description}
                   </p>
@@ -333,6 +401,7 @@ export default function OverViewSection() {
                   <h4 className="font-sora text-lg font-semibold">
                     {pillar.title}
                   </h4>
+
                   <p className="mt-1 font-sora text-sm leading-relaxed text-[#404040]">
                     {pillar.description}
                   </p>
@@ -357,6 +426,7 @@ export default function OverViewSection() {
                   <h4 className="font-sora text-xl font-semibold">
                     {challenge.title}
                   </h4>
+
                   <p className="mt-2 font-sora text-base leading-relaxed text-[#404040]">
                     {challenge.description}
                   </p>
@@ -379,6 +449,7 @@ export default function OverViewSection() {
                   <h4 className="font-sora text-xl font-semibold">
                     {pillar.title}
                   </h4>
+
                   <p className="mt-2 font-sora text-base leading-relaxed text-[#404040]">
                     {pillar.description}
                   </p>
@@ -407,6 +478,7 @@ export default function OverViewSection() {
 
       <Divider />
 
+      {/* Digital Experience & Ecommerce */}
       <section className="space-y-8">
         <SectionHeading icon={<Idea />}>
           Digital Experience <span className="text-primary">& Ecommerce.</span>
@@ -434,7 +506,8 @@ export default function OverViewSection() {
           </MobileDisclosure>
         </div>
 
-        <div className="grid gap-7 md:grid-cols-2">
+        {/* Mobile curated view */}
+        <div className="grid gap-6 md:hidden">
           <LightboxImage
             src="/eliteB.png"
             alt="Elite Abrasives responsive ecommerce website"
@@ -445,41 +518,81 @@ export default function OverViewSection() {
             className="block h-auto w-full object-contain"
           />
 
+          <MobileDisclosure label="View more ecommerce work">
+            <div className="grid gap-6">
+              <LightboxImage
+                src="/global3B.png"
+                alt="Global Cutting Tools responsive ecommerce website"
+                width={1500}
+                height={1311}
+                gallery={INDUSTRIAL_GALLERY}
+                index={5}
+                className="block h-auto w-full object-contain"
+              />
+
+              <LightboxImage
+                src="/itc.png"
+                alt="Industrial Tool Crib responsive ecommerce website"
+                width={1500}
+                height={1311}
+                gallery={INDUSTRIAL_GALLERY}
+                index={6}
+                className="block h-auto w-full object-contain"
+              />
+            </div>
+          </MobileDisclosure>
+        </div>
+
+        {/* Desktop view — unchanged */}
+        <div className="hidden md:block">
+          <div className="grid gap-7 md:grid-cols-2">
+            <LightboxImage
+              src="/eliteB.png"
+              alt="Elite Abrasives responsive ecommerce website"
+              width={1500}
+              height={1311}
+              gallery={INDUSTRIAL_GALLERY}
+              index={4}
+              className="block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/global3B.png"
+              alt="Global Cutting Tools responsive ecommerce website"
+              width={1500}
+              height={1311}
+              gallery={INDUSTRIAL_GALLERY}
+              index={5}
+              className="block h-auto w-full object-contain"
+            />
+          </div>
+
           <LightboxImage
-            src="/global3B.png"
-            alt="Global Cutting Tools responsive ecommerce website"
+            src="/itc.png"
+            alt="Industrial Tool Crib responsive ecommerce website"
             width={1500}
             height={1311}
             gallery={INDUSTRIAL_GALLERY}
-            index={5}
-            className="block h-auto w-full object-contain"
+            index={6}
+            className="mx-auto mt-7 block h-auto w-full max-w-3xl object-contain"
           />
         </div>
-
-        <LightboxImage
-          src="/itc.png"
-          alt="Industrial Tool Crib responsive ecommerce website"
-          width={1500}
-          height={1311}
-          gallery={INDUSTRIAL_GALLERY}
-          index={6}
-          className="mx-auto block h-auto w-full max-w-3xl object-contain"
-        />
-
       </section>
 
       <Divider />
 
+      {/* Product Branding & Launch Creative */}
       <section className="space-y-8">
         <SectionHeading icon={<Product />}>
-          Product <span className="text-primary">Marketing.</span>
+          Product Branding{" "}
+          <span className="text-primary">& Launch Creative.</span>
         </SectionHeading>
 
         <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
-            Positioned, launched, merchandised, and promoted complex industrial
-            products across distributor, ecommerce, and direct-to-consumer
-            channels.
+            Developed brand, packaging, launch, merchandising, and campaign
+            creative for complex industrial products across distributor,
+            ecommerce, and direct-to-consumer channels.
           </p>
 
           <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
@@ -496,75 +609,148 @@ export default function OverViewSection() {
           </MobileDisclosure>
         </div>
 
-        <div className="mx-auto grid max-w-5xl items-center gap-7 md:grid-cols-[1.15fr_0.85fr]">
-  <LightboxImage
-    src="/Elite bB.png"
-    alt="Elite Abrasives product packaging"
-    width={1613}
-    height={1421}
-    gallery={INDUSTRIAL_GALLERY}
-    index={8}
-    className="mx-auto block h-auto w-full max-w-[450px] object-contain md:max-h-[620px] md:w-auto md:max-w-full"
-  />
-
-  <div className="grid items-center gap-7 sm:grid-cols-2 md:grid-cols-1">
-    <LightboxImage
-      src="/Elite IMG_20190607_082339134.png"
-      alt="Elite Abrasives packaged industrial product"
-      width={1062}
-      height={1107}
-      gallery={INDUSTRIAL_GALLERY}
-      index={7}
-      className="mx-auto block h-auto w-full max-w-[300px] object-contain md:max-h-[285px] md:w-auto md:max-w-full"
-    />
-
-    <LightboxImage
-      src="/Elite Label 4.5_FD_CG_T27_SD.png"
-      alt="Elite Abrasives product label system"
-      width={1199}
-      height={1193}
-      gallery={INDUSTRIAL_GALLERY}
-      index={9}
-      className="mx-auto block max-h-[285px] w-auto max-w-full object-contain"
-    />
-  </div>
-</div>
-
-        <div className="grid gap-7 md:grid-cols-2">
+        {/* Mobile curated view */}
+        <div className="grid gap-6 md:hidden">
           <LightboxImage
-            src="/Elite -24-web banner.jpg"
-            alt="Elite Abrasives product marketing campaign banner"
-            width={1600}
-            height={323}
+            src="/Elite bB.png"
+            alt="Elite Abrasives product packaging"
+            width={1613}
+            height={1421}
             gallery={INDUSTRIAL_GALLERY}
-            index={10}
-            className="block h-auto w-full object-contain"
+            index={8}
+            className="mx-auto block h-auto w-full max-w-[450px] object-contain"
           />
 
           <LightboxImage
-            src="/Elite -web banner.jpg"
-            alt="Elite Abrasives product promotion banner"
-            width={1600}
-            height={323}
+            src="/LVA All 2018 LVA -web banner.jpg"
+            alt="Lehigh Valley Abrasives integrated product campaign graphics"
+            width={2000}
+            height={667}
             gallery={INDUSTRIAL_GALLERY}
-            index={11}
-            className="block h-auto w-full object-contain"
+            index={12}
+            className="mx-auto block h-auto w-full object-contain"
           />
+
+          <MobileDisclosure label="View more product work">
+            <div className="grid gap-6">
+              <div className="grid grid-cols-2 gap-4">
+                <LightboxImage
+                  src="/Elite IMG_20190607_082339134.png"
+                  alt="Elite Abrasives packaged industrial product"
+                  width={1062}
+                  height={1107}
+                  gallery={INDUSTRIAL_GALLERY}
+                  index={7}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+
+                <LightboxImage
+                  src="/Elite Label 4.5_FD_CG_T27_SD.png"
+                  alt="Elite Abrasives product label system"
+                  width={1199}
+                  height={1193}
+                  gallery={INDUSTRIAL_GALLERY}
+                  index={9}
+                  className="mx-auto block h-auto w-full object-contain"
+                />
+              </div>
+
+              <LightboxImage
+                src="/Elite -24-web banner.jpg"
+                alt="Elite Abrasives product marketing campaign banner"
+                width={1600}
+                height={323}
+                gallery={INDUSTRIAL_GALLERY}
+                index={10}
+                className="block h-auto w-full object-contain"
+              />
+
+              <LightboxImage
+                src="/Elite -web banner.jpg"
+                alt="Elite Abrasives product promotion banner"
+                width={1600}
+                height={323}
+                gallery={INDUSTRIAL_GALLERY}
+                index={11}
+                className="block h-auto w-full object-contain"
+              />
+            </div>
+          </MobileDisclosure>
         </div>
 
-        <LightboxImage
-          src="/LVA All 2018 LVA -web banner.jpg"
-          alt="Lehigh Valley Abrasives integrated product campaign graphics"
-          width={2000}
-          height={667}
-          gallery={INDUSTRIAL_GALLERY}
-          index={12}
-          className="mx-auto block h-auto w-full max-w-5xl object-contain"
-        />
+        {/* Desktop view — unchanged */}
+        <div className="hidden md:block">
+          <div className="mx-auto grid max-w-5xl items-center gap-7 md:grid-cols-[1.15fr_0.85fr]">
+            <LightboxImage
+              src="/Elite bB.png"
+              alt="Elite Abrasives product packaging"
+              width={1613}
+              height={1421}
+              gallery={INDUSTRIAL_GALLERY}
+              index={8}
+              className="mx-auto block h-auto w-full max-w-[450px] object-contain md:max-h-[620px] md:w-auto md:max-w-full"
+            />
+
+            <div className="grid items-center gap-7 sm:grid-cols-2 md:grid-cols-1">
+              <LightboxImage
+                src="/Elite IMG_20190607_082339134.png"
+                alt="Elite Abrasives packaged industrial product"
+                width={1062}
+                height={1107}
+                gallery={INDUSTRIAL_GALLERY}
+                index={7}
+                className="mx-auto block h-auto w-full max-w-[300px] object-contain md:max-h-[285px] md:w-auto md:max-w-full"
+              />
+
+              <LightboxImage
+                src="/Elite Label 4.5_FD_CG_T27_SD.png"
+                alt="Elite Abrasives product label system"
+                width={1199}
+                height={1193}
+                gallery={INDUSTRIAL_GALLERY}
+                index={9}
+                className="mx-auto block max-h-[285px] w-auto max-w-full object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="mt-7 grid gap-7 md:grid-cols-2">
+            <LightboxImage
+              src="/Elite -24-web banner.jpg"
+              alt="Elite Abrasives product marketing campaign banner"
+              width={1600}
+              height={323}
+              gallery={INDUSTRIAL_GALLERY}
+              index={10}
+              className="block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/Elite -web banner.jpg"
+              alt="Elite Abrasives product promotion banner"
+              width={1600}
+              height={323}
+              gallery={INDUSTRIAL_GALLERY}
+              index={11}
+              className="block h-auto w-full object-contain"
+            />
+          </div>
+
+          <LightboxImage
+            src="/LVA All 2018 LVA -web banner.jpg"
+            alt="Lehigh Valley Abrasives integrated product campaign graphics"
+            width={2000}
+            height={667}
+            gallery={INDUSTRIAL_GALLERY}
+            index={12}
+            className="mx-auto mt-7 block h-auto w-full max-w-5xl object-contain"
+          />
+        </div>
       </section>
 
       <Divider />
 
+      {/* Sales Enablement */}
       <section className="space-y-8">
         <SectionHeading icon={<Business />}>
           Sales <span className="text-primary">Enablement.</span>
@@ -591,6 +777,7 @@ export default function OverViewSection() {
           </MobileDisclosure>
         </div>
 
+        {/* Primary examples — visible everywhere */}
         <div className="grid gap-7 md:grid-cols-2">
           <LightboxImage
             src="/elite coverB.png"
@@ -613,6 +800,62 @@ export default function OverViewSection() {
           />
         </div>
 
+        {/* Mobile secondary work */}
+        <MobileDisclosure label="View more sales enablement work">
+          <div className="grid gap-6">
+            <LightboxImage
+              src="/Elite line cardB.png"
+              alt="Elite Abrasives product line card"
+              width={1500}
+              height={971}
+              gallery={INDUSTRIAL_GALLERY}
+              index={15}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/Global vortex4 coverB.png"
+              alt="Global Cutting Tools Vortex4 product literature"
+              width={1500}
+              height={971}
+              gallery={INDUSTRIAL_GALLERY}
+              index={16}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/LVA insert 3.png"
+              alt="Lehigh Valley Abrasives product insert"
+              width={1558}
+              height={803}
+              gallery={INDUSTRIAL_GALLERY}
+              index={17}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/conical build ass.jpg"
+              alt="Conical Cutting Tools technical build assembly documentation"
+              width={1275}
+              height={1650}
+              gallery={INDUSTRIAL_GALLERY}
+              index={18}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+
+            <LightboxImage
+              src="/Elite Sales-Promotion.jpg"
+              alt="Elite Abrasives sales promotion sheet"
+              width={1500}
+              height={1500}
+              gallery={INDUSTRIAL_GALLERY}
+              index={19}
+              className="mx-auto block h-auto w-full object-contain"
+            />
+          </div>
+        </MobileDisclosure>
+
+        {/* Desktop secondary work — unchanged */}
         <div className="hidden md:block">
           <div className="grid items-center gap-7 md:grid-cols-[1fr_1fr_1.15fr]">
             <LightboxImage
@@ -668,64 +911,15 @@ export default function OverViewSection() {
             />
           </div>
         </div>
-
-<div className="grid gap-6 md:hidden">
-  <LightboxImage
-    src="/Elite line cardB.png"
-    alt="Elite Abrasives product line card"
-    width={1500}
-    height={971}
-    gallery={INDUSTRIAL_GALLERY}
-    index={15}
-    className="mx-auto block h-auto w-full object-contain"
-  />
-
-  <LightboxImage
-    src="/Global vortex4 coverB.png"
-    alt="Global Cutting Tools Vortex4 product literature"
-    width={1500}
-    height={971}
-    gallery={INDUSTRIAL_GALLERY}
-    index={16}
-    className="mx-auto block h-auto w-full object-contain"
-  />
-
-  <LightboxImage
-    src="/LVA insert 3.png"
-    alt="Lehigh Valley Abrasives product insert"
-    width={1558}
-    height={803}
-    gallery={INDUSTRIAL_GALLERY}
-    index={17}
-    className="mx-auto block h-auto w-full object-contain"
-  />
-
-  <LightboxImage
-    src="/conical build ass.jpg"
-    alt="Conical Cutting Tools technical build assembly documentation"
-    width={1275}
-    height={1650}
-    gallery={INDUSTRIAL_GALLERY}
-    index={18}
-    className="mx-auto block h-auto w-full object-contain"
-  />
-
-  <LightboxImage
-    src="/Elite Sales-Promotion.jpg"
-    alt="Elite Abrasives sales promotion sheet"
-    width={1500}
-    height={1500}
-    gallery={INDUSTRIAL_GALLERY}
-    index={19}
-    className="mx-auto block h-auto w-full object-contain"
-  />
-</div>      </section>
+      </section>
 
       <Divider />
 
+      {/* Integrated Brand & Creative Execution */}
       <section className="space-y-8">
         <SectionHeading icon={<Idea />}>
-          Integrated Marketing <span className="text-primary">Execution.</span>
+          Integrated Brand{" "}
+          <span className="text-primary">& Creative Execution.</span>
         </SectionHeading>
 
         <div className="space-y-4">
@@ -751,46 +945,73 @@ export default function OverViewSection() {
           </MobileDisclosure>
         </div>
 
-        <div className="grid items-start gap-6 md:grid-cols-2 md:items-center md:gap-10">
-  <div className="flex h-fit min-h-0 items-start justify-center md:min-h-[520px] md:items-center">
-    <LightboxImage
-      src="/Elite trade.png"
-      alt="Elite Abrasives trade show and environmental brand execution"
-      width={1440}
-      height={880}
-      gallery={INDUSTRIAL_GALLERY}
-      index={20}
-      className="block h-auto w-full max-w-[700px] object-contain"
-    />
-  </div>
+        {/* Mobile curated view */}
+        <div className="grid gap-6 md:hidden">
+          <LightboxImage
+            src="/Elite trade.png"
+            alt="Elite Abrasives trade show and environmental brand execution"
+            width={1440}
+            height={880}
+            gallery={INDUSTRIAL_GALLERY}
+            index={20}
+            className="block h-auto w-full object-contain"
+          />
 
-  <div className="flex h-fit min-h-0 items-start justify-center md:min-h-[520px] md:items-center">
-    <LightboxImage
-      src="/LVA_Email_Selection_082715_Offline_03.jpg"
-      alt="Lehigh Valley Abrasives email marketing campaign"
-      width={620}
-      height={753}
-      gallery={INDUSTRIAL_GALLERY}
-      index={21}
-      className="block h-auto max-h-none w-auto max-w-full object-contain md:max-h-[520px]"
-    />
-</div>
-</div>
-</section>
+          <MobileDisclosure label="View email campaign">
+            <LightboxImage
+              src="/LVA_Email_Selection_082715_Offline_03.jpg"
+              alt="Lehigh Valley Abrasives email marketing campaign"
+              width={620}
+              height={753}
+              gallery={INDUSTRIAL_GALLERY}
+              index={21}
+              className="mx-auto block h-auto w-full max-w-[340px] object-contain"
+            />
+          </MobileDisclosure>
+        </div>
+
+        {/* Desktop view — unchanged */}
+        <div className="hidden items-start gap-6 md:grid md:grid-cols-2 md:items-center md:gap-10">
+          <div className="flex h-fit min-h-0 items-start justify-center md:min-h-[520px] md:items-center">
+            <LightboxImage
+              src="/Elite trade.png"
+              alt="Elite Abrasives trade show and environmental brand execution"
+              width={1440}
+              height={880}
+              gallery={INDUSTRIAL_GALLERY}
+              index={20}
+              className="block h-auto w-full max-w-[700px] object-contain"
+            />
+          </div>
+
+          <div className="flex h-fit min-h-0 items-start justify-center md:min-h-[520px] md:items-center">
+            <LightboxImage
+              src="/LVA_Email_Selection_082715_Offline_03.jpg"
+              alt="Lehigh Valley Abrasives email marketing campaign"
+              width={620}
+              height={753}
+              gallery={INDUSTRIAL_GALLERY}
+              index={21}
+              className="block h-auto max-h-none w-auto max-w-full object-contain md:max-h-[520px]"
+            />
+          </div>
+        </div>
+      </section>
 
       <Divider />
 
+      {/* Outcomes */}
       <section className="space-y-8 font-sora">
         <SectionHeading icon={<Target />}>
           Outcomes<span className="text-primary"> & Impact.</span>
         </SectionHeading>
 
         <p className="font-sora text-xl leading-relaxed">
-          Built a scalable brand and marketing foundation across a complex
+          Built a scalable creative and brand foundation across a complex
           portfolio of industrial businesses. The work supported company growth,
-          acquisition integration, ecommerce revenue, product marketing,
-          customer communications, and the ongoing needs of executive leadership
-          and sales teams.
+          acquisition integration, ecommerce revenue, product launches, sales
+          enablement, customer communications, and the ongoing needs of
+          executive leadership and sales teams.
         </p>
 
         <div className="grid grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
