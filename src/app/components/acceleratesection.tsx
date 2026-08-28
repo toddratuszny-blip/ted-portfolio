@@ -390,7 +390,7 @@ export default function AccelerateSection() {
         </div>
 
         <p className="max-w-6xl text-xl leading-relaxed">
-          Led the LifeToGo creative execution for Performance Inspired
+          Led the LifeToGo creative execution for Performance, Inspired
           products, including ecommerce merchandising, promotional assets, and
           campaign content featuring cofounder Mark Wahlberg. I adapted the
           established partner brand for the LifeToGo marketplace while
