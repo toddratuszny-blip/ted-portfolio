@@ -486,9 +486,7 @@ export default function OverViewSection() {
 
         <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
-            Launched and managed seven ecommerce platforms supporting more than
-            $3 million in annual ecommerce revenue and approximately 10,000
-            products across multiple brands.
+            Launched six ecommerce sites and managed two additional sites across four platforms, supporting more than $3 million in annual ecommerce revenue and approximately 10,000 products across multiple brands.
           </p>
 
           <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">

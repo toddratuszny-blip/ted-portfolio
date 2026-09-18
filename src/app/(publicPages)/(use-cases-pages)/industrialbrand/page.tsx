@@ -32,7 +32,7 @@ const features = [
     icon: <MonitorIcon />,
     title: "DIGITAL & ECOMMERCE",
     description:
-      "Seven ecommerce platforms, websites, merchandising systems, and email programs reaching 50,000+ subscribers supported digital growth.",
+      "Eight ecommerce sites across four platforms, supported by merchandising systems and email programs reaching 50,000+ subscribers.",
   },
   {
     icon: <ChartLineIcon />,
