@@ -92,7 +92,7 @@ const STRATEGIC_PILLARS = [
 const OUTCOMES = [
   { metric: "08", label: "Companies Supported" },
   { metric: "03", label: "Acquisitions Integrated" },
-  { metric: "08", label: "B2B & Ecommerce Websites" },
+  { metric: "08", label: "Portfolio Websites" },
   { metric: "$3M+", label: "Annual Ecommerce Revenue" },
   { metric: "10K", label: "Products and SKUs" },
   { metric: "276", label: "Page Product Catalog" },
