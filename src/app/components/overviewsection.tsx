@@ -486,7 +486,7 @@ export default function OverViewSection() {
 
         <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
-            Led eight+ portfolio websites across B2B manufacturing, corporate, and B2C ecommerce experiences on four platforms platforms, supporting more than $3M in annual ecommerce revenue and approximately 10,000 products/SKUs across multiple brands.
+            Led eight portfolio websites across B2B manufacturing, corporate, and B2C ecommerce experiences on four platforms platforms, supporting more than $3M in annual ecommerce revenue and approximately 10,000 products/SKUs across multiple brands.
           </p>
 
           <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
