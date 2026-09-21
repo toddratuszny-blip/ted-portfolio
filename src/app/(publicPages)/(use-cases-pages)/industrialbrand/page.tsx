@@ -32,7 +32,7 @@ const features = [
     icon: <MonitorIcon />,
     title: "DIGITAL & ECOMMERCE",
     description:
-      "Led eight+ portfolio websites across B2B product, corporate, and B2C ecommerce experiences on four platforms, supported by merchandising systems and email programs reaching 50,000+ subscribers.",
+      "Led eight portfolio websites across B2B manufacturing, corporate, and B2C ecommerce experiences on four platforms platforms, supporting more than $3M in annual ecommerce revenue and approximately 10,000 products/SKUs across multiple brands.",
   },
   {
     icon: <ChartLineIcon />,
