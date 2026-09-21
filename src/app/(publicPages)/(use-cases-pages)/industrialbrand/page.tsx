@@ -32,7 +32,7 @@ const features = [
     icon: <MonitorIcon />,
     title: "DIGITAL & ECOMMERCE",
     description:
-      "Eight ecommerce sites across four platforms, supported by merchandising systems and email programs reaching 50,000+ subscribers.",
+      "Led eight+ portfolio websites across B2B product, corporate, and B2C ecommerce experiences on four platforms, supported by merchandising systems and email programs reaching 50,000+ subscribers.",
   },
   {
     icon: <ChartLineIcon />,

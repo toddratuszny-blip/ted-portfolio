@@ -92,7 +92,7 @@ const STRATEGIC_PILLARS = [
 const OUTCOMES = [
   { metric: "08", label: "Companies Supported" },
   { metric: "03", label: "Acquisitions Integrated" },
-  { metric: "07", label: "Ecommerce Platforms" },
+  { metric: "08", label: "B2B & Ecommerce Websites" },
   { metric: "$3M+", label: "Annual Ecommerce Revenue" },
   { metric: "10K", label: "Products and SKUs" },
   { metric: "276", label: "Page Product Catalog" },
@@ -486,7 +486,7 @@ export default function OverViewSection() {
 
         <div className="space-y-4">
           <p className="font-sora text-xl leading-relaxed">
-            Launched six ecommerce sites and managed two additional sites across four platforms, supporting more than $3 million in annual ecommerce revenue and approximately 10,000 products across multiple brands.
+            Led website strategy and digital merchandising across a portfolio of B2B manufacturer/product sites, corporate properties, and B2C ecommerce storefronts across four platforms, supporting more than $3 million in annual ecommerce revenue and approximately 10,000 products across multiple brands.
           </p>
 
           <p className="hidden font-sora text-base font-medium leading-relaxed text-[#555] md:block md:text-lg">
