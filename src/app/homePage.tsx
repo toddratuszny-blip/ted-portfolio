@@ -15,12 +15,11 @@ export default function HomePage() {
         description={
           <>
             <p>
-              I've built my career at the intersection of creative and marketing—starting in design and art direction and expanding into brand strategy, digital, ecommerce, content, and sales enablement.
+              I’ve built my career at the intersection of creative and marketing—starting in design and art direction and expanding into brand strategy, digital, ecommerce, content, and cross-functional delivery.
             </p>
 
             <p className="mt-8">
-              I connect business goals to clear positioning, cohesive creative
-              systems, and practical execution across every customer touchpoint.
+              I connect business goals to clear positioning, cohesive creative systems, and practical execution across teams, vendors, websites, campaigns, and customer touchpoints.
             </p>
           </>
         }

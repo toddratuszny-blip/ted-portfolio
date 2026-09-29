@@ -15,9 +15,7 @@ export default function GetInTouch() {
             </h1>
 
             <h2 className="text-base font-sora md:text-xl leading-[160%]">
-              Explore selected case studies showing how strategy, creative
-              direction, and marketing execution come together to support
-              business growth.
+              Explore selected case studies showing how strategy, creative direction, cross-functional delivery, and marketing execution come together to support business goals.
             </h2>
           </div>
 

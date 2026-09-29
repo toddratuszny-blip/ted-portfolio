@@ -33,9 +33,7 @@ export default function Talk() {
             </p>
 
             <p className="text-[18px] leading-[1.6] text-[#404040] md:text-[22px]">
-              From there, I develop practical solutions and carry ideas from
-              early strategy through final execution with consistency, clarity,
-              and attention to detail.
+              From there, I move work from early strategy through final execution by aligning people, priorities, content, and deliverables with consistency, clarity, and attention to detail.
             </p>
           </div>
 

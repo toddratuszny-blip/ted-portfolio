@@ -22,7 +22,7 @@ description:
 {
 title: "Creative Operations",
 description:
-"Creative intake, prioritization, workflows, resource coordination, agency and vendor management, and quality control across multidisciplinary work.",
+"Creative intake, prioritization, workflows, resource coordination, agency and vendor management, and cross-functional delivery across multidisciplinary work.",
 },
 {
 title: "Content & Sales Enablement",
@@ -75,7 +75,7 @@ return ( <div> <AboutUsHeader />
           </div>
 
           <h2 className="mb-4 font-sora text-3xl font-semibold leading-[1.15] text-white md:text-4xl">
-            Where creative direction meets execution.
+            Where creative, brand, and delivery come together.
           </h2>
 
           <p className="text-base font-light leading-[1.55] text-white/80 md:hidden">
@@ -86,10 +86,7 @@ return ( <div> <AboutUsHeader />
           </p>
 
           <p className="hidden text-base font-light leading-[1.6] text-white/80 md:block md:text-xl">
-            My strongest work sits at the intersection of creative
-            direction, brand systems, and integrated execution—supported by
-            experience across content, digital, ecommerce, sales enablement,
-            and cross-functional delivery.
+            My strongest work sits at the intersection of brand, creative, and cross-functional delivery—supported by experience across content, digital, ecommerce, sales enablement, and multidisciplinary teams.
           </p>
         </div>
 

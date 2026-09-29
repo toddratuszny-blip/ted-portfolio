@@ -29,10 +29,10 @@ export default function Header() {
 
           {/* Tablet/Desktop headline — unchanged */}
           <h1 className="hidden font-sora font-bold leading-[1.1] tracking-tight text-black md:block md:text-[80px]">
-            Creative Direction. <br className="hidden md:block" />
-            <span className="text-primary">Brand Strategy.</span>{" "}
+            Brand Strategy. <br className="hidden md:block" />
+            <span className="text-primary">Marketing Communications.</span>{" "}
             <br className="hidden md:block" />
-            Marketing Integration.
+            Creative & Digital Delivery.
           </h1>
         </div>
 
@@ -57,9 +57,7 @@ export default function Header() {
       <div className="relative z-10 mx-auto mt-6 grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:mt-16 md:grid-cols-[1fr_1fr] xl:px-0">
         <div className="flex w-full flex-col items-center gap-8 text-center md:items-start md:text-left lg:ml-[6%] lg:max-w-[500px]">
           <p className="text-[18px] font-normal leading-relaxed text-[#171717] sm:text-xl md:text-[24px]">
-            I bring a creative leader&apos;s perspective to marketing—combining
-            deep design and art direction experience with the strategic
-            understanding to connect creative decisions to business goals.
+            I bring a design-rooted perspective to brand, marketing, and digital delivery—connecting strategy with the people, workflows, content, and execution needed to move work forward.
           </p>
 
           <Link
