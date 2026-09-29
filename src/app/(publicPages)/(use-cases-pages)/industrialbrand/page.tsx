@@ -87,9 +87,9 @@ export default function IndustrialBrand() {
             </h2>
 
             <p className="text-base font-medium leading-relaxed text-white md:max-w-[560px] md:text-xl">
-              Led brand strategy, creative direction, and marketing execution
-              across an eight-company portfolio spanning approximately 10,000
-              SKUs and $3M+ in annual ecommerce revenue.
+              Led brand, creative, and marketing across eight manufacturing,
+              distribution, and ecommerce companies spanning
+              10,000+ SKUs and $3M+ in annual ecommerce revenue.
             </p>
           </div>
         </div>
