@@ -306,7 +306,7 @@ export default function BrandStrategySection() {
       <div className="my-12 h-px w-full bg-linear-to-r from-[#A4A4A4] to-white md:my-14" />
 
       {/* Sales Enablement */}
-      <section className="grid gap-6">
+      <section id="commercial-sales" className="grid gap-6 scroll-mt-24">
         <div className="flex items-center gap-2.5 font-sora">
           <Sales />
 

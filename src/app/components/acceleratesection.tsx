@@ -165,7 +165,7 @@ export default function AccelerateSection() {
       <Divider />
 
       {/* LifeToGo Immunity Drink Mix */}
-      <section className="grid gap-6">
+      <section id="lifetogo-launch" className="grid gap-6 scroll-mt-24">
         <div className="flex items-center gap-2.5">
           <h1 className="text-3xl font-semibold md:text-5xl">
             LifeToGo Immunity Drink Mix
