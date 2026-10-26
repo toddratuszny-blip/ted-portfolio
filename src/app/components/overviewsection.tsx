@@ -230,7 +230,7 @@ export default function OverViewSection() {
       <Divider />
 
       {/* Brand Strategy & Identity */}
-      <section id="industrial-branding" className="space-y-8 scroll-mt-24">
+      <section id="industrial-branding" className="space-y-8 scroll-mt-40">
         <SectionHeading icon={<Setting />}>
           Brand Strategy <span className="text-primary">& Identity.</span>
         </SectionHeading>
