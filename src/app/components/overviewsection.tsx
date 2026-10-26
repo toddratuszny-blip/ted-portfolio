@@ -749,7 +749,7 @@ export default function OverViewSection() {
       <Divider />
 
       {/* Sales Enablement */}
-      <section className="space-y-8">
+      <section id="industrial-catalog" className="space-y-8 scroll-mt-40">
         <SectionHeading icon={<Business />}>
           Sales <span className="text-primary">Enablement.</span>
         </SectionHeading>
